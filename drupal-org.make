@@ -84,7 +84,7 @@ projects[iconizer][subdir] = "contrib"
 projects[imageapi][version] = "1.10"
 projects[imageapi][subdir] = "contrib"
 
-projects[imagecache][version] = "2.0-beta12"
+projects[imagecache][version] = "2.0-rc1"
 projects[imagecache][subdir] = "contrib"
 
 projects[imagecache_actions][version] = "2.0"
@@ -105,7 +105,7 @@ projects[jquery_ui][subdir] = "contrib"
 projects[jquery_update][version] = "2.0-alpha1"
 projects[jquery_update][subdir] = "contrib"
 
-projects[jwplayermodule][version] = "1.1"
+projects[jwplayermodule][version] = "1.7"
 projects[jwplayermodule][subdir] = "contrib"
 
 projects[lightbox2][version] = "1.11"
@@ -147,7 +147,7 @@ projects[token][subdir] = "contrib"
 projects[vertical_tabs][version] = "1.0-rc2"
 projects[vertical_tabs][subdir] = "contrib"
 
-projects[views][version] = "2.12"
+projects[views][version] = "2.16"
 projects[views][subdir] = "contrib"
 
 projects[views_bonus][version] = "1.1"
@@ -166,10 +166,10 @@ projects[wysiwyg_template][version] = "2.6"
 projects[wysiwyg_template][subdir] = "contrib"
 
 ; Themes
-projects[rubik][version] = "3.0-beta2"
+projects[rubik][version] = "3.0-beta3"
 projects[rubik][subdir] = "contrib"
 
-projects[tao][version] = "3.2"
+projects[tao][version] = "3.3"
 projects[tao][subdir] = "contrib"
 
 projects[sky][version] = "3.11"
