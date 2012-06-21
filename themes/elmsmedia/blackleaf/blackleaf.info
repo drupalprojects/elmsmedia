@@ -1,0 +1,27 @@
+name = "Blackleaf"
+description = "Blackleaf theme for FMIS"
+core = "6.x"
+engine = "phptemplate"
+
+screenshot = "screenshot.jpg"
+
+regions[left] = "Left sidebar"
+regions[right] = "Right sidebar"
+regions[content] = "Content"
+regions[header] = "Header"
+regions[footer] = "Footer"
+regions[admin] = "Admin Block"
+regions[upload_btn] = "Upload Button"
+regions[asset] = "Asset Block"
+regions[left_bottom] = "Bottom Left Block"
+
+stylesheets[all][] = "blackleaf.css"
+
+scripts[] = "js/cookie.js"
+
+scripts[] = "js/upload_btn.js"
+scripts[] = "js/sub_menu.js"
+scripts[] = "js/tabs_arrow.js"
+scripts[] = "js/left_menu_hover.js"
+scripts[] = "js/media_thumb_hover.js"
+scripts[] = "js/views.js"
