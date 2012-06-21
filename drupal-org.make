@@ -156,6 +156,9 @@ projects[views_bonus][subdir] = "contrib"
 projects[views_calc][version] = "1.3"
 projects[views_calc][subdir] = "contrib"
 
+projects[libraries][version] = "1.0"
+projects[libraries][subdir] = "contrib"
+
 projects[views_fluid_grid][version] = "1.1"
 projects[views_fluid_grid][subdir] = "contrib"
 

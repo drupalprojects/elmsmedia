@@ -20,6 +20,7 @@ function elmsmedia_profile_modules() {
   $elmsmedia = array(
     'views_bulk_operations',
     'admin',
+    'libraries',
     'adminrole',
     'advanced_help',
     'auto_nodetitle',
