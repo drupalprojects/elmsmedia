@@ -87,7 +87,7 @@ projects[imageapi][subdir] = "contrib"
 projects[imagecache][version] = "2.0-rc1"
 projects[imagecache][subdir] = "contrib"
 
-projects[imagecache_actions][version] = "2.0"
+projects[imagecache_actions][version] = "1.8"
 projects[imagecache_actions][subdir] = "contrib"
 
 projects[imagecache_scale9actions][version] = "1.02"
@@ -181,6 +181,12 @@ libraries[ckeditor][download][url] = "http://download.cksource.com/CKEditor/CKEd
 libraries[ckeditor][directory_name] = "ckeditor"
 libraries[ckeditor][type] = "library"
 libraries[ckeditor][destination] = "libraries"
+
+libraries[jquery.ui][download][type] = "get"
+libraries[jquery.ui][download][url] = "http://jquery-ui.googlecode.com/files/jquery.ui-1.6.zip"
+libraries[jquery.ui][directory_name] = "jquery.ui"
+libraries[jquery.ui][type] = "library"
+libraries[jquery.ui][destination] = "libraries"
 
 ; Patches
 projects[context][patch][] = "http://drupal.org/files/issues/context-expose-weights.patch"
