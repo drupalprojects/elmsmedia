@@ -32,6 +32,7 @@ function elmsmedia_profile_modules() {
     'util',
     'conditional_fields',
     'context',
+    'ctools',
     'content',
     'date',
     'devel',
@@ -51,7 +52,6 @@ function elmsmedia_profile_modules() {
     'imagecache_scale9actions',
     'imagefield',
     'jammer',
-    'jquery_ui',
     'jquery_update',
     'jwplayermodule',
     'lightbox2',
@@ -72,7 +72,12 @@ function elmsmedia_profile_modules() {
     'views_calc',
     'views_fluid_grid',
     'wysiwyg',
-    'wysiwyg_template'
+    'wysiwyg_template',
+    // ELMS Media core modules
+    'elmsmedia',
+    'elms_styles',
+    'elms_media_helper',
+    'elmsmedia_feature',
   );
   return array_merge($core, $elmsmedia);
 }
@@ -159,8 +164,10 @@ function elmsmedia_profile_tasks(&$task, $url) {
 
   // set default admin theme
   variable_set('admin_theme', 'rubik');
-	// enable default theme
+  // enable default theme
   variable_set('theme_default', 'blackleaf');
+  // now its safe to enable jquery_ui
+  module_enable(array('jquery_ui'));
   // Update the menu router information.
   menu_rebuild();
 }

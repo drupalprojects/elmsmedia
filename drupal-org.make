@@ -42,6 +42,9 @@ projects[conditional_fields][subdir] = "contrib"
 projects[context][version] = "3.x-dev"
 projects[context][subdir] = "contrib"
 
+projects[ctools][version] = "1.8"
+projects[ctools][subdir] = "contrib"
+
 projects[cck][version] = "2.9"
 projects[cck][subdir] = "contrib"
 
