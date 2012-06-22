@@ -20,6 +20,7 @@
  *
  * @ingroup views_templates
  */
+ global $base_url;
 ?>
 <?php foreach ($fields as $id => $field):
     $content = '';
@@ -27,7 +28,7 @@
     if ($id == 'nid') {
       $settings = array(
         'config' => strip_tags($fields['title']->content) .'/yes',
-        'image' => 'https://elimedia.psu.edu/renderimage/70',
+        'image' => $base_url .'/renderimage/70',
       );
       $content = theme('elms_media_helper_render',$settings);
       $class = 'elmedia-top image-treatment-spacer';

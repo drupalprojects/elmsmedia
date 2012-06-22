@@ -13,6 +13,7 @@
  */
 
 // Short tags act bad below in the html so we print it here.
+global $base_url;
 ?>
 <rss version="2.0" xmlns:media="http://search.yahoo.com/mrss/" xmlns:jwplayer="http://developer.longtailvideo.com/">
 <channel>
@@ -56,7 +57,7 @@ $asset_ary = array(
         if ($node->type == 'webcam') {
             foreach($node->field_webcam as $key => $video) {
               //path to the video
-              $vidpath = str_replace('sites/default/files/','',$video['filepath']);
+              $vidpath = str_replace(file_directory_path() .'/', '', $video['filepath']);
               $videos.= '<media:content url="'. $vidpath .'" />'."\n";
             }
             $output.= '<media:group>'."\n". $videos .'</media:group>'."\n";
@@ -67,9 +68,10 @@ $asset_ary = array(
    ?>
 <?php 
 
-  $output.= '<jwplayer:image>https://elimedia.psu.edu/sites/default/files/webcam_default.png</jwplayer:image>
+  /*$output.= '<jwplayer:image>'. $base_url .'/'. file_directory_path() .'/webcam_default.png</jwplayer:image>
 <jwplayer:provider>rtmp</jwplayer:provider> 
-<jwplayer:streamer>rtmp://elimedia.psu.edu/vod</jwplayer:streamer>'."\n";
+<jwplayer:streamer>rtmp://elmsmedia.psu.edu/vod</jwplayer:streamer>'."\n";*/
+  $output.= '<jwplayer:image>'. $base_url .'/'. file_directory_path() .'/webcam_default.png</jwplayer:image>'."\n";
 $output.= '</item>'."\n";
 print $output;
 endforeach; ?>

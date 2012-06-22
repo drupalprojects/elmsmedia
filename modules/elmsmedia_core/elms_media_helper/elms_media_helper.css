@@ -1,0 +1,480 @@
+/* CSS Document */
+
+.elms-asset {
+  padding:2px;
+  background-color:#859EBC;
+  clear:both;
+  float:left;
+}
+
+.elms-asset img {
+  margin:0px;
+  padding:2px;
+  display:block;
+}
+
+.elms-asset-image-info {
+  border:4px solid #859EBC;
+  color:#333;
+  margin:0px;
+  padding:0px;
+  text-align:center;
+  background-color:#FFF;
+  display:block;
+  max-width:200px;
+}
+
+/* style for the artist gallery */
+.elmsmedia_artist_wrapper h1, .elmsmedia_artist_wrapper h2, .elmsmedia_artist_wrapper h3, .elmsmedia_artist_wrapper h4, .elmsmedia_artist_wrapper h5 {
+  font-weight: normal;
+  margin: 0;
+  padding: 0;
+  
+}
+
+.elmsmedia_artist_wrapper {
+  width: 760px;
+  height: 500px;
+  top:auto;
+  left:auto;
+  background: url('images/content_pattern.png');  
+  z-index:10000;
+  display:none;
+  position:static;
+  border:3px solid #006;
+}
+
+.elmsmedia_artist_flashwrapper {
+  width: 760px;
+  height: 500px;
+  top:auto;
+  left:auto;
+  background: url('images/header.png');  
+  z-index:10000;
+  display:none;
+  position:static;
+  border:3px solid #006;
+}
+.elmsmedia_artist_flashwrapper .elmsmedia_artist_header{
+  height: 80px;
+  width: 100%;
+  background: url('images/header.png') no-repeat top right;
+}
+.elmsmedia_artist_header {
+  width: 760px;
+  height: 80px;
+  background: url('images/header.png') no-repeat;
+}
+
+.elmsmedia_artist_close {
+  width: 120px;
+  height: 28px;
+  background: url('images/close_btn.png') no-repeat;
+  float: right;
+  margin-top: 10px;
+  margin-right: 10px;
+  cursor: pointer;
+  position:absolute;
+  right:0px;
+}
+  
+  
+
+.elmsmedia_artist_content-wrapper {
+  width: 760px;
+  height: 323px;
+}
+
+.elmsmedia_artist_content-left {
+  width: 375px;
+  height: 323px;
+  background: url('images/content_left.png') no-repeat;
+  float: left;
+}
+
+.elmsmedia_artist_image {
+  width: 250px;
+  height: 250px;
+  margin-left: 25px;
+  margin-top: 36px;
+  display:none;
+}
+
+.elmsmedia_artist_content-right {
+  width: 385px;
+  height: 323px;
+  background: #ffffff;
+  float: left;
+}
+
+.elmsmedia_artist_title {
+  height: 30px;
+  background: url('images/title_tile.png');
+  margin-top: 20px;
+  width: 385px;
+  font-size: 18px;
+  padding-top: 10px;
+  display:none;
+  text-align:left;
+}
+
+.elmsmedia_artist_text {
+  width: 365px;
+  height: 240px;
+  margin-top: 10px;
+  overflow: auto;
+  font-size: 12px;
+  line-height: 1.5em;
+  text-align:left;
+}
+
+.elmsmedia_artist_footer-wrapper {
+  width: 760px;
+  height: 97px;
+  background: #082243;
+}
+
+.elmsmedia_artist_footer-text {
+  max-height: 77px;
+}
+
+/*  utility classes for text */
+
+.elmsmedia_artist_serif {
+  font-family: Georgia, "Times New Roman", Times, serif;  
+}
+
+.elmsmedia_artist_sans-serif {
+  font-family: Arial, Helvetica, sans-serif;  
+}
+
+.elmsmedia_artist_white {
+  color: #ffffff;
+}
+
+.elmsmedia_artist_gray {
+  color: #cccccc;
+}
+
+.elmsmedia_artist_blue {
+  color: #5d93b5;  
+}
+
+.elmsmedia_artist_italic {
+  font-style:italic;  
+}
+
+
+.elmsmedia_artist_name {
+  margin-left: 10px;
+  margin-top: 20px;
+  font-size: 36px;
+}
+
+.elmsmedia_artist_medium {
+  margin-left: 20px !important;
+  margin-top: 30px !important;
+}
+
+.elmsmedia_artist_float-left {
+  float: left;
+}
+
+.elmsmedia_artist_float-right {
+  float: right;  
+}
+
+.elmsmedia_artist_thumb {
+  width: 55px;
+  height: 70px;
+  margin-left: 60px;
+}
+
+.elmsmedia_artist_viewgallery {
+  background: url('images/viewartworks.gif');
+  width:111px;
+  height:51px;
+}
+
+.elmsmedia_artist_viewactivity {
+  background: url('images/viewactivity.gif');
+  width:111px;
+  height:51px;
+}
+
+.elmsmedia_artist_viewgallery:hover {
+  cursor:pointer;
+}
+.elmsmedia_artist_viewactivity:hover {
+  cursor:pointer;
+}
+
+.elmsmedia_artist_footer-text h2 {
+  padding-top: 20px;
+  padding-left: 30px;
+}
+.elmsmedia_artist_footer-text h3 {
+  padding-left: 45px;
+  font-size:16px;
+  clear:both;
+}
+
+.elmsmedia_artist_images {
+  padding:10px 0px 0px;
+  text-align:center;
+  
+}
+
+.elmsmedia_artist_images img{
+  overflow:hidden;
+}
+
+.elmsmedia_artist_images img:hover{
+  margin:-2px;
+  border: 2px solid #903;
+  cursor:pointer;
+}
+
+.elmsmedia_artist_images span{
+  margin:0px 0px 0px 5px;
+}
+
+.elmsmedia_artist_images_selected{
+  border:2px solid #06C;
+  margin:-2px;
+}
+
+.elmsmedia_basic {
+  width:100%;
+  float:left;
+  display:block;
+}
+.elmsmedia_basic ul {
+ margin-left: 0px;
+ padding-left: 0px;
+ list-style-type:none;
+}
+.elmsmedia_basic ul img {
+  margin:10px 10px 10px 0px;
+  float:left;
+  padding:5px;
+  border: 1px solid #ccc;
+}
+
+/*
+  Templates section for CKeditor HTML templates
+*/
+
+/* Template: Readings list */
+.id-readings {
+  border:2px solid #666;
+  color:#222;
+  background-color:#FFD;
+  padding:10px;
+  margin:10px;
+  width:auto;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+}
+
+h2.id-header {
+  color:#222;  
+  margin:5px;
+  width:auto;
+}
+.id-readings ul{
+  list-style-position:inside;
+  list-style-type:disc;
+  margin:0px 0px 0px 5px;
+  width:auto;
+}
+.id-readings li{
+  margin:0px;
+  padding:0px;
+  width:auto;
+}
+/* Steps to completion Template */
+.id-stepstocompletion {
+  width:auto;
+  margin:10px;
+  padding:0px;
+}
+.id-stepstocompletion-header {
+  margin:0px;
+  clear:both;
+  padding:10px;
+  background-color:#EEE;
+  width:auto;
+  -moz-border-radius-topright: 10px;
+  border-top-right-radius: 10px;
+  -moz-border-radius-topleft: 10px;
+  border-top-left-radius: 10px;
+}
+.id-stepstocompletion-table {
+  background-color:#BBD3DD;
+  width:100%;
+  margin:0px;
+  padding:0px;
+  -moz-border-radius-bottomright: 10px;
+  border-bottom-right-radius: 10px;
+  -moz-border-radius-bottomleft: 10px;
+  border-bottom-left-radius: 10px;
+}
+.id-stepstocompletion th{
+  background-color:#DDD;
+  font-weight:bold;
+  text-align:left;
+  margin:0px;
+  padding:5px;
+}
+.id-stepstocompletion tr{
+  border-top:#DDD solid 1px;
+}
+
+.id-stepstocompletion tr:hover{
+  background-color:#CCC;
+}
+.id-stepstocompletion td{
+  margin:0px;
+  padding:5px;
+  overflow:auto;
+}
+.id-stepstocompletion .id-col1{
+  font-weight:bold;
+  text-align:center;
+}
+.id-stepstocompletion .id-col2{
+}
+.id-stepstocompletion .id-col3{
+}
+
+/* Assignment template */
+.id-assignment {
+  background-color:#FFD47B;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  width:auto;
+  margin:10px;
+}
+.id-assignment h2{
+  padding:15px 0px 0px 42px;
+}
+.id-icon-info {
+ background-image:url('images/info.png');
+ width:32px;
+ height:32px;
+ margin:10px;
+ vertical-align:middle;
+ padding:0px;  
+ float:left;
+}
+.id-directions {
+  width:auto;
+  margin:0px;
+  padding:10px 20px 25px 25px;  
+}
+/*Blockquote Template */
+
+.id-blockquote{
+  background:#DDD top left no-repeat url('images/quote1.png');
+  margin:10px;
+  padding:0px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  width:auto;
+}
+
+.id-blockquote2{
+  background:bottom right no-repeat url('images/quote2.png');
+  color:#222;
+  font-style:italic;
+  margin:0px;
+  padding:35px 80px 35px 80px;
+  height:100%;
+  text-align:center;
+}
+
+/* Assignment template */
+.id-fact {
+  background-color:#FFE3E6;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+  width:250px;
+  margin:10px 0px 10px 10px;
+  float:right;
+}
+
+.id-fact h2{
+  padding:15px 0px 0px 42px;
+}
+
+/* Collapse templates */
+.id-collapse {
+  background-color:#F3F3F3;
+}
+
+.id-collapse-text {
+  font-weight:bold;
+  color:#333;
+  background-color:transparent;
+}
+.id-collapse-text a{
+  text-decoration:none;
+  background-color:transparent;
+}
+
+.id-collapse-body {
+  color:#222;
+}
+/* Steps to completion Template */
+.id-objectives {
+  width:auto;
+  margin:10px;
+  padding:0px;
+}
+.id-objectives-header {
+  margin:0px;
+  clear:both;
+  padding:10px;
+  background-color:#EEE;
+  width:auto;
+  -moz-border-radius-topright: 10px;
+  border-top-right-radius: 10px;
+  -moz-border-radius-topleft: 10px;
+  border-top-left-radius: 10px;
+}
+.id-objectives-table {
+  background-color:#BBD3DD;
+  width:100%;
+  margin:0px;
+  padding:0px;
+  -moz-border-radius-bottomright: 10px;
+  border-bottom-right-radius: 10px;
+  -moz-border-radius-bottomleft: 10px;
+  border-bottom-left-radius: 10px;
+}
+.id-objectives th{
+  background-color:#DDD;
+  font-weight:bold;
+  text-align:left;
+  margin:0px;
+  padding:5px;
+}
+.id-objectives tr{
+  border-top:#DDD solid 1px;
+}
+
+.id-objectives tr:hover{
+  background-color:#CCC;
+}
+.id-objectives td{
+  margin:0px;
+  padding:5px;
+  overflow:auto;
+}
+.id-objectives .id-col1{
+  font-weight:bold;
+  text-align:center;
+}
+.id-objectives .id-col2{
+}

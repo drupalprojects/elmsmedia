@@ -26,25 +26,25 @@
     print '<span alt="'. $output .'" title="'. $output .'">&copy;</span>';
   break;
   case 'Attribution':
-    print '<img src="'. drupal_get_path('module','elimedia') .'/ccimages/by.png" title="Creative Commons '. $output .'" alt="Creative Commons '. $output .'"/>';
+    print '<img src="'. drupal_get_path('module','elmsmedia') .'/ccimages/by.png" title="Creative Commons '. $output .'" alt="Creative Commons '. $output .'"/>';
   break;
   case 'Attribution-Share Alike':
-    print '<img src="'. drupal_get_path('module','elimedia') .'/ccimages/bysa.png" title="Creative Commons '. $output .'" alt="Creative Commons '. $output .'"/>';
+    print '<img src="'. drupal_get_path('module','elmsmedia') .'/ccimages/bysa.png" title="Creative Commons '. $output .'" alt="Creative Commons '. $output .'"/>';
   break;
   case 'Attribution-No Derivatives':
-    print '<img src="'. drupal_get_path('module','elimedia') .'/ccimages/bynd.png" title="Creative Commons '. $output .'" alt="Creative Commons '. $output .'"/>';
+    print '<img src="'. drupal_get_path('module','elmsmedia') .'/ccimages/bynd.png" title="Creative Commons '. $output .'" alt="Creative Commons '. $output .'"/>';
   break;
   case 'Attribution-Noncommercial':
-    print '<img src="'. drupal_get_path('module','elimedia') .'/ccimages/bync.png" title="Creative Commons '. $output .'" alt="Creative Commons '. $output .'"/>';
+    print '<img src="'. drupal_get_path('module','elmsmedia') .'/ccimages/bync.png" title="Creative Commons '. $output .'" alt="Creative Commons '. $output .'"/>';
   break;
   case 'Attribution-Noncommercial-Share Alike':
-    print '<img src="'. drupal_get_path('module','elimedia') .'/ccimages/byncsa.png" title="Creative Commons '. $output .'" alt="Creative Commons '. $output .'"/>';
+    print '<img src="'. drupal_get_path('module','elmsmedia') .'/ccimages/byncsa.png" title="Creative Commons '. $output .'" alt="Creative Commons '. $output .'"/>';
   break;
   case 'Attribution-Noncommercial No Derivative Works':
-    print '<img src="'. drupal_get_path('module','elimedia') .'/ccimages/byncnd.png" title="Creative Commons '. $output .'" alt="Creative Commons '. $output .'"/>';
+    print '<img src="'. drupal_get_path('module','elmsmedia') .'/ccimages/byncnd.png" title="Creative Commons '. $output .'" alt="Creative Commons '. $output .'"/>';
   break;
   case 'Public Domain':
-    print '<img src="'. drupal_get_path('module','elimedia') .'/ccimages/cc0.png" title="C'. $output .'" alt="'. $output .'"/>';
+    print '<img src="'. drupal_get_path('module','elmsmedia') .'/ccimages/cc0.png" title="C'. $output .'" alt="'. $output .'"/>';
   break;
   default:
     print $output;

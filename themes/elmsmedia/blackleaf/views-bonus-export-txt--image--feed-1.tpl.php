@@ -12,13 +12,13 @@
  * @ingroup views_templates
  */
 
-    // Basically just routing things through this view as a plain text document
-  
+  // Basically just routing things through this view as a plain text document
   // arg 1 is always the image, arg 2 is always the template
+  global $base_url;
   $imagenode = node_load(check_plain(arg(1)));
   // template title
   $templatenode = node_load(db_result(db_query("SELECT nid FROM {node} WHERE title='%s' AND type='image_treatment'",check_plain(arg(2)))));
-  // need to know if we're viewing on the ELImedia site; in which case we shouldn't cache anything
+  // if viewing internal to site don't cache anything
   $skip_cache = check_plain(arg(3));
   if ($skip_cache == 'yes') {
     $skip_cache = TRUE;
@@ -59,7 +59,7 @@
   $output = $templatenode->field_template[0]['value'];
   // search criteria
   $search = array('%image','%title','%citation','%year','%notes','%class', '%footnote');
-  $preset = _elimedia_clean_title($templatenode->title);
+  $preset = _elmsmedia_clean_title($templatenode->title);
   // image node values
   $title = $imagenode->title;
   $citation = $imagenode->field_citation[0]['value'];
@@ -109,7 +109,7 @@
     }
   }
   if ($trackback[3] == 'node') {
-    $trackpath = 'https://elimedia.psu.edu'. $trackpath;
+    $trackpath = $base_url . $trackpath;
   }
   else {
     $trackpath = 'https://'. $trackpath;

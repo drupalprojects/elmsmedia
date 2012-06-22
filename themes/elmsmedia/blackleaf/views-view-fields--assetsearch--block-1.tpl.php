@@ -24,10 +24,10 @@
     $class = '';
     if (($id == 'field_audiothumb_fid' || $id == 'field_videothumb_fid' || $id == 'field_image_fid') && $field->content != '') {
       $content = str_replace('title=""','title="'. $fields['type']->content .'<br />Added: '. $fields['created']->content .'<br />'. $fields['tid']->content .'"',$field->content);
-      $class = 'elimedia-top elimedia-playlist-img-ref elimedia-playlist-ref';
+      $class = 'elmsmedia-top elmsmedia-playlist-img-ref elmsmedia-playlist-ref';
     }
     elseif ($id == 'type' && strip_tags($field->content) == 'External Video') {
-      $class = 'elimedia-top elimedia-playlist-img-ref elimedia-playlist-ref';
+      $class = 'elmsmedia-top elmsmedia-playlist-img-ref elmsmedia-playlist-ref';
       $exnid = $fields['nid']->content;
       $extasset = node_load($exnid);
       $popupcount = rand(50,1000);
@@ -36,7 +36,7 @@
     }
     elseif ($id == 'title') {
       $content = $field->content;
-      $class = 'elimedia-playlist-ref';
+      $class = 'elmsmedia-playlist-ref';
     }
   if (!empty($content)): ?>
     <div class="field-content <?php print $class; ?> views-field-<?php print $field->class; ?>"><?php print $content; ?></div>

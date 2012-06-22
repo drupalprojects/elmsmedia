@@ -24,11 +24,11 @@
     $class = '';
     if (($id == 'field_audiothumb_fid' || $id == 'field_videothumb_fid' || $id == 'field_image_fid') && $field->content != '') {
       $content = str_replace('title=""','title="'. $fields['type']->content .'<br />Added: '. $fields['created']->content .'<br />'. $fields['tid']->content .'"',$field->content);
-      $class = 'elimedia-top elimedia-gallery-img-ref elimedia-gallery-ref';
+      $class = 'elmsmedia-top elmsmedia-gallery-img-ref elmsmedia-gallery-ref';
     }
     elseif ($id == 'title') {
       $content = $field->content;
-      $class = 'elimedia-gallery-ref';
+      $class = 'elmsmedia-gallery-ref';
     }
   if (!empty($content)): ?>
     <div class="field-content <?php print $class; ?> views-field-<?php print $field->class; ?>"><?php print $content; ?></div>

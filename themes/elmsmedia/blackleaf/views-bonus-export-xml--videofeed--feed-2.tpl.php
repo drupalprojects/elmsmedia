@@ -13,6 +13,7 @@
  */
 
 // Short tags act bad below in the html so we print it here.
+global $base_url;
 ?>
 <rss version="2.0" xmlns:media="http://search.yahoo.com/mrss/" xmlns:jwplayer="http://developer.longtailvideo.com/">
 <channel>
@@ -50,7 +51,7 @@ $asset_ary = array(
       if ($label != 'nid') {
         if ($label == 'jwplayer:file') {
           $image_path = str_replace('http://www.youtube.com/watch?v=','',$content);
-          $content = str_replace('sites/default/files/','',$content);
+          $content = str_replace(file_directory_path() .'/','',$content);
         }
         elseif ($label == 'jwplayer:provider') {
           $external_provider = TRUE;
@@ -66,7 +67,7 @@ $asset_ary = array(
     if ($node->type == 'webcam') {
           foreach($node->field_webcam as $key => $video) {
             //path to the video
-            $vidpath = str_replace('sites/default/files/','',$video['filepath']);
+            $vidpath = str_replace(file_directory_path() .'/','',$video['filepath']);
             $videos.= '<media:content url="'. $vidpath .'" />'."\n";
           }
           $output.= '<media:group>'."\n". $videos .'</media:group>'."\n";
@@ -74,13 +75,13 @@ $asset_ary = array(
         elseif ($node->type == 'video') {
           if ($node->field_streaming_type[0]['value'] == 'Buffered Stream') {
             $vidpath = $node->field_video[0]['filepath'];
-            $output.= '<jwplayer:file>https://elimedia.psu.edu/'. $vidpath .'</jwplayer:file>'."\n";
+            $output.= '<jwplayer:file>'. $base_url .'/'. $vidpath .'</jwplayer:file>'."\n";
       $external_provider = TRUE;
           }
           else {
             foreach($node->field_video as $key => $video) {
               //path to the video
-              $vidpath = str_replace('sites/default/files/','',$video['filepath']);
+              $vidpath = str_replace(file_directory_path() .'/','',$video['filepath']);
               //if a width / bitrate were found on upload then use them, else use the 'best guess' method
               if ($node->field_video_bitrate[$key]['value'] != 0) {
                 $video_bitrate = $node->field_video_bitrate[$key]['value'];
@@ -104,20 +105,18 @@ $asset_ary = array(
   endforeach;
    ?>
 <?php 
+/*
 if (!$external_provider) {
   $output.= '<jwplayer:provider>rtmp</jwplayer:provider> 
-<jwplayer:streamer>rtmp://elimedia.psu.edu/vod</jwplayer:streamer>'."\n";
-}
+<jwplayer:streamer>rtmp://elmsmedia.psu.edu/vod</jwplayer:streamer>'."\n";
+}*/
 $output.= '</item>'."\n";
 //if they don't, don't display anything
 //if they do, and arg(2) is course, then only display content that says lock down to courses
 // arg(3) will be the actual course so if content says that it can only be displayed within the course then make sure it's taken out as well
 $location = arg(2);
 $course = arg(3);
-if ($location == 'elimedia.psu.edu' || $location == 'online.aanda.psu.edu') {
-  print $output;
-}
-elseif ($node->type == 'webcam') {
+if ($node->type == 'webcam') {
   print $output;  
 }
 elseif ($external_provider) {
@@ -131,7 +130,7 @@ elseif ($node->field_privacy[0]['value'] == 'Protected to courses' && $location 
 }
 elseif ($node->field_privacy[0]['value'] == 'Protected to a specific course' && $location == 'courses') {
   //need to check in the "array" for the course
-  $allowed_courses = explode(' ',$node->field_allowed_courses[0]['value']);
+  $allowed_courses = explode(' ', $node->field_allowed_courses[0]['value']);
   if (in_array($course,$allowed_courses)) {
     print $output;
   }
@@ -139,34 +138,13 @@ elseif ($node->field_privacy[0]['value'] == 'Protected to a specific course' && 
 endforeach; ?>
 </channel>
 </rss>
-
 <?php 
-//arg 1 is always the file
-  if (arg(2) == 'elms.psu.edu') {
-  $trackpath = 'https://'. arg(2) .'/'. arg(3) .'/'. arg(4) .'/'. arg(5);
-    $ignode = node_load(arg(1));
-    //register trackback
-    if (strpos($ignode->field_trackbacks[0]['value'],$trackpath) === FALSE) {
-      $ignode->field_trackbacks[0]['value'].= "\n". l($trackpath,$trackpath,array('attributes' => array('target' => '_blank'))) .'<br />';
-      node_save($ignode);
-    }
-  }
-  elseif (arg(2) == 'online.aanda.psu.edu') {
-  $trackpath = 'https://'. arg(2) .'/'. arg(3) .'/'. arg(4) .'/'. arg(5);
-    $ignode = node_load(arg(1));
-    //register trackback
-    if (strpos($ignode->field_trackbacks[0]['value'],$trackpath) === FALSE) {
-      $ignode->field_trackbacks[0]['value'].= "\n". l($trackpath,$trackpath,array('attributes' => array('target' => '_blank'))) .'<br />';
-      node_save($ignode);
-    }
-  }
-  elseif ($location != 'elimedia.psu.edu') {
-    $trackpath = 'https://elearning.psu.edu/'. arg(2) .'/'. arg(3) .'/'. arg(4) .'/'. arg(5);
-    $ignode = node_load(arg(1));
-    //register trackback
-    if (strpos($ignode->field_trackbacks[0]['value'],$trackpath) === FALSE) {
-      $ignode->field_trackbacks[0]['value'].= "\n". l($trackpath,$trackpath,array('attributes' => array('target' => '_blank'))) .'<br />';
-      node_save($ignode);
-    }
+  // build the trackback
+  $trackpath = arg(2) .'/'. arg(3) .'/'. arg(4) .'/'. arg(5);
+  $ignode = node_load(arg(1));
+  // register trackback if not set already
+  if (strpos($ignode->field_trackbacks[0]['value'], $trackpath) === FALSE) {
+    $ignode->field_trackbacks[0]['value'].= "\n". l($trackpath, $trackpath, array('attributes' => array('target' => '_blank'))) .'<br />';
+    node_save($ignode);
   }
 ?>

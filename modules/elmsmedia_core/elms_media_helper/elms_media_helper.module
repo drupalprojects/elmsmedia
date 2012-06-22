@@ -1,0 +1,113 @@
+<?php
+/**
+ * Implementation of hook_theme.
+ */
+function elms_media_helper_theme() {
+  return array(
+    "elms_media_helper_render" => array(
+      "arguments" => array(
+        "settings" => NULL,
+      ),
+    ),
+  );
+}
+
+function elms_media_helper_init() {
+  drupal_add_css(drupal_get_path('module', 'elms_media_helper') .'/elms_media_helper.css');
+  drupal_add_css(drupal_get_path('module', 'elms_media_helper') . '/fancy_slide.css');
+  drupal_add_css(drupal_get_path('module', 'elms_media_helper') . '/galleria.css');
+  drupal_add_js(drupal_get_path('module', 'elms_media_helper') . '/fancy_slide.js');
+  drupal_add_js(drupal_get_path('module', 'elms_media_helper') . '/artist.js');
+  drupal_add_js(drupal_get_path('module', 'elms_media_helper') . '/jquery.galleria.js');
+}
+
+/**
+ * Implementation of hook_nodeapi.  This method is based off the way jwplayer looks at the 
+ * input code and converts it to usable html 
+ */
+function elms_media_helper_nodeapi(&$node, $op, $a3, $a4) {
+  switch ($op) {
+    case "view":
+      $text = $node->content["body"]["#value"];
+      $regex = "/\[(\<br \/\>|\s)*elmsmedia(\<br \/\>|\s)*(\|([a-zA-Z0-9_.\s]+=[-a-zA-Z0-9+.:&@#\/\?<>\"%=~_\s]+))*(\<br \/\>|\s)*\]/";
+      if (preg_match_all($regex, $text, $matches)) {
+        $patterns = array();
+        $media = array();
+        //Have to process multiple matches since more than one player can be on a node.
+        foreach ($matches[0] as $match) {
+          $tag = $match;
+          $config = "";
+          $image_vars = array();
+          $tag = str_replace("<br />", "", $tag);
+          $tag = preg_replace("/\[(\s)*elmsmedia(\s)*(\||\])/", "", $tag);
+          $tag = str_replace("]", "", $tag);
+          $args = preg_split("/\|/", $tag);
+          //For the current match, process each parameter.
+          foreach ($args as $fvar) {
+            $key_val = preg_split("/=/", $fvar, 2);
+            switch (trim($key_val[0])) {
+              case "file":
+              case "image":
+                //Drupal automatically convers URLs into <a> tags.  Must strip this out.
+                $file = preg_replace("/<(.)*>/U", "", $key_val[1]);
+                if ($attachment) {
+                  $image_vars[trim($key_val[0])] = $attachment;
+                }
+                else {
+                  $image_vars[trim($key_val[0])] = trim($file);
+                }
+                break;
+              default:
+                if ($key_val[0] != "") {
+                  $image_vars[trim($key_val[0])] = trim($key_val[1]);
+                }
+                break;
+            }
+          }
+          $patterns[] = $regex;
+          $media[] = theme('elms_media_helper_render', $image_vars);
+        }
+        $text = preg_replace($patterns, $media, $text, 1);
+      }
+      $node->content["body"]["#value"] = $text;
+      break;
+  }
+}
+
+function theme_elms_media_helper_render($settings) {
+  if (isset($settings['file'])) {
+    $location = $settings['file'];
+  }
+  else {
+    $location = $settings['image'];
+    $style = $settings['style'];
+    $align = $settings['align'];
+  }
+  $result = drupal_http_request($location .'/'. $settings['config'] .'/'. $_SERVER['SERVER_NAME'] .'/'. base_path() .'/'. $_GET['q'] .'?style='. $style .'&align='. $align);
+  return '<span class="elmsmedia_asset">'. $result->data .'</span>';
+}
+
+/**
+* Implementation of hook_wywiwyg_plugin().
+*/
+function elms_media_helper_wysiwyg_plugin($editor, $version) {
+  global $base_url;
+  return array(
+    'elmsmedia' => array(
+      'url' => $base_url .'/',
+      'path' => wysiwyg_get_path($editor) . '/elmsmedia/plugin.js',
+      'buttons' => array(
+        'elmsmedia' => t('ELMS Media'),
+      ),
+      'load' => FALSE,
+    ),
+    'elmsmedia_webcam' => array(
+      //'url' => '',
+      'path' => wysiwyg_get_path($editor) . '/elmsmedia_webcam/plugin.js',
+      'buttons' => array(
+        'elmsmedia_webcam' => t('ELMS Media: Webcam'),
+      ),
+      'load' => FALSE,
+    ),
+  );
+}

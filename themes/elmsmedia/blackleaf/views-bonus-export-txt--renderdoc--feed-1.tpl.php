@@ -15,6 +15,7 @@
   // Basically just routing things through this view as a plain text document
   
   //arg 1 is always the file
+  global $base_url;
   $docnode = node_load(arg(1));
   if ($docnode->type == 'flash') {
     $width = $docnode->field_width[0]['value'];
@@ -22,14 +23,14 @@
     if ($docnode->field_file[0]['filemime'] == 'application/zip') {
       $height2 = $height + 85.0;
       $width2 = $width + 5.0;
-      $output = '<div class="elimedia_artist_viewgallery elimedia_artist_viewactivity" id="elimedia_node_'. arg(1) .'"></div>
-      <div class="elimedia_artist_wrapper elimedia_artist_flashwrapper" style="width:'. $width2 .'px;height:'. $height2 .'px;" id="elimedia_artist_wrapper_'. arg(1) .'">
-      <div class="elimedia_artist_header" style="background-position:right">
-          <div class="elimedia_artist_white elimedia_artist_serif elimedia_artist_name elimedia_artist_float-left">'. $docnode->title .'</div>
-          <div class="elimedia_artist_close"></div> <!-- /close -->
+      $output = '<div class="elmsmedia_artist_viewgallery elmsmedia_artist_viewactivity" id="elmsmedia_node_'. arg(1) .'"></div>
+      <div class="elmsmedia_artist_wrapper elmsmedia_artist_flashwrapper" style="width:'. $width2 .'px;height:'. $height2 .'px;" id="elmsmedia_artist_wrapper_'. arg(1) .'">
+      <div class="elmsmedia_artist_header" style="background-position:right">
+          <div class="elmsmedia_artist_white elmsmedia_artist_serif elmsmedia_artist_name elmsmedia_artist_float-left">'. $docnode->title .'</div>
+          <div class="elmsmedia_artist_close"></div> <!-- /close -->
         </div> <!-- /header -->
-        <div class="elimedia_artist_content-wrapper">
-        <iframe style="overflow:hidden;" src="https://elimedia.psu.edu/sites/default/files/flash/node'. $docnode->nid .'/player.html" width="'. $width .'" height="'. $height .'"><p>Your browser does not support iframes.</p></iframe>
+        <div class="elmsmedia_artist_content-wrapper">
+        <iframe style="overflow:hidden;" src="'. $base_url .'/'. file_directory_path() .'/flash/node'. $docnode->nid .'/player.html" width="'. $width .'" height="'. $height .'"><p>Your browser does not support iframes.</p></iframe>
         </div> <!-- /content-wrapper -->
     </div> <!-- /wrapper -->';
     }
@@ -55,7 +56,7 @@
     }
   }
   if ($trackback[3] == 'node') {
-    $trackpath = 'https://elimedia.psu.edu'. $trackpath;
+    $trackpath = $base_url . $trackpath;
   }
   else {
     $trackpath = 'https://'. $trackpath;

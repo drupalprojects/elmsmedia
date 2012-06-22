@@ -48,11 +48,11 @@
                 $count++;
                 $asset_node = node_load($item['nid']);
                 if ($asset_node->type == 'video') {
-                  $content.= '<img src="/sites/default/files/imagecache/minisearchthumb/'. $asset_node->field_videothumb[0]['filename'] .'" hspace="2px" id="hover-preview-'. $popupcount .'" class="imagecache imagecache-searchthumb imagecache-default imagecache-searchthumb_hover_preview_searchpopup hover-preview" /><a id="hover-preview-'. $popupcount .'-url" style="display: none;" class="hover-preview-preview-url" href="/sites/default/files/imagecache/searchpopup/'. $asset_node->field_videothumb[0]['filename'] .'"></a>';
+                  $content.= '<img src="/'. file_directory_path() .'/imagecache/minisearchthumb/'. $asset_node->field_videothumb[0]['filename'] .'" hspace="2px" id="hover-preview-'. $popupcount .'" class="imagecache imagecache-searchthumb imagecache-default imagecache-searchthumb_hover_preview_searchpopup hover-preview" /><a id="hover-preview-'. $popupcount .'-url" style="display: none;" class="hover-preview-preview-url" href="/'. file_directory_path() .'/imagecache/searchpopup/'. $asset_node->field_videothumb[0]['filename'] .'"></a>';
                   $popupcount--;
                 }
                 elseif ($asset_node->type == 'audio') {
-                  $content.= '<img src="/sites/default/files/imagecache/minisearchthumb/'. $asset_node->field_audiothumb[0]['filename'] .'" hspace="2px" id="hover-preview-'. $popupcount .'" class="imagecache imagecache-searchthumb imagecache-default imagecache-searchthumb_hover_preview_searchpopup hover-preview" /><a id="hover-preview-'. $popupcount .'-url" style="display: none;" class="hover-preview-preview-url" href="/sites/default/files/imagecache/searchpopup/'. $asset_node->field_audiothumb[0]['filename'] .'"></a>';
+                  $content.= '<img src="/'. file_directory_path() .'/imagecache/minisearchthumb/'. $asset_node->field_audiothumb[0]['filename'] .'" hspace="2px" id="hover-preview-'. $popupcount .'" class="imagecache imagecache-searchthumb imagecache-default imagecache-searchthumb_hover_preview_searchpopup hover-preview" /><a id="hover-preview-'. $popupcount .'-url" style="display: none;" class="hover-preview-preview-url" href="/'. file_directory_path() .'/imagecache/searchpopup/'. $asset_node->field_audiothumb[0]['filename'] .'"></a>';
                   $popupcount--;
                 }
                 elseif ($asset_node->type == 'external_video') {

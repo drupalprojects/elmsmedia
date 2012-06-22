@@ -119,8 +119,6 @@
                 <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
               </a>
           <?php endif; ?>
-            
-            <div class="fmis-icon"><img src="<?php print base_path() . $directory; ?>/images/fmis_esplode_icon.png" width="159" height="76" /></div>
         </div> <!-- /branding-area -->
         
      <div class="menu-shelf">

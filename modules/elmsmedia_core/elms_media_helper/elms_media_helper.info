@@ -1,0 +1,5 @@
+; $Id: elms_media_helper.info
+name = ELMS Media Helper
+description = This is a helper module for use with ELMS Media server
+package = Media
+core = 6.x

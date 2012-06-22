@@ -1,0 +1,5 @@
+; $Id: elmsmedia.info
+name = "ELMS Media"
+description = "Customizations and helper functions for building the ELMS Media system"
+package = "ELMS"
+core = "6.x"

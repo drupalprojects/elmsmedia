@@ -71,10 +71,10 @@
           $asset_node = node_load($item['nid']);
           $typename = db_result(db_query("SELECT name FROM {node_type} WHERE type='%s'",$asset_node->type));
           if ($asset_node->type == 'video') {
-            $content.= '<a href="'. base_path() . 'node/'. $playlistnid .'"><img src="/sites/default/files/imagecache/'. $imgcacheset .'/'. $asset_node->field_videothumb[0]['filename'] .'" vspace="0px" hspace="0px" style="float:left;" id="hover-preview-'. $popupcount .'" class="imagecache imagecache-'. $imgcacheset .' imagecache-default imagecache-searchthumb_hover_preview_searchpopup hover-preview" title="'. $typename .'<br/>Playlist Item: '. ($itempos+1) .'<br />Added: '. date('m/d/y',$asset_node->created) .'" /></a><a id="hover-preview-'. $popupcount .'-url" style="display: none;" class="hover-preview-preview-url" href="/sites/default/files/imagecache/searchpopup/'. $asset_node->field_videothumb[0]['filename'] .'"></a>';
+            $content.= '<a href="'. base_path() . 'node/'. $playlistnid .'"><img src="/'. file_directory_path() .'/imagecache/'. $imgcacheset .'/'. $asset_node->field_videothumb[0]['filename'] .'" vspace="0px" hspace="0px" style="float:left;" id="hover-preview-'. $popupcount .'" class="imagecache imagecache-'. $imgcacheset .' imagecache-default imagecache-searchthumb_hover_preview_searchpopup hover-preview" title="'. $typename .'<br/>Playlist Item: '. ($itempos+1) .'<br />Added: '. date('m/d/y',$asset_node->created) .'" /></a><a id="hover-preview-'. $popupcount .'-url" style="display: none;" class="hover-preview-preview-url" href="/'. file_directory_path() .'/imagecache/searchpopup/'. $asset_node->field_videothumb[0]['filename'] .'"></a>';
           }
           elseif ($asset_node->type == 'audio') {
-            $content.= '<a href="'. base_path() . 'node/'. $playlistnid .'"><img src="/sites/default/files/imagecache/'. $imgcacheset .'/'. $asset_node->field_audiothumb[0]['filename'] .'" vspace="0px"  hspace="0px" style="float:left;" id="hover-preview-'. $popupcount .'" class="imagecache imagecache-'. $imgcacheset .' imagecache-default imagecache-searchthumb_hover_preview_searchpopup hover-preview" title="'. $typename .'<br/>Playlist Item: '. ($itempos+1) .'<br />Added: '. date('m/d/y',$asset_node->created) .'" /></a><a id="hover-preview-'. $popupcount .'-url" style="display: none;" class="hover-preview-preview-url" href="/sites/default/files/imagecache/searchpopup/'. $asset_node->field_audiothumb[0]['filename'] .'"></a>';
+            $content.= '<a href="'. base_path() . 'node/'. $playlistnid .'"><img src="/'. file_directory_path() .'/imagecache/'. $imgcacheset .'/'. $asset_node->field_audiothumb[0]['filename'] .'" vspace="0px"  hspace="0px" style="float:left;" id="hover-preview-'. $popupcount .'" class="imagecache imagecache-'. $imgcacheset .' imagecache-default imagecache-searchthumb_hover_preview_searchpopup hover-preview" title="'. $typename .'<br/>Playlist Item: '. ($itempos+1) .'<br />Added: '. date('m/d/y',$asset_node->created) .'" /></a><a id="hover-preview-'. $popupcount .'-url" style="display: none;" class="hover-preview-preview-url" href="/'. file_directory_path() .'/imagecache/searchpopup/'. $asset_node->field_audiothumb[0]['filename'] .'"></a>';
           }
           elseif ($asset_node->type == 'external_video') {
             $image_path = str_replace('http://www.youtube.com/watch?v=','',$asset_node->field_video_url[0]['embed']);
@@ -124,7 +124,7 @@
           $docimg = 'unknown';
         break;
       }
-      $image_path = base_path() . 'sites/default/files/document-'. $docimg .'.png';
+      $image_path = base_path() . file_directory_path() .'/document-'. $docimg .'.png';
       $content = '<a href="'. base_path() . 'node/'. $fields['nid']->content .'"><img src="'. $image_path .'" width="100" height="100" alt="Document" title="Document<br/>Added: '. $fields['created']->content .'" id="hover-preview-'. $popupcount .'" class="imagecache imagecache-searchthumb imagecache-default imagecache-searchthumb_hover_preview_searchpopup hover-preview" /></a><a id="hover-preview-'. $popupcount .'-url" style="display: none;" class="hover-preview-preview-url" href="'. $image_path .'"></a>';
     }
     elseif ($id == 'title') {
