@@ -17,6 +17,8 @@ function elmsmedia_profile_modules() {
     'iconizer',
     'lightbox2',
     'libraries',
+    'coder',
+    'hacked',
     'realname',
     'stringoverrides',
     'pathauto',
@@ -199,8 +201,8 @@ function elmsmedia_profile_tasks(&$task, $url) {
   variable_set('theme_default', 'blackleaf');
   // now its safe to enable jquery_ui
   module_enable(array('jquery_ui'));
-  // revert the feature to build out the whole thing
-  features_revert(array('elmsmedia_feature' => array('content', 'fieldgroup', 'node', 'views', 'variable', 'permissions')));
+  // the feature to build out the whole thing
+  features_revert(array('elmsmedia_feature' => array('content', 'fieldgroup', 'menu_links', 'node', 'views', 'variable', 'permissions')));
   // Update the menu router information.
   menu_rebuild();
 }

@@ -18,6 +18,12 @@ projects[advanced_help][subdir] = "contrib"
 projects[auto_nodetitle][version] = "1.2"
 projects[auto_nodetitle][subdir] = "contrib"
 
+projects[hacked][version] = "2.0-beta8"
+projects[hacked][subdir] = "contrib"
+
+projects[coder][version] = "2.0-rc1"
+projects[coder][subdir] = "contrib"
+
 projects[backup_migrate][version] = "2.6"
 projects[backup_migrate][subdir] = "contrib"
 
