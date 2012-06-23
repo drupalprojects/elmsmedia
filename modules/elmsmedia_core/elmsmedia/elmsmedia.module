@@ -169,7 +169,7 @@ function _elmsmedia_form($form_state) {
   }
   
   $flashVars = $settings;
-  $playlist = str_replace('https://', str_replace('http://', '', $base_url));
+  $playlist = str_replace('https://', '', str_replace('http://', '', $base_url));
   $flashVars['playlistfile'].= '/'. $playlist;
   
   if ($node->type == 'audio' || $node->type == 'video' || $node->type == 'webcam' || $node->type == 'playlist' || $node->type == 'external_video') {
