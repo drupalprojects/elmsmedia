@@ -63,9 +63,9 @@ function elmsmedia_profile_modules() {
     'imagefield',
     'fieldgroup',
     'conditional_fields',
+    'ctools',
     'devel',
     'colorpicker',
-    'elmsmedia_feature',
     'features',
     'elmsmedia',
     'elms_styles',
@@ -111,7 +111,7 @@ function elmsmedia_profile_modules() {
     'nodeformcols',
     'context',
     'context_ui',
-    'ctools',
+    'elmsmedia_feature',
   );
   return $elmsmedia;
 }
