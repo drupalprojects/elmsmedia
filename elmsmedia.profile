@@ -16,6 +16,7 @@ function elmsmedia_profile_modules() {
     'elmsmedia',
     'iconizer',
     'lightbox2',
+    'libraries',
     'realname',
     'stringoverrides',
     'pathauto',
@@ -89,6 +90,7 @@ function elmsmedia_profile_modules() {
     'wysiwyg_template',
     'jquery_update',
     'vertical_tabs',
+    'strongarm',
     'subscriptions',
     'subscriptions_mail',
     'subscriptions_taxonomy',
@@ -105,6 +107,9 @@ function elmsmedia_profile_modules() {
     'views_fluid_grid',
     'views',
     'nodeformcols',
+    'context',
+    'context_ui',
+    'ctools',
   );
   return $elmsmedia;
 }

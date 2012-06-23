@@ -9,7 +9,9 @@ function elmsmedia_feature_user_default_permissions() {
   // Exported permission: Use PHP input for field settings (dangerous - grant with care)
   $permissions['Use PHP input for field settings (dangerous - grant with care)'] = array(
     'name' => 'Use PHP input for field settings (dangerous - grant with care)',
-    'roles' => array(),
+    'roles' => array(
+      '0' => 'administrator',
+    ),
   );
 
   // Exported permission: access administration pages
@@ -17,6 +19,7 @@ function elmsmedia_feature_user_default_permissions() {
     'name' => 'access administration pages',
     'roles' => array(
       '0' => 'admin',
+      '1' => 'administrator',
     ),
   );
 
@@ -25,19 +28,24 @@ function elmsmedia_feature_user_default_permissions() {
     'name' => 'access all views',
     'roles' => array(
       '0' => 'admin',
+      '1' => 'administrator',
     ),
   );
 
   // Exported permission: access backup and migrate
   $permissions['access backup and migrate'] = array(
     'name' => 'access backup and migrate',
-    'roles' => array(),
+    'roles' => array(
+      '0' => 'administrator',
+    ),
   );
 
   // Exported permission: access backup files
   $permissions['access backup files'] = array(
     'name' => 'access backup files',
-    'roles' => array(),
+    'roles' => array(
+      '0' => 'administrator',
+    ),
   );
 
   // Exported permission: access content
@@ -45,16 +53,19 @@ function elmsmedia_feature_user_default_permissions() {
     'name' => 'access content',
     'roles' => array(
       '0' => 'admin',
-      '1' => 'instructional designer',
-      '2' => 'instructor',
-      '3' => 'media staff',
+      '1' => 'administrator',
+      '2' => 'instructional designer',
+      '3' => 'instructor',
+      '4' => 'media staff',
     ),
   );
 
   // Exported permission: access devel information
   $permissions['access devel information'] = array(
     'name' => 'access devel information',
-    'roles' => array(),
+    'roles' => array(
+      '0' => 'administrator',
+    ),
   );
 
   // Exported permission: access site reports
@@ -62,6 +73,7 @@ function elmsmedia_feature_user_default_permissions() {
     'name' => 'access site reports',
     'roles' => array(
       '0' => 'admin',
+      '1' => 'administrator',
     ),
   );
 
@@ -70,8 +82,9 @@ function elmsmedia_feature_user_default_permissions() {
     'name' => 'access user profiles',
     'roles' => array(
       '0' => 'admin',
-      '1' => 'instructional designer',
-      '2' => 'media staff',
+      '1' => 'administrator',
+      '2' => 'instructional designer',
+      '3' => 'media staff',
     ),
   );
 
@@ -80,13 +93,16 @@ function elmsmedia_feature_user_default_permissions() {
     'name' => 'administer actions',
     'roles' => array(
       '0' => 'admin',
+      '1' => 'administrator',
     ),
   );
 
   // Exported permission: administer backup and migrate
   $permissions['administer backup and migrate'] = array(
     'name' => 'administer backup and migrate',
-    'roles' => array(),
+    'roles' => array(
+      '0' => 'administrator',
+    ),
   );
 
   // Exported permission: administer blocks
@@ -94,6 +110,7 @@ function elmsmedia_feature_user_default_permissions() {
     'name' => 'administer blocks',
     'roles' => array(
       '0' => 'admin',
+      '1' => 'administrator',
     ),
   );
 
@@ -102,6 +119,7 @@ function elmsmedia_feature_user_default_permissions() {
     'name' => 'administer conditional fields',
     'roles' => array(
       '0' => 'admin',
+      '1' => 'administrator',
     ),
   );
 
@@ -110,19 +128,24 @@ function elmsmedia_feature_user_default_permissions() {
     'name' => 'administer content types',
     'roles' => array(
       '0' => 'admin',
+      '1' => 'administrator',
     ),
   );
 
   // Exported permission: administer date tools
   $permissions['administer date tools'] = array(
     'name' => 'administer date tools',
-    'roles' => array(),
+    'roles' => array(
+      '0' => 'administrator',
+    ),
   );
 
   // Exported permission: administer features
   $permissions['administer features'] = array(
     'name' => 'administer features',
-    'roles' => array(),
+    'roles' => array(
+      '0' => 'administrator',
+    ),
   );
 
   // Exported permission: administer files
@@ -130,6 +153,7 @@ function elmsmedia_feature_user_default_permissions() {
     'name' => 'administer files',
     'roles' => array(
       '0' => 'admin',
+      '1' => 'administrator',
     ),
   );
 
@@ -138,13 +162,16 @@ function elmsmedia_feature_user_default_permissions() {
     'name' => 'administer filters',
     'roles' => array(
       '0' => 'admin',
+      '1' => 'administrator',
     ),
   );
 
   // Exported permission: administer flags
   $permissions['administer flags'] = array(
     'name' => 'administer flags',
-    'roles' => array(),
+    'roles' => array(
+      '0' => 'administrator',
+    ),
   );
 
   // Exported permission: administer imageapi
@@ -152,6 +179,7 @@ function elmsmedia_feature_user_default_permissions() {
     'name' => 'administer imageapi',
     'roles' => array(
       '0' => 'admin',
+      '1' => 'administrator',
     ),
   );
 
@@ -160,6 +188,7 @@ function elmsmedia_feature_user_default_permissions() {
     'name' => 'administer imagecache',
     'roles' => array(
       '0' => 'admin',
+      '1' => 'administrator',
     ),
   );
 
@@ -168,7 +197,8 @@ function elmsmedia_feature_user_default_permissions() {
     'name' => 'administer jwplayermodule',
     'roles' => array(
       '0' => 'admin',
-      '1' => 'media staff',
+      '1' => 'administrator',
+      '2' => 'media staff',
     ),
   );
 
@@ -177,13 +207,16 @@ function elmsmedia_feature_user_default_permissions() {
     'name' => 'administer lightbox2',
     'roles' => array(
       '0' => 'admin',
+      '1' => 'administrator',
     ),
   );
 
   // Exported permission: administer masquerade
   $permissions['administer masquerade'] = array(
     'name' => 'administer masquerade',
-    'roles' => array(),
+    'roles' => array(
+      '0' => 'administrator',
+    ),
   );
 
   // Exported permission: administer menu
@@ -191,13 +224,16 @@ function elmsmedia_feature_user_default_permissions() {
     'name' => 'administer menu',
     'roles' => array(
       '0' => 'admin',
+      '1' => 'administrator',
     ),
   );
 
   // Exported permission: administer module filter
   $permissions['administer module filter'] = array(
     'name' => 'administer module filter',
-    'roles' => array(),
+    'roles' => array(
+      '0' => 'administrator',
+    ),
   );
 
   // Exported permission: administer nodes
@@ -205,6 +241,7 @@ function elmsmedia_feature_user_default_permissions() {
     'name' => 'administer nodes',
     'roles' => array(
       '0' => 'admin',
+      '1' => 'administrator',
     ),
   );
 
@@ -213,6 +250,7 @@ function elmsmedia_feature_user_default_permissions() {
     'name' => 'administer pathauto',
     'roles' => array(
       '0' => 'admin',
+      '1' => 'administrator',
     ),
   );
 
@@ -221,6 +259,7 @@ function elmsmedia_feature_user_default_permissions() {
     'name' => 'administer permissions',
     'roles' => array(
       '0' => 'admin',
+      '1' => 'administrator',
     ),
   );
 
@@ -229,13 +268,16 @@ function elmsmedia_feature_user_default_permissions() {
     'name' => 'administer site configuration',
     'roles' => array(
       '0' => 'admin',
+      '1' => 'administrator',
     ),
   );
 
   // Exported permission: administer string overrides
   $permissions['administer string overrides'] = array(
     'name' => 'administer string overrides',
-    'roles' => array(),
+    'roles' => array(
+      '0' => 'administrator',
+    ),
   );
 
   // Exported permission: administer taxonomy
@@ -243,19 +285,24 @@ function elmsmedia_feature_user_default_permissions() {
     'name' => 'administer taxonomy',
     'roles' => array(
       '0' => 'admin',
+      '1' => 'administrator',
     ),
   );
 
   // Exported permission: administer theme assignments
   $permissions['administer theme assignments'] = array(
     'name' => 'administer theme assignments',
-    'roles' => array(),
+    'roles' => array(
+      '0' => 'administrator',
+    ),
   );
 
   // Exported permission: administer themekey settings
   $permissions['administer themekey settings'] = array(
     'name' => 'administer themekey settings',
-    'roles' => array(),
+    'roles' => array(
+      '0' => 'administrator',
+    ),
   );
 
   // Exported permission: administer url aliases
@@ -263,13 +310,16 @@ function elmsmedia_feature_user_default_permissions() {
     'name' => 'administer url aliases',
     'roles' => array(
       '0' => 'admin',
+      '1' => 'administrator',
     ),
   );
 
   // Exported permission: administer user subscriptions
   $permissions['administer user subscriptions'] = array(
     'name' => 'administer user subscriptions',
-    'roles' => array(),
+    'roles' => array(
+      '0' => 'administrator',
+    ),
   );
 
   // Exported permission: administer users
@@ -277,6 +327,7 @@ function elmsmedia_feature_user_default_permissions() {
     'name' => 'administer users',
     'roles' => array(
       '0' => 'admin',
+      '1' => 'administrator',
     ),
   );
 
@@ -285,6 +336,7 @@ function elmsmedia_feature_user_default_permissions() {
     'name' => 'administer views',
     'roles' => array(
       '0' => 'admin',
+      '1' => 'administrator',
     ),
   );
 
@@ -293,31 +345,40 @@ function elmsmedia_feature_user_default_permissions() {
     'name' => 'administer views calc',
     'roles' => array(
       '0' => 'admin',
+      '1' => 'administrator',
     ),
   );
 
   // Exported permission: assign node themes
   $permissions['assign node themes'] = array(
     'name' => 'assign node themes',
-    'roles' => array(),
+    'roles' => array(
+      '0' => 'administrator',
+    ),
   );
 
   // Exported permission: assign path alias themes
   $permissions['assign path alias themes'] = array(
     'name' => 'assign path alias themes',
-    'roles' => array(),
+    'roles' => array(
+      '0' => 'administrator',
+    ),
   );
 
   // Exported permission: assign theme to own nodes
   $permissions['assign theme to own nodes'] = array(
     'name' => 'assign theme to own nodes',
-    'roles' => array(),
+    'roles' => array(
+      '0' => 'administrator',
+    ),
   );
 
   // Exported permission: bulk-administer user subscriptions
   $permissions['bulk-administer user subscriptions'] = array(
     'name' => 'bulk-administer user subscriptions',
-    'roles' => array(),
+    'roles' => array(
+      '0' => 'administrator',
+    ),
   );
 
   // Exported permission: change own username
@@ -325,19 +386,24 @@ function elmsmedia_feature_user_default_permissions() {
     'name' => 'change own username',
     'roles' => array(
       '0' => 'admin',
+      '1' => 'administrator',
     ),
   );
 
   // Exported permission: collapse format fieldset by default
   $permissions['collapse format fieldset by default'] = array(
     'name' => 'collapse format fieldset by default',
-    'roles' => array(),
+    'roles' => array(
+      '0' => 'administrator',
+    ),
   );
 
   // Exported permission: collapsible format selection
   $permissions['collapsible format selection'] = array(
     'name' => 'collapsible format selection',
-    'roles' => array(),
+    'roles' => array(
+      '0' => 'administrator',
+    ),
   );
 
   // Exported permission: create archived_media content
@@ -345,6 +411,7 @@ function elmsmedia_feature_user_default_permissions() {
     'name' => 'create archived_media content',
     'roles' => array(
       '0' => 'admin',
+      '1' => 'administrator',
     ),
   );
 
@@ -353,9 +420,10 @@ function elmsmedia_feature_user_default_permissions() {
     'name' => 'create audio content',
     'roles' => array(
       '0' => 'admin',
-      '1' => 'instructional designer',
-      '2' => 'instructor',
-      '3' => 'media staff',
+      '1' => 'administrator',
+      '2' => 'instructional designer',
+      '3' => 'instructor',
+      '4' => 'media staff',
     ),
   );
 
@@ -364,9 +432,10 @@ function elmsmedia_feature_user_default_permissions() {
     'name' => 'create document content',
     'roles' => array(
       '0' => 'admin',
-      '1' => 'instructional designer',
-      '2' => 'instructor',
-      '3' => 'media staff',
+      '1' => 'administrator',
+      '2' => 'instructional designer',
+      '3' => 'instructor',
+      '4' => 'media staff',
     ),
   );
 
@@ -375,9 +444,10 @@ function elmsmedia_feature_user_default_permissions() {
     'name' => 'create external_video content',
     'roles' => array(
       '0' => 'admin',
-      '1' => 'instructional designer',
-      '2' => 'instructor',
-      '3' => 'media staff',
+      '1' => 'administrator',
+      '2' => 'instructional designer',
+      '3' => 'instructor',
+      '4' => 'media staff',
     ),
   );
 
@@ -386,9 +456,10 @@ function elmsmedia_feature_user_default_permissions() {
     'name' => 'create flash content',
     'roles' => array(
       '0' => 'admin',
-      '1' => 'instructional designer',
-      '2' => 'instructor',
-      '3' => 'media staff',
+      '1' => 'administrator',
+      '2' => 'instructional designer',
+      '3' => 'instructor',
+      '4' => 'media staff',
     ),
   );
 
@@ -397,9 +468,10 @@ function elmsmedia_feature_user_default_permissions() {
     'name' => 'create image content',
     'roles' => array(
       '0' => 'admin',
-      '1' => 'instructional designer',
-      '2' => 'instructor',
-      '3' => 'media staff',
+      '1' => 'administrator',
+      '2' => 'instructional designer',
+      '3' => 'instructor',
+      '4' => 'media staff',
     ),
   );
 
@@ -408,9 +480,10 @@ function elmsmedia_feature_user_default_permissions() {
     'name' => 'create image_gallery content',
     'roles' => array(
       '0' => 'admin',
-      '1' => 'instructional designer',
-      '2' => 'instructor',
-      '3' => 'media staff',
+      '1' => 'administrator',
+      '2' => 'instructional designer',
+      '3' => 'instructor',
+      '4' => 'media staff',
     ),
   );
 
@@ -419,19 +492,10 @@ function elmsmedia_feature_user_default_permissions() {
     'name' => 'create image_treatment content',
     'roles' => array(
       '0' => 'admin',
-      '1' => 'instructional designer',
-      '2' => 'instructor',
-      '3' => 'media staff',
-    ),
-  );
-
-  // Exported permission: create media_request_form content
-  $permissions['create media_request_form content'] = array(
-    'name' => 'create media_request_form content',
-    'roles' => array(
-      '0' => 'admin',
-      '1' => 'instructional designer',
-      '2' => 'media staff',
+      '1' => 'administrator',
+      '2' => 'instructional designer',
+      '3' => 'instructor',
+      '4' => 'media staff',
     ),
   );
 
@@ -440,9 +504,10 @@ function elmsmedia_feature_user_default_permissions() {
     'name' => 'create playlist content',
     'roles' => array(
       '0' => 'admin',
-      '1' => 'instructional designer',
-      '2' => 'instructor',
-      '3' => 'media staff',
+      '1' => 'administrator',
+      '2' => 'instructional designer',
+      '3' => 'instructor',
+      '4' => 'media staff',
     ),
   );
 
@@ -451,6 +516,7 @@ function elmsmedia_feature_user_default_permissions() {
     'name' => 'create url aliases',
     'roles' => array(
       '0' => 'admin',
+      '1' => 'administrator',
     ),
   );
 
@@ -459,9 +525,10 @@ function elmsmedia_feature_user_default_permissions() {
     'name' => 'create video content',
     'roles' => array(
       '0' => 'admin',
-      '1' => 'instructional designer',
-      '2' => 'instructor',
-      '3' => 'media staff',
+      '1' => 'administrator',
+      '2' => 'instructional designer',
+      '3' => 'instructor',
+      '4' => 'media staff',
     ),
   );
 
@@ -470,6 +537,7 @@ function elmsmedia_feature_user_default_permissions() {
     'name' => 'create views calc',
     'roles' => array(
       '0' => 'admin',
+      '1' => 'administrator',
     ),
   );
 
@@ -478,8 +546,9 @@ function elmsmedia_feature_user_default_permissions() {
     'name' => 'create webcam content',
     'roles' => array(
       '0' => 'admin',
-      '1' => 'instructional designer',
-      '2' => 'instructor',
+      '1' => 'administrator',
+      '2' => 'instructional designer',
+      '3' => 'instructor',
     ),
   );
 
@@ -488,6 +557,7 @@ function elmsmedia_feature_user_default_permissions() {
     'name' => 'delete any archived_media content',
     'roles' => array(
       '0' => 'admin',
+      '1' => 'administrator',
     ),
   );
 
@@ -496,6 +566,7 @@ function elmsmedia_feature_user_default_permissions() {
     'name' => 'delete any audio content',
     'roles' => array(
       '0' => 'admin',
+      '1' => 'administrator',
     ),
   );
 
@@ -504,6 +575,7 @@ function elmsmedia_feature_user_default_permissions() {
     'name' => 'delete any document content',
     'roles' => array(
       '0' => 'admin',
+      '1' => 'administrator',
     ),
   );
 
@@ -512,6 +584,7 @@ function elmsmedia_feature_user_default_permissions() {
     'name' => 'delete any external_video content',
     'roles' => array(
       '0' => 'admin',
+      '1' => 'administrator',
     ),
   );
 
@@ -520,6 +593,7 @@ function elmsmedia_feature_user_default_permissions() {
     'name' => 'delete any flash content',
     'roles' => array(
       '0' => 'admin',
+      '1' => 'administrator',
     ),
   );
 
@@ -528,6 +602,7 @@ function elmsmedia_feature_user_default_permissions() {
     'name' => 'delete any image content',
     'roles' => array(
       '0' => 'admin',
+      '1' => 'administrator',
     ),
   );
 
@@ -536,6 +611,7 @@ function elmsmedia_feature_user_default_permissions() {
     'name' => 'delete any image_gallery content',
     'roles' => array(
       '0' => 'admin',
+      '1' => 'administrator',
     ),
   );
 
@@ -544,14 +620,7 @@ function elmsmedia_feature_user_default_permissions() {
     'name' => 'delete any image_treatment content',
     'roles' => array(
       '0' => 'admin',
-    ),
-  );
-
-  // Exported permission: delete any media_request_form content
-  $permissions['delete any media_request_form content'] = array(
-    'name' => 'delete any media_request_form content',
-    'roles' => array(
-      '0' => 'admin',
+      '1' => 'administrator',
     ),
   );
 
@@ -560,6 +629,7 @@ function elmsmedia_feature_user_default_permissions() {
     'name' => 'delete any playlist content',
     'roles' => array(
       '0' => 'admin',
+      '1' => 'administrator',
     ),
   );
 
@@ -568,7 +638,8 @@ function elmsmedia_feature_user_default_permissions() {
     'name' => 'delete any video content',
     'roles' => array(
       '0' => 'admin',
-      '1' => 'media staff',
+      '1' => 'administrator',
+      '2' => 'media staff',
     ),
   );
 
@@ -577,13 +648,16 @@ function elmsmedia_feature_user_default_permissions() {
     'name' => 'delete any webcam content',
     'roles' => array(
       '0' => 'admin',
+      '1' => 'administrator',
     ),
   );
 
   // Exported permission: delete backup files
   $permissions['delete backup files'] = array(
     'name' => 'delete backup files',
-    'roles' => array(),
+    'roles' => array(
+      '0' => 'administrator',
+    ),
   );
 
   // Exported permission: delete own archived_media content
@@ -591,6 +665,7 @@ function elmsmedia_feature_user_default_permissions() {
     'name' => 'delete own archived_media content',
     'roles' => array(
       '0' => 'admin',
+      '1' => 'administrator',
     ),
   );
 
@@ -599,8 +674,9 @@ function elmsmedia_feature_user_default_permissions() {
     'name' => 'delete own audio content',
     'roles' => array(
       '0' => 'admin',
-      '1' => 'instructional designer',
-      '2' => 'media staff',
+      '1' => 'administrator',
+      '2' => 'instructional designer',
+      '3' => 'media staff',
     ),
   );
 
@@ -609,8 +685,9 @@ function elmsmedia_feature_user_default_permissions() {
     'name' => 'delete own document content',
     'roles' => array(
       '0' => 'admin',
-      '1' => 'instructional designer',
-      '2' => 'media staff',
+      '1' => 'administrator',
+      '2' => 'instructional designer',
+      '3' => 'media staff',
     ),
   );
 
@@ -619,8 +696,9 @@ function elmsmedia_feature_user_default_permissions() {
     'name' => 'delete own external_video content',
     'roles' => array(
       '0' => 'admin',
-      '1' => 'instructional designer',
-      '2' => 'media staff',
+      '1' => 'administrator',
+      '2' => 'instructional designer',
+      '3' => 'media staff',
     ),
   );
 
@@ -629,8 +707,9 @@ function elmsmedia_feature_user_default_permissions() {
     'name' => 'delete own flash content',
     'roles' => array(
       '0' => 'admin',
-      '1' => 'instructional designer',
-      '2' => 'media staff',
+      '1' => 'administrator',
+      '2' => 'instructional designer',
+      '3' => 'media staff',
     ),
   );
 
@@ -639,8 +718,9 @@ function elmsmedia_feature_user_default_permissions() {
     'name' => 'delete own image content',
     'roles' => array(
       '0' => 'admin',
-      '1' => 'instructional designer',
-      '2' => 'media staff',
+      '1' => 'administrator',
+      '2' => 'instructional designer',
+      '3' => 'media staff',
     ),
   );
 
@@ -649,8 +729,9 @@ function elmsmedia_feature_user_default_permissions() {
     'name' => 'delete own image_gallery content',
     'roles' => array(
       '0' => 'admin',
-      '1' => 'instructional designer',
-      '2' => 'media staff',
+      '1' => 'administrator',
+      '2' => 'instructional designer',
+      '3' => 'media staff',
     ),
   );
 
@@ -659,18 +740,9 @@ function elmsmedia_feature_user_default_permissions() {
     'name' => 'delete own image_treatment content',
     'roles' => array(
       '0' => 'admin',
-      '1' => 'instructional designer',
-      '2' => 'media staff',
-    ),
-  );
-
-  // Exported permission: delete own media_request_form content
-  $permissions['delete own media_request_form content'] = array(
-    'name' => 'delete own media_request_form content',
-    'roles' => array(
-      '0' => 'admin',
-      '1' => 'instructional designer',
-      '2' => 'media staff',
+      '1' => 'administrator',
+      '2' => 'instructional designer',
+      '3' => 'media staff',
     ),
   );
 
@@ -679,8 +751,9 @@ function elmsmedia_feature_user_default_permissions() {
     'name' => 'delete own playlist content',
     'roles' => array(
       '0' => 'admin',
-      '1' => 'instructional designer',
-      '2' => 'media staff',
+      '1' => 'administrator',
+      '2' => 'instructional designer',
+      '3' => 'media staff',
     ),
   );
 
@@ -689,8 +762,9 @@ function elmsmedia_feature_user_default_permissions() {
     'name' => 'delete own video content',
     'roles' => array(
       '0' => 'admin',
-      '1' => 'instructional designer',
-      '2' => 'media staff',
+      '1' => 'administrator',
+      '2' => 'instructional designer',
+      '3' => 'media staff',
     ),
   );
 
@@ -699,7 +773,8 @@ function elmsmedia_feature_user_default_permissions() {
     'name' => 'delete own webcam content',
     'roles' => array(
       '0' => 'admin',
-      '1' => 'instructional designer',
+      '1' => 'administrator',
+      '2' => 'instructional designer',
     ),
   );
 
@@ -708,6 +783,7 @@ function elmsmedia_feature_user_default_permissions() {
     'name' => 'delete revisions',
     'roles' => array(
       '0' => 'admin',
+      '1' => 'administrator',
     ),
   );
 
@@ -716,13 +792,16 @@ function elmsmedia_feature_user_default_permissions() {
     'name' => 'display iconizer links',
     'roles' => array(
       '0' => 'admin',
+      '1' => 'administrator',
     ),
   );
 
   // Exported permission: display source code
   $permissions['display source code'] = array(
     'name' => 'display source code',
-    'roles' => array(),
+    'roles' => array(
+      '0' => 'administrator',
+    ),
   );
 
   // Exported permission: download original image
@@ -730,8 +809,9 @@ function elmsmedia_feature_user_default_permissions() {
     'name' => 'download original image',
     'roles' => array(
       '0' => 'admin',
-      '1' => 'instructional designer',
-      '2' => 'media staff',
+      '1' => 'administrator',
+      '2' => 'instructional designer',
+      '3' => 'media staff',
     ),
   );
 
@@ -740,6 +820,7 @@ function elmsmedia_feature_user_default_permissions() {
     'name' => 'edit any archived_media content',
     'roles' => array(
       '0' => 'admin',
+      '1' => 'administrator',
     ),
   );
 
@@ -748,8 +829,9 @@ function elmsmedia_feature_user_default_permissions() {
     'name' => 'edit any audio content',
     'roles' => array(
       '0' => 'admin',
-      '1' => 'instructional designer',
-      '2' => 'media staff',
+      '1' => 'administrator',
+      '2' => 'instructional designer',
+      '3' => 'media staff',
     ),
   );
 
@@ -758,8 +840,9 @@ function elmsmedia_feature_user_default_permissions() {
     'name' => 'edit any document content',
     'roles' => array(
       '0' => 'admin',
-      '1' => 'instructional designer',
-      '2' => 'media staff',
+      '1' => 'administrator',
+      '2' => 'instructional designer',
+      '3' => 'media staff',
     ),
   );
 
@@ -768,8 +851,9 @@ function elmsmedia_feature_user_default_permissions() {
     'name' => 'edit any external_video content',
     'roles' => array(
       '0' => 'admin',
-      '1' => 'instructional designer',
-      '2' => 'media staff',
+      '1' => 'administrator',
+      '2' => 'instructional designer',
+      '3' => 'media staff',
     ),
   );
 
@@ -778,8 +862,9 @@ function elmsmedia_feature_user_default_permissions() {
     'name' => 'edit any flash content',
     'roles' => array(
       '0' => 'admin',
-      '1' => 'instructional designer',
-      '2' => 'media staff',
+      '1' => 'administrator',
+      '2' => 'instructional designer',
+      '3' => 'media staff',
     ),
   );
 
@@ -788,8 +873,9 @@ function elmsmedia_feature_user_default_permissions() {
     'name' => 'edit any image content',
     'roles' => array(
       '0' => 'admin',
-      '1' => 'instructional designer',
-      '2' => 'media staff',
+      '1' => 'administrator',
+      '2' => 'instructional designer',
+      '3' => 'media staff',
     ),
   );
 
@@ -798,8 +884,9 @@ function elmsmedia_feature_user_default_permissions() {
     'name' => 'edit any image_gallery content',
     'roles' => array(
       '0' => 'admin',
-      '1' => 'instructional designer',
-      '2' => 'media staff',
+      '1' => 'administrator',
+      '2' => 'instructional designer',
+      '3' => 'media staff',
     ),
   );
 
@@ -808,18 +895,9 @@ function elmsmedia_feature_user_default_permissions() {
     'name' => 'edit any image_treatment content',
     'roles' => array(
       '0' => 'admin',
-      '1' => 'instructional designer',
-      '2' => 'media staff',
-    ),
-  );
-
-  // Exported permission: edit any media_request_form content
-  $permissions['edit any media_request_form content'] = array(
-    'name' => 'edit any media_request_form content',
-    'roles' => array(
-      '0' => 'admin',
-      '1' => 'instructional designer',
-      '2' => 'media staff',
+      '1' => 'administrator',
+      '2' => 'instructional designer',
+      '3' => 'media staff',
     ),
   );
 
@@ -828,8 +906,9 @@ function elmsmedia_feature_user_default_permissions() {
     'name' => 'edit any playlist content',
     'roles' => array(
       '0' => 'admin',
-      '1' => 'instructional designer',
-      '2' => 'media staff',
+      '1' => 'administrator',
+      '2' => 'instructional designer',
+      '3' => 'media staff',
     ),
   );
 
@@ -838,8 +917,9 @@ function elmsmedia_feature_user_default_permissions() {
     'name' => 'edit any video content',
     'roles' => array(
       '0' => 'admin',
-      '1' => 'instructional designer',
-      '2' => 'media staff',
+      '1' => 'administrator',
+      '2' => 'instructional designer',
+      '3' => 'media staff',
     ),
   );
 
@@ -848,7 +928,8 @@ function elmsmedia_feature_user_default_permissions() {
     'name' => 'edit any webcam content',
     'roles' => array(
       '0' => 'admin',
-      '1' => 'instructional designer',
+      '1' => 'administrator',
+      '2' => 'instructional designer',
     ),
   );
 
@@ -857,6 +938,7 @@ function elmsmedia_feature_user_default_permissions() {
     'name' => 'edit own archived_media content',
     'roles' => array(
       '0' => 'admin',
+      '1' => 'administrator',
     ),
   );
 
@@ -865,9 +947,10 @@ function elmsmedia_feature_user_default_permissions() {
     'name' => 'edit own audio content',
     'roles' => array(
       '0' => 'admin',
-      '1' => 'instructional designer',
-      '2' => 'instructor',
-      '3' => 'media staff',
+      '1' => 'administrator',
+      '2' => 'instructional designer',
+      '3' => 'instructor',
+      '4' => 'media staff',
     ),
   );
 
@@ -876,9 +959,10 @@ function elmsmedia_feature_user_default_permissions() {
     'name' => 'edit own document content',
     'roles' => array(
       '0' => 'admin',
-      '1' => 'instructional designer',
-      '2' => 'instructor',
-      '3' => 'media staff',
+      '1' => 'administrator',
+      '2' => 'instructional designer',
+      '3' => 'instructor',
+      '4' => 'media staff',
     ),
   );
 
@@ -887,9 +971,10 @@ function elmsmedia_feature_user_default_permissions() {
     'name' => 'edit own external_video content',
     'roles' => array(
       '0' => 'admin',
-      '1' => 'instructional designer',
-      '2' => 'instructor',
-      '3' => 'media staff',
+      '1' => 'administrator',
+      '2' => 'instructional designer',
+      '3' => 'instructor',
+      '4' => 'media staff',
     ),
   );
 
@@ -898,9 +983,10 @@ function elmsmedia_feature_user_default_permissions() {
     'name' => 'edit own flash content',
     'roles' => array(
       '0' => 'admin',
-      '1' => 'instructional designer',
-      '2' => 'instructor',
-      '3' => 'media staff',
+      '1' => 'administrator',
+      '2' => 'instructional designer',
+      '3' => 'instructor',
+      '4' => 'media staff',
     ),
   );
 
@@ -909,9 +995,10 @@ function elmsmedia_feature_user_default_permissions() {
     'name' => 'edit own image content',
     'roles' => array(
       '0' => 'admin',
-      '1' => 'instructional designer',
-      '2' => 'instructor',
-      '3' => 'media staff',
+      '1' => 'administrator',
+      '2' => 'instructional designer',
+      '3' => 'instructor',
+      '4' => 'media staff',
     ),
   );
 
@@ -920,9 +1007,10 @@ function elmsmedia_feature_user_default_permissions() {
     'name' => 'edit own image_gallery content',
     'roles' => array(
       '0' => 'admin',
-      '1' => 'instructional designer',
-      '2' => 'instructor',
-      '3' => 'media staff',
+      '1' => 'administrator',
+      '2' => 'instructional designer',
+      '3' => 'instructor',
+      '4' => 'media staff',
     ),
   );
 
@@ -931,20 +1019,10 @@ function elmsmedia_feature_user_default_permissions() {
     'name' => 'edit own image_treatment content',
     'roles' => array(
       '0' => 'admin',
-      '1' => 'instructional designer',
-      '2' => 'instructor',
-      '3' => 'media staff',
-    ),
-  );
-
-  // Exported permission: edit own media_request_form content
-  $permissions['edit own media_request_form content'] = array(
-    'name' => 'edit own media_request_form content',
-    'roles' => array(
-      '0' => 'admin',
-      '1' => 'instructional designer',
-      '2' => 'instructor',
-      '3' => 'media staff',
+      '1' => 'administrator',
+      '2' => 'instructional designer',
+      '3' => 'instructor',
+      '4' => 'media staff',
     ),
   );
 
@@ -953,9 +1031,10 @@ function elmsmedia_feature_user_default_permissions() {
     'name' => 'edit own playlist content',
     'roles' => array(
       '0' => 'admin',
-      '1' => 'instructional designer',
-      '2' => 'instructor',
-      '3' => 'media staff',
+      '1' => 'administrator',
+      '2' => 'instructional designer',
+      '3' => 'instructor',
+      '4' => 'media staff',
     ),
   );
 
@@ -964,9 +1043,10 @@ function elmsmedia_feature_user_default_permissions() {
     'name' => 'edit own video content',
     'roles' => array(
       '0' => 'admin',
-      '1' => 'instructional designer',
-      '2' => 'instructor',
-      '3' => 'media staff',
+      '1' => 'administrator',
+      '2' => 'instructional designer',
+      '3' => 'instructor',
+      '4' => 'media staff',
     ),
   );
 
@@ -975,15 +1055,18 @@ function elmsmedia_feature_user_default_permissions() {
     'name' => 'edit own webcam content',
     'roles' => array(
       '0' => 'admin',
-      '1' => 'instructional designer',
-      '2' => 'instructor',
+      '1' => 'administrator',
+      '2' => 'instructional designer',
+      '3' => 'instructor',
     ),
   );
 
   // Exported permission: execute php code
   $permissions['execute php code'] = array(
     'name' => 'execute php code',
-    'roles' => array(),
+    'roles' => array(
+      '0' => 'administrator',
+    ),
   );
 
   // Exported permission: flush imagecache
@@ -991,13 +1074,16 @@ function elmsmedia_feature_user_default_permissions() {
     'name' => 'flush imagecache',
     'roles' => array(
       '0' => 'admin',
+      '1' => 'administrator',
     ),
   );
 
   // Exported permission: manage features
   $permissions['manage features'] = array(
     'name' => 'manage features',
-    'roles' => array(),
+    'roles' => array(
+      '0' => 'administrator',
+    ),
   );
 
   // Exported permission: manage iconizer settings
@@ -1005,6 +1091,7 @@ function elmsmedia_feature_user_default_permissions() {
     'name' => 'manage iconizer settings',
     'roles' => array(
       '0' => 'admin',
+      '1' => 'administrator',
     ),
   );
 
@@ -1013,6 +1100,7 @@ function elmsmedia_feature_user_default_permissions() {
     'name' => 'masquerade as admin',
     'roles' => array(
       '0' => 'admin',
+      '1' => 'administrator',
     ),
   );
 
@@ -1021,6 +1109,7 @@ function elmsmedia_feature_user_default_permissions() {
     'name' => 'masquerade as user',
     'roles' => array(
       '0' => 'admin',
+      '1' => 'administrator',
     ),
   );
 
@@ -1029,29 +1118,24 @@ function elmsmedia_feature_user_default_permissions() {
     'name' => 'notify of path changes',
     'roles' => array(
       '0' => 'admin',
+      '1' => 'administrator',
     ),
   );
 
   // Exported permission: perform backup
   $permissions['perform backup'] = array(
     'name' => 'perform backup',
-    'roles' => array(),
-  );
-
-  // Exported permission: reboot fmis
-  $permissions['reboot fmis'] = array(
-    'name' => 'reboot fmis',
     'roles' => array(
-      '0' => 'admin',
-      '1' => 'instructional designer',
-      '2' => 'media staff',
+      '0' => 'administrator',
     ),
   );
 
   // Exported permission: restore from backup
   $permissions['restore from backup'] = array(
     'name' => 'restore from backup',
-    'roles' => array(),
+    'roles' => array(
+      '0' => 'administrator',
+    ),
   );
 
   // Exported permission: revert revisions
@@ -1059,9 +1143,10 @@ function elmsmedia_feature_user_default_permissions() {
     'name' => 'revert revisions',
     'roles' => array(
       '0' => 'admin',
-      '1' => 'instructional designer',
-      '2' => 'instructor',
-      '3' => 'media staff',
+      '1' => 'administrator',
+      '2' => 'instructional designer',
+      '3' => 'instructor',
+      '4' => 'media staff',
     ),
   );
 
@@ -1070,37 +1155,48 @@ function elmsmedia_feature_user_default_permissions() {
     'name' => 'select different theme',
     'roles' => array(
       '0' => 'admin',
+      '1' => 'administrator',
     ),
   );
 
   // Exported permission: show format selection for blocks
   $permissions['show format selection for blocks'] = array(
     'name' => 'show format selection for blocks',
-    'roles' => array(),
+    'roles' => array(
+      '0' => 'administrator',
+    ),
   );
 
   // Exported permission: show format selection for comments
   $permissions['show format selection for comments'] = array(
     'name' => 'show format selection for comments',
-    'roles' => array(),
+    'roles' => array(
+      '0' => 'administrator',
+    ),
   );
 
   // Exported permission: show format selection for nodes
   $permissions['show format selection for nodes'] = array(
     'name' => 'show format selection for nodes',
-    'roles' => array(),
+    'roles' => array(
+      '0' => 'administrator',
+    ),
   );
 
   // Exported permission: show format tips
   $permissions['show format tips'] = array(
     'name' => 'show format tips',
-    'roles' => array(),
+    'roles' => array(
+      '0' => 'administrator',
+    ),
   );
 
   // Exported permission: show more format tips link
   $permissions['show more format tips link'] = array(
     'name' => 'show more format tips link',
-    'roles' => array(),
+    'roles' => array(
+      '0' => 'administrator',
+    ),
   );
 
   // Exported permission: subscribe to all content types
@@ -1108,8 +1204,9 @@ function elmsmedia_feature_user_default_permissions() {
     'name' => 'subscribe to all content types',
     'roles' => array(
       '0' => 'admin',
-      '1' => 'instructional designer',
-      '2' => 'media staff',
+      '1' => 'administrator',
+      '2' => 'instructional designer',
+      '3' => 'media staff',
     ),
   );
 
@@ -1118,8 +1215,9 @@ function elmsmedia_feature_user_default_permissions() {
     'name' => 'subscribe to content',
     'roles' => array(
       '0' => 'admin',
-      '1' => 'instructional designer',
-      '2' => 'media staff',
+      '1' => 'administrator',
+      '2' => 'instructional designer',
+      '3' => 'media staff',
     ),
   );
 
@@ -1128,8 +1226,9 @@ function elmsmedia_feature_user_default_permissions() {
     'name' => 'subscribe to content types',
     'roles' => array(
       '0' => 'admin',
-      '1' => 'instructional designer',
-      '2' => 'media staff',
+      '1' => 'administrator',
+      '2' => 'instructional designer',
+      '3' => 'media staff',
     ),
   );
 
@@ -1138,9 +1237,10 @@ function elmsmedia_feature_user_default_permissions() {
     'name' => 'subscribe to taxonomy terms',
     'roles' => array(
       '0' => 'admin',
-      '1' => 'instructional designer',
-      '2' => 'instructor',
-      '3' => 'media staff',
+      '1' => 'administrator',
+      '2' => 'instructional designer',
+      '3' => 'instructor',
+      '4' => 'media staff',
     ),
   );
 
@@ -1149,16 +1249,19 @@ function elmsmedia_feature_user_default_permissions() {
     'name' => 'suspend own subscriptions',
     'roles' => array(
       '0' => 'admin',
-      '1' => 'instructional designer',
-      '2' => 'instructor',
-      '3' => 'media staff',
+      '1' => 'administrator',
+      '2' => 'instructional designer',
+      '3' => 'instructor',
+      '4' => 'media staff',
     ),
   );
 
   // Exported permission: switch users
   $permissions['switch users'] = array(
     'name' => 'switch users',
-    'roles' => array(),
+    'roles' => array(
+      '0' => 'administrator',
+    ),
   );
 
   // Exported permission: use PHP for block visibility
@@ -1166,6 +1269,7 @@ function elmsmedia_feature_user_default_permissions() {
     'name' => 'use PHP for block visibility',
     'roles' => array(
       '0' => 'admin',
+      '1' => 'administrator',
     ),
   );
 
@@ -1174,13 +1278,16 @@ function elmsmedia_feature_user_default_permissions() {
     'name' => 'use PHP for title patterns',
     'roles' => array(
       '0' => 'admin',
+      '1' => 'administrator',
     ),
   );
 
   // Exported permission: use admin toolbar
   $permissions['use admin toolbar'] = array(
     'name' => 'use admin toolbar',
-    'roles' => array(),
+    'roles' => array(
+      '0' => 'administrator',
+    ),
   );
 
   // Exported permission: use realname
@@ -1188,8 +1295,9 @@ function elmsmedia_feature_user_default_permissions() {
     'name' => 'use realname',
     'roles' => array(
       '0' => 'admin',
-      '1' => 'instructional designer',
-      '2' => 'media staff',
+      '1' => 'administrator',
+      '2' => 'instructional designer',
+      '3' => 'media staff',
     ),
   );
 
@@ -1198,6 +1306,7 @@ function elmsmedia_feature_user_default_permissions() {
     'name' => 'view advanced help index',
     'roles' => array(
       '0' => 'admin',
+      '1' => 'administrator',
     ),
   );
 
@@ -1206,6 +1315,7 @@ function elmsmedia_feature_user_default_permissions() {
     'name' => 'view advanced help popup',
     'roles' => array(
       '0' => 'admin',
+      '1' => 'administrator',
     ),
   );
 
@@ -1214,31 +1324,40 @@ function elmsmedia_feature_user_default_permissions() {
     'name' => 'view advanced help topic',
     'roles' => array(
       '0' => 'admin',
+      '1' => 'administrator',
     ),
   );
 
   // Exported permission: view author options
   $permissions['view author options'] = array(
     'name' => 'view author options',
-    'roles' => array(),
+    'roles' => array(
+      '0' => 'administrator',
+    ),
   );
 
   // Exported permission: view body options
   $permissions['view body options'] = array(
     'name' => 'view body options',
-    'roles' => array(),
+    'roles' => array(
+      '0' => 'administrator',
+    ),
   );
 
   // Exported permission: view code review
   $permissions['view code review'] = array(
     'name' => 'view code review',
-    'roles' => array(),
+    'roles' => array(
+      '0' => 'administrator',
+    ),
   );
 
   // Exported permission: view code review all
   $permissions['view code review all'] = array(
     'name' => 'view code review all',
-    'roles' => array(),
+    'roles' => array(
+      '0' => 'administrator',
+    ),
   );
 
   // Exported permission: view comment preview button
@@ -1246,37 +1365,40 @@ function elmsmedia_feature_user_default_permissions() {
     'name' => 'view comment preview button',
     'roles' => array(
       '0' => 'admin',
+      '1' => 'administrator',
     ),
   );
 
   // Exported permission: view comment settings
   $permissions['view comment settings'] = array(
     'name' => 'view comment settings',
-    'roles' => array(),
+    'roles' => array(
+      '0' => 'administrator',
+    ),
   );
 
   // Exported permission: view date repeats
   $permissions['view date repeats'] = array(
     'name' => 'view date repeats',
-    'roles' => array(),
+    'roles' => array(
+      '0' => 'administrator',
+    ),
   );
 
   // Exported permission: view delete button
   $permissions['view delete button'] = array(
     'name' => 'view delete button',
-    'roles' => array(),
+    'roles' => array(
+      '0' => 'administrator',
+    ),
   );
 
   // Exported permission: view diffs of changed files
   $permissions['view diffs of changed files'] = array(
     'name' => 'view diffs of changed files',
-    'roles' => array(),
-  );
-
-  // Exported permission: view imagecache art201finalsubmission
-  $permissions['view imagecache art201finalsubmission'] = array(
-    'name' => 'view imagecache art201finalsubmission',
-    'roles' => array(),
+    'roles' => array(
+      '0' => 'administrator',
+    ),
   );
 
   // Exported permission: view imagecache basic
@@ -1284,15 +1406,26 @@ function elmsmedia_feature_user_default_permissions() {
     'name' => 'view imagecache basic',
     'roles' => array(
       '0' => 'admin',
-      '1' => 'instructional designer',
-      '2' => 'media staff',
+      '1' => 'administrator',
+      '2' => 'instructional designer',
+      '3' => 'media staff',
     ),
   );
 
   // Exported permission: view imagecache citation
   $permissions['view imagecache citation'] = array(
     'name' => 'view imagecache citation',
-    'roles' => array(),
+    'roles' => array(
+      '0' => 'administrator',
+    ),
+  );
+
+  // Exported permission: view imagecache elms_column
+  $permissions['view imagecache elms_column'] = array(
+    'name' => 'view imagecache elms_column',
+    'roles' => array(
+      '0' => 'administrator',
+    ),
   );
 
   // Exported permission: view imagecache elmsmedia_artistartwork
@@ -1300,8 +1433,9 @@ function elmsmedia_feature_user_default_permissions() {
     'name' => 'view imagecache elmsmedia_artistartwork',
     'roles' => array(
       '0' => 'admin',
-      '1' => 'instructional designer',
-      '2' => 'media staff',
+      '1' => 'administrator',
+      '2' => 'instructional designer',
+      '3' => 'media staff',
     ),
   );
 
@@ -1310,8 +1444,9 @@ function elmsmedia_feature_user_default_permissions() {
     'name' => 'view imagecache elmsmedia_artistbigartwork',
     'roles' => array(
       '0' => 'admin',
-      '1' => 'instructional designer',
-      '2' => 'media staff',
+      '1' => 'administrator',
+      '2' => 'instructional designer',
+      '3' => 'media staff',
     ),
   );
 
@@ -1320,8 +1455,9 @@ function elmsmedia_feature_user_default_permissions() {
     'name' => 'view imagecache elmsmedia_basic',
     'roles' => array(
       '0' => 'admin',
-      '1' => 'instructional designer',
-      '2' => 'media staff',
+      '1' => 'administrator',
+      '2' => 'instructional designer',
+      '3' => 'media staff',
     ),
   );
 
@@ -1330,8 +1466,9 @@ function elmsmedia_feature_user_default_permissions() {
     'name' => 'view imagecache elmsmedia_fancyslide',
     'roles' => array(
       '0' => 'admin',
-      '1' => 'instructional designer',
-      '2' => 'media staff',
+      '1' => 'administrator',
+      '2' => 'instructional designer',
+      '3' => 'media staff',
     ),
   );
 
@@ -1340,80 +1477,25 @@ function elmsmedia_feature_user_default_permissions() {
     'name' => 'view imagecache elmsmedia_galleria',
     'roles' => array(
       '0' => 'admin',
-      '1' => 'instructional designer',
-      '2' => 'media staff',
+      '1' => 'administrator',
+      '2' => 'instructional designer',
+      '3' => 'media staff',
     ),
-  );
-
-  // Exported permission: view imagecache elms_column
-  $permissions['view imagecache elms_column'] = array(
-    'name' => 'view imagecache elms_column',
-    'roles' => array(),
   );
 
   // Exported permission: view imagecache esg_t1
   $permissions['view imagecache esg_t1'] = array(
     'name' => 'view imagecache esg_t1',
-    'roles' => array(),
+    'roles' => array(
+      '0' => 'administrator',
+    ),
   );
 
   // Exported permission: view imagecache esg_t2
   $permissions['view imagecache esg_t2'] = array(
     'name' => 'view imagecache esg_t2',
-    'roles' => array(),
-  );
-
-  // Exported permission: view imagecache float_right_div_w__citation
-  $permissions['view imagecache float_right_div_w__citation'] = array(
-    'name' => 'view imagecache float_right_div_w__citation',
-    'roles' => array(),
-  );
-
-  // Exported permission: view imagecache floatleftscale150
-  $permissions['view imagecache floatleftscale150'] = array(
-    'name' => 'view imagecache floatleftscale150',
-    'roles' => array(),
-  );
-
-  // Exported permission: view imagecache minisearchthumb
-  $permissions['view imagecache minisearchthumb'] = array(
-    'name' => 'view imagecache minisearchthumb',
     'roles' => array(
-      '0' => 'admin',
-      '1' => 'instructional designer',
-      '2' => 'media staff',
-    ),
-  );
-
-  // Exported permission: view imagecache muisc009_float_right
-  $permissions['view imagecache muisc009_float_right'] = array(
-    'name' => 'view imagecache muisc009_float_right',
-    'roles' => array(),
-  );
-
-  // Exported permission: view imagecache music007
-  $permissions['view imagecache music007'] = array(
-    'name' => 'view imagecache music007',
-    'roles' => array(),
-  );
-
-  // Exported permission: view imagecache music007floatright
-  $permissions['view imagecache music007floatright'] = array(
-    'name' => 'view imagecache music007floatright',
-    'roles' => array(
-      '0' => 'admin',
-      '1' => 'instructional designer',
-      '2' => 'media staff',
-    ),
-  );
-
-  // Exported permission: view imagecache nodesize
-  $permissions['view imagecache nodesize'] = array(
-    'name' => 'view imagecache nodesize',
-    'roles' => array(
-      '0' => 'admin',
-      '1' => 'instructional designer',
-      '2' => 'media staff',
+      '0' => 'administrator',
     ),
   );
 
@@ -1422,8 +1504,9 @@ function elmsmedia_feature_user_default_permissions() {
     'name' => 'view imagecache none',
     'roles' => array(
       '0' => 'admin',
-      '1' => 'instructional designer',
-      '2' => 'media staff',
+      '1' => 'administrator',
+      '2' => 'instructional designer',
+      '3' => 'media staff',
     ),
   );
 
@@ -1432,91 +1515,50 @@ function elmsmedia_feature_user_default_permissions() {
     'name' => 'view imagecache playerthumb',
     'roles' => array(
       '0' => 'admin',
-      '1' => 'instructional designer',
-      '2' => 'media staff',
-    ),
-  );
-
-  // Exported permission: view imagecache quickchange
-  $permissions['view imagecache quickchange'] = array(
-    'name' => 'view imagecache quickchange',
-    'roles' => array(),
-  );
-
-  // Exported permission: view imagecache searchpopup
-  $permissions['view imagecache searchpopup'] = array(
-    'name' => 'view imagecache searchpopup',
-    'roles' => array(
-      '0' => 'admin',
-      '1' => 'instructional designer',
-      '2' => 'media staff',
-    ),
-  );
-
-  // Exported permission: view imagecache searchthumb
-  $permissions['view imagecache searchthumb'] = array(
-    'name' => 'view imagecache searchthumb',
-    'roles' => array(
-      '0' => 'admin',
-      '1' => 'instructional designer',
-      '2' => 'media staff',
-    ),
-  );
-
-  // Exported permission: view imagecache small_image
-  $permissions['view imagecache small_image'] = array(
-    'name' => 'view imagecache small_image',
-    'roles' => array(),
-  );
-
-  // Exported permission: view imagecache thinsearchthumb
-  $permissions['view imagecache thinsearchthumb'] = array(
-    'name' => 'view imagecache thinsearchthumb',
-    'roles' => array(
-      '0' => 'admin',
-      '1' => 'instructional designer',
-      '2' => 'media staff',
-    ),
-  );
-
-  // Exported permission: view imagecache widesearchthumb
-  $permissions['view imagecache widesearchthumb'] = array(
-    'name' => 'view imagecache widesearchthumb',
-    'roles' => array(
-      '0' => 'admin',
-      '1' => 'instructional designer',
-      '2' => 'media staff',
+      '1' => 'administrator',
+      '2' => 'instructional designer',
+      '3' => 'media staff',
     ),
   );
 
   // Exported permission: view menu options
   $permissions['view menu options'] = array(
     'name' => 'view menu options',
-    'roles' => array(),
+    'roles' => array(
+      '0' => 'administrator',
+    ),
   );
 
   // Exported permission: view path options
   $permissions['view path options'] = array(
     'name' => 'view path options',
-    'roles' => array(),
+    'roles' => array(
+      '0' => 'administrator',
+    ),
   );
 
   // Exported permission: view preview button
   $permissions['view preview button'] = array(
     'name' => 'view preview button',
-    'roles' => array(),
+    'roles' => array(
+      '0' => 'administrator',
+    ),
   );
 
   // Exported permission: view revision information
   $permissions['view revision information'] = array(
     'name' => 'view revision information',
-    'roles' => array(),
+    'roles' => array(
+      '0' => 'administrator',
+    ),
   );
 
   // Exported permission: view revision log textarea
   $permissions['view revision log textarea'] = array(
     'name' => 'view revision log textarea',
-    'roles' => array(),
+    'roles' => array(
+      '0' => 'administrator',
+    ),
   );
 
   // Exported permission: view revisions
@@ -1524,22 +1566,27 @@ function elmsmedia_feature_user_default_permissions() {
     'name' => 'view revisions',
     'roles' => array(
       '0' => 'admin',
-      '1' => 'instructional designer',
-      '2' => 'instructor',
-      '3' => 'media staff',
+      '1' => 'administrator',
+      '2' => 'instructional designer',
+      '3' => 'instructor',
+      '4' => 'media staff',
     ),
   );
 
   // Exported permission: view submit button
   $permissions['view submit button'] = array(
     'name' => 'view submit button',
-    'roles' => array(),
+    'roles' => array(
+      '0' => 'administrator',
+    ),
   );
 
   // Exported permission: view teaser controls
   $permissions['view teaser controls'] = array(
     'name' => 'view teaser controls',
-    'roles' => array(),
+    'roles' => array(
+      '0' => 'administrator',
+    ),
   );
 
   // Exported permission: view user delete button
@@ -1547,13 +1594,16 @@ function elmsmedia_feature_user_default_permissions() {
     'name' => 'view user delete button',
     'roles' => array(
       '0' => 'admin',
+      '1' => 'administrator',
     ),
   );
 
   // Exported permission: view workflow tabs
   $permissions['view workflow tabs'] = array(
     'name' => 'view workflow tabs',
-    'roles' => array(),
+    'roles' => array(
+      '0' => 'administrator',
+    ),
   );
 
   return $permissions;

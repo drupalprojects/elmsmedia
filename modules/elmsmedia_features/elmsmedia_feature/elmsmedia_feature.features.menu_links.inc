@@ -82,7 +82,7 @@ function elmsmedia_feature_menu_default_menu_links() {
   $menu_links['menu-3rdlevel:node/add/media-request-form'] = array(
     'menu_name' => 'menu-3rdlevel',
     'link_path' => 'node/add/media-request-form',
-    'router_path' => 'node/add/media-request-form',
+    'router_path' => 'node/add',
     'link_title' => 'Create Media Request',
     'options' => array(
       'attributes' => array(
@@ -114,24 +114,6 @@ function elmsmedia_feature_menu_default_menu_links() {
     'expanded' => '0',
     'weight' => '-48',
   );
-  // Exported menu link: menu-sysadmin:admin/content/taxonomy/1
-  $menu_links['menu-sysadmin:admin/content/taxonomy/1'] = array(
-    'menu_name' => 'menu-sysadmin',
-    'link_path' => 'admin/content/taxonomy/1',
-    'router_path' => 'admin/content/taxonomy/%',
-    'link_title' => 'Change course list',
-    'options' => array(
-      'attributes' => array(
-        'title' => 'List of courses that media can be associated to',
-      ),
-    ),
-    'module' => 'menu',
-    'hidden' => '0',
-    'external' => '0',
-    'has_children' => '0',
-    'expanded' => '0',
-    'weight' => '-46',
-  );
   // Exported menu link: menu-sysadmin:asset_trackbacks
   $menu_links['menu-sysadmin:asset_trackbacks'] = array(
     'menu_name' => 'menu-sysadmin',
@@ -148,7 +130,7 @@ function elmsmedia_feature_menu_default_menu_links() {
     'external' => '0',
     'has_children' => '0',
     'expanded' => '0',
-    'weight' => '-45',
+    'weight' => '0',
   );
   // Exported menu link: menu-sysadmin:assetlist
   $menu_links['menu-sysadmin:assetlist'] = array(
@@ -184,57 +166,7 @@ function elmsmedia_feature_menu_default_menu_links() {
     'external' => '0',
     'has_children' => '0',
     'expanded' => '0',
-    'weight' => '-49',
-  );
-  // Exported menu link: menu-sysadmin:login
-  $menu_links['menu-sysadmin:login'] = array(
-    'menu_name' => 'menu-sysadmin',
-    'link_path' => 'login',
-    'router_path' => 'login',
-    'link_title' => 'login',
-    'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
-    ),
-    'module' => 'system',
-    'hidden' => '0',
-    'external' => '0',
-    'has_children' => '0',
-    'expanded' => '0',
-    'weight' => '-50',
-  );
-  // Exported menu link: menu-sysadmin:login/cosign
-  $menu_links['menu-sysadmin:login/cosign'] = array(
-    'menu_name' => 'menu-sysadmin',
-    'link_path' => 'login/cosign',
-    'router_path' => 'login/cosign',
-    'link_title' => '',
-    'options' => array(),
-    'module' => 'system',
-    'hidden' => '1',
-    'external' => '0',
-    'has_children' => '0',
-    'expanded' => '0',
-    'weight' => '-40',
-  );
-  // Exported menu link: menu-sysadmin:logout
-  $menu_links['menu-sysadmin:logout'] = array(
-    'menu_name' => 'menu-sysadmin',
-    'link_path' => 'logout',
-    'router_path' => 'logout',
-    'link_title' => 'logout',
-    'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
-    ),
-    'module' => 'system',
-    'hidden' => '0',
-    'external' => '0',
-    'has_children' => '0',
-    'expanded' => '0',
-    'weight' => '-42',
+    'weight' => '-10',
   );
   // Exported menu link: menu-sysadmin:missing_citations
   $menu_links['menu-sysadmin:missing_citations'] = array(
@@ -252,25 +184,7 @@ function elmsmedia_feature_menu_default_menu_links() {
     'external' => '0',
     'has_children' => '0',
     'expanded' => '0',
-    'weight' => '-47',
-  );
-  // Exported menu link: menu-sysadmin:reboot_fmis
-  $menu_links['menu-sysadmin:reboot_fmis'] = array(
-    'menu_name' => 'menu-sysadmin',
-    'link_path' => 'reboot_fmis',
-    'router_path' => 'reboot_fmis',
-    'link_title' => 'Reboot FMIS',
-    'options' => array(
-      'attributes' => array(
-        'title' => 'Reboot the Flash Media Interactive Server',
-      ),
-    ),
-    'module' => 'system',
-    'hidden' => '0',
-    'external' => '0',
-    'has_children' => '0',
-    'expanded' => '0',
-    'weight' => '-41',
+    'weight' => '0',
   );
   // Exported menu link: menu-sysadmin:transcription_workflow
   $menu_links['menu-sysadmin:transcription_workflow'] = array(
@@ -288,7 +202,7 @@ function elmsmedia_feature_menu_default_menu_links() {
     'external' => '0',
     'has_children' => '0',
     'expanded' => '0',
-    'weight' => '-48',
+    'weight' => '0',
   );
   // Exported menu link: menu-sysadmin:user
   $menu_links['menu-sysadmin:user'] = array(
@@ -442,7 +356,6 @@ function elmsmedia_feature_menu_default_menu_links() {
   t('Asset Audit');
   t('Asset Trackbacks');
   t('Audio');
-  t('Change course list');
   t('Citation Listing');
   t('Create Image Gallery');
   t('Create Media Playlist');
@@ -450,15 +363,12 @@ function elmsmedia_feature_menu_default_menu_links() {
   t('Flash');
   t('Image');
   t('Profile');
-  t('Reboot FMIS');
   t('Search Assets');
   t('Search Media Requests');
   t('Transcription Workflow');
   t('Video');
   t('Video Asset List File');
   t('Webcam');
-  t('login');
-  t('logout');
 
 
   return $menu_links;

@@ -11,10 +11,9 @@ function elmsmedia_feature_views_default_views() {
   $view->name = 'asset_output';
   $view->description = 'Listing of all assets in the system for cataloguing purposes';
   $view->tag = 'asset';
-  $view->view_php = '';
   $view->base_table = 'node';
-  $view->is_cacheable = FALSE;
-  $view->api_version = 2;
+  $view->core = 0;
+  $view->api_version = '2';
   $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
   $handler = $view->new_display('default', 'Defaults', 'default');
   $handler->override_option('fields', array(
@@ -46,9 +45,9 @@ function elmsmedia_feature_views_default_views() {
       'link_to_taxonomy' => 0,
       'limit' => 1,
       'vids' => array(
-        '1' => 1,
-        '3' => 0,
-        '2' => 0,
+        1 => 1,
+        3 => 0,
+        2 => 0,
       ),
       'exclude' => 0,
       'id' => 'tid_1',
@@ -364,9 +363,9 @@ function elmsmedia_feature_views_default_views() {
   $handler->override_option('access', array(
     'type' => 'role',
     'role' => array(
-      '3' => 3,
-      '6' => 6,
-      '4' => 4,
+      3 => 3,
+      6 => 6,
+      4 => 4,
     ),
   ));
   $handler->override_option('cache', array(
@@ -441,10 +440,9 @@ function elmsmedia_feature_views_default_views() {
   $view->name = 'assetsearch';
   $view->description = 'Asset Search Page';
   $view->tag = 'search';
-  $view->view_php = '';
   $view->base_table = 'node';
-  $view->is_cacheable = FALSE;
-  $view->api_version = 2;
+  $view->core = 0;
+  $view->api_version = '2';
   $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
   $handler = $view->new_display('default', 'Defaults', 'default');
   $handler->override_option('fields', array(
@@ -733,8 +731,8 @@ function elmsmedia_feature_views_default_views() {
       'link_to_taxonomy' => 0,
       'limit' => 1,
       'vids' => array(
-        '1' => 1,
-        '2' => 2,
+        1 => 1,
+        2 => 2,
       ),
       'exclude' => 0,
       'id' => 'tid',
@@ -856,11 +854,11 @@ function elmsmedia_feature_views_default_views() {
   $handler->override_option('access', array(
     'type' => 'role',
     'role' => array(
-      '3' => 3,
-      '6' => 6,
-      '5' => 5,
-      '4' => 4,
-      '7' => 7,
+      3 => 3,
+      6 => 6,
+      5 => 5,
+      4 => 4,
+      7 => 7,
     ),
   ));
   $handler->override_option('cache', array(
@@ -1362,7 +1360,7 @@ function elmsmedia_feature_views_default_views() {
       'link_to_taxonomy' => 0,
       'limit' => 1,
       'vids' => array(
-        '1' => 1,
+        1 => 1,
       ),
       'exclude' => 0,
       'id' => 'tid',
@@ -1967,8 +1965,8 @@ function elmsmedia_feature_views_default_views() {
       'link_to_taxonomy' => 0,
       'limit' => 1,
       'vids' => array(
-        '1' => 1,
-        '2' => 2,
+        1 => 1,
+        2 => 2,
       ),
       'exclude' => 0,
       'id' => 'tid',
@@ -2252,10 +2250,9 @@ function elmsmedia_feature_views_default_views() {
   $view->name = 'citations';
   $view->description = 'Citation hunter';
   $view->tag = 'citation';
-  $view->view_php = '';
   $view->base_table = 'node';
-  $view->is_cacheable = FALSE;
-  $view->api_version = 2;
+  $view->core = 0;
+  $view->api_version = '2';
   $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
   $handler = $view->new_display('default', 'Defaults', 'default');
   $handler->override_option('fields', array(
@@ -2287,9 +2284,9 @@ function elmsmedia_feature_views_default_views() {
       'link_to_taxonomy' => 0,
       'limit' => 1,
       'vids' => array(
-        '1' => 1,
-        '3' => 0,
-        '2' => 0,
+        1 => 1,
+        3 => 0,
+        2 => 0,
       ),
       'exclude' => 0,
       'id' => 'tid',
@@ -2539,7 +2536,7 @@ function elmsmedia_feature_views_default_views() {
     'field_cc_value_many_to_one' => array(
       'operator' => 'or',
       'value' => array(
-        '1' => '1',
+        1 => '1',
       ),
       'group' => '0',
       'exposed' => TRUE,
@@ -2594,9 +2591,9 @@ function elmsmedia_feature_views_default_views() {
   $handler->override_option('access', array(
     'type' => 'role',
     'role' => array(
-      '3' => 3,
-      '6' => 6,
-      '4' => 4,
+      3 => 3,
+      6 => 6,
+      4 => 4,
     ),
   ));
   $handler->override_option('cache', array(
@@ -2675,10 +2672,9 @@ function elmsmedia_feature_views_default_views() {
   $view->name = 'contenttypelists';
   $view->description = 'A listing of nodes per content type';
   $view->tag = 'playlist helper';
-  $view->view_php = '';
   $view->base_table = 'node';
-  $view->is_cacheable = FALSE;
-  $view->api_version = 2;
+  $view->core = 0;
+  $view->api_version = '2';
   $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
   $handler = $view->new_display('default', 'Defaults', 'default');
   $handler->override_option('fields', array(
@@ -2785,10 +2781,9 @@ function elmsmedia_feature_views_default_views() {
   $view->name = 'course_asset_overview';
   $view->description = 'Course Asset overview of progress in meeting quality, copyright, and accessibility audits';
   $view->tag = 'audit';
-  $view->view_php = '';
   $view->base_table = 'term_data';
-  $view->is_cacheable = FALSE;
-  $view->api_version = 2;
+  $view->core = 0;
+  $view->api_version = '2';
   $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
   $handler = $view->new_display('default', 'Defaults', 'default');
   $handler->override_option('fields', array(
@@ -3133,7 +3128,7 @@ function elmsmedia_feature_views_default_views() {
     'vid' => array(
       'operator' => 'in',
       'value' => array(
-        '1' => '1',
+        1 => '1',
       ),
       'group' => '0',
       'exposed' => FALSE,
@@ -3150,9 +3145,9 @@ function elmsmedia_feature_views_default_views() {
   $handler->override_option('access', array(
     'type' => 'role',
     'role' => array(
-      '3' => 3,
-      '6' => 6,
-      '4' => 4,
+      3 => 3,
+      6 => 6,
+      4 => 4,
     ),
   ));
   $handler->override_option('cache', array(
@@ -3210,10 +3205,9 @@ function elmsmedia_feature_views_default_views() {
   $view->name = 'image';
   $view->description = 'Use this for getting rendered images';
   $view->tag = '';
-  $view->view_php = '';
   $view->base_table = 'node';
-  $view->is_cacheable = FALSE;
-  $view->api_version = 2;
+  $view->core = 0;
+  $view->api_version = '2';
   $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
   $handler = $view->new_display('default', 'Defaults', 'default');
   $handler->override_option('fields', array(
@@ -3315,10 +3309,9 @@ function elmsmedia_feature_views_default_views() {
   $view->name = 'imagegalleryhelper';
   $view->description = 'Image Gallery helper';
   $view->tag = 'search';
-  $view->view_php = '';
   $view->base_table = 'node';
-  $view->is_cacheable = FALSE;
-  $view->api_version = 2;
+  $view->core = 0;
+  $view->api_version = '2';
   $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
   $handler = $view->new_display('default', 'Defaults', 'default');
   $handler->override_option('fields', array(
@@ -3607,8 +3600,8 @@ function elmsmedia_feature_views_default_views() {
       'link_to_taxonomy' => 0,
       'limit' => 1,
       'vids' => array(
-        '1' => 1,
-        '2' => 2,
+        1 => 1,
+        2 => 2,
       ),
       'exclude' => 0,
       'id' => 'tid',
@@ -3727,11 +3720,11 @@ function elmsmedia_feature_views_default_views() {
   $handler->override_option('access', array(
     'type' => 'role',
     'role' => array(
-      '3' => 3,
-      '6' => 6,
-      '5' => 5,
-      '4' => 4,
-      '7' => 7,
+      3 => 3,
+      6 => 6,
+      5 => 5,
+      4 => 4,
+      7 => 7,
     ),
   ));
   $handler->override_option('cache', array(
@@ -3937,7 +3930,7 @@ function elmsmedia_feature_views_default_views() {
       'link_to_taxonomy' => 0,
       'limit' => 1,
       'vids' => array(
-        '1' => 1,
+        1 => 1,
       ),
       'exclude' => 0,
       'id' => 'tid',
@@ -4143,1567 +4136,14 @@ function elmsmedia_feature_views_default_views() {
 
   $views[$view->name] = $view;
 
-  // Exported view: mediarequest
-  $view = new view;
-  $view->name = 'mediarequest';
-  $view->description = 'Media request';
-  $view->tag = 'media';
-  $view->view_php = '';
-  $view->base_table = 'node';
-  $view->is_cacheable = FALSE;
-  $view->api_version = 2;
-  $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
-  $handler = $view->new_display('default', 'Defaults', 'default');
-  $handler->override_option('fields', array(
-    'field_status_value' => array(
-      'label' => 'Status',
-      'alter' => array(
-        'alter_text' => 0,
-        'text' => '',
-        'make_link' => 0,
-        'path' => '',
-        'link_class' => '',
-        'alt' => '',
-        'prefix' => '',
-        'suffix' => '',
-        'target' => '',
-        'help' => '',
-        'trim' => 0,
-        'max_length' => '',
-        'word_boundary' => 1,
-        'ellipsis' => 1,
-        'html' => 0,
-        'strip_tags' => 0,
-      ),
-      'empty' => '',
-      'hide_empty' => 0,
-      'empty_zero' => 0,
-      'link_to_node' => 0,
-      'label_type' => 'widget',
-      'format' => 'default',
-      'multiple' => array(
-        'group' => TRUE,
-        'multiple_number' => '',
-        'multiple_from' => '',
-        'multiple_reversed' => FALSE,
-      ),
-      'exclude' => 0,
-      'id' => 'field_status_value',
-      'table' => 'node_data_field_status',
-      'field' => 'field_status_value',
-      'override' => array(
-        'button' => 'Override',
-      ),
-      'relationship' => 'none',
-    ),
-    'title' => array(
-      'label' => 'Name',
-      'alter' => array(
-        'alter_text' => 0,
-        'text' => '',
-        'make_link' => 0,
-        'path' => '',
-        'link_class' => '',
-        'alt' => '',
-        'prefix' => '',
-        'suffix' => '',
-        'target' => '',
-        'help' => '',
-        'trim' => 0,
-        'max_length' => '',
-        'word_boundary' => 1,
-        'ellipsis' => 1,
-        'html' => 0,
-        'strip_tags' => 0,
-      ),
-      'empty' => '',
-      'hide_empty' => 0,
-      'empty_zero' => 0,
-      'link_to_node' => 1,
-      'exclude' => 0,
-      'id' => 'title',
-      'table' => 'node',
-      'field' => 'title',
-      'override' => array(
-        'button' => 'Override',
-      ),
-      'relationship' => 'none',
-    ),
-    'timestamp' => array(
-      'label' => '',
-      'alter' => array(
-        'alter_text' => 0,
-        'text' => '',
-        'make_link' => 0,
-        'path' => '',
-        'link_class' => '',
-        'alt' => '',
-        'prefix' => '',
-        'suffix' => '',
-        'target' => '',
-        'help' => '',
-        'trim' => 0,
-        'max_length' => '',
-        'word_boundary' => 1,
-        'ellipsis' => 1,
-        'html' => 0,
-        'strip_tags' => 0,
-      ),
-      'empty' => '',
-      'hide_empty' => 0,
-      'empty_zero' => 0,
-      'link_to_node' => 1,
-      'comments' => FALSE,
-      'exclude' => 0,
-      'id' => 'timestamp',
-      'table' => 'history_user',
-      'field' => 'timestamp',
-      'override' => array(
-        'button' => 'Override',
-      ),
-      'relationship' => 'none',
-    ),
-    'field_due_date_value' => array(
-      'label' => 'Due Date',
-      'alter' => array(
-        'alter_text' => 0,
-        'text' => '',
-        'make_link' => 0,
-        'path' => '',
-        'link_class' => '',
-        'alt' => '',
-        'prefix' => '',
-        'suffix' => '',
-        'target' => '',
-        'help' => '',
-        'trim' => 0,
-        'max_length' => '',
-        'word_boundary' => 1,
-        'ellipsis' => 1,
-        'html' => 0,
-        'strip_tags' => 0,
-      ),
-      'empty' => '',
-      'hide_empty' => 0,
-      'empty_zero' => 0,
-      'link_to_node' => 0,
-      'label_type' => 'widget',
-      'format' => 'short',
-      'multiple' => array(
-        'multiple_number' => '',
-        'multiple_from' => '',
-        'multiple_to' => '',
-        'group' => '',
-      ),
-      'repeat' => array(
-        'show_repeat_rule' => '',
-      ),
-      'fromto' => array(
-        'fromto' => 'both',
-      ),
-      'exclude' => 0,
-      'id' => 'field_due_date_value',
-      'table' => 'node_data_field_due_date',
-      'field' => 'field_due_date_value',
-      'override' => array(
-        'button' => 'Override',
-      ),
-      'relationship' => 'none',
-    ),
-    'tid' => array(
-      'label' => 'Course',
-      'alter' => array(
-        'alter_text' => 0,
-        'text' => '',
-        'make_link' => 0,
-        'path' => '',
-        'link_class' => '',
-        'alt' => '',
-        'prefix' => '',
-        'suffix' => '',
-        'target' => '',
-        'help' => '',
-        'trim' => 0,
-        'max_length' => '',
-        'word_boundary' => 1,
-        'ellipsis' => 1,
-        'html' => 0,
-        'strip_tags' => 0,
-      ),
-      'empty' => '',
-      'hide_empty' => 0,
-      'empty_zero' => 0,
-      'type' => 'separator',
-      'separator' => ', ',
-      'link_to_taxonomy' => 0,
-      'limit' => 1,
-      'vids' => array(
-        '1' => 1,
-        '3' => 0,
-        '2' => 0,
-      ),
-      'exclude' => 0,
-      'id' => 'tid',
-      'table' => 'term_node',
-      'field' => 'tid',
-      'override' => array(
-        'button' => 'Override',
-      ),
-      'relationship' => 'none',
-    ),
-    'tid_1' => array(
-      'label' => 'Lesson',
-      'alter' => array(
-        'alter_text' => 0,
-        'text' => '',
-        'make_link' => 0,
-        'path' => '',
-        'link_class' => '',
-        'alt' => '',
-        'prefix' => '',
-        'suffix' => '',
-        'target' => '',
-        'help' => '',
-        'trim' => 0,
-        'max_length' => '',
-        'word_boundary' => 1,
-        'ellipsis' => 1,
-        'html' => 0,
-        'strip_tags' => 0,
-      ),
-      'empty' => '',
-      'hide_empty' => 0,
-      'empty_zero' => 0,
-      'type' => 'separator',
-      'separator' => ', ',
-      'link_to_taxonomy' => 0,
-      'limit' => 1,
-      'vids' => array(
-        '3' => 3,
-        '1' => 0,
-        '2' => 0,
-      ),
-      'exclude' => 0,
-      'id' => 'tid_1',
-      'table' => 'term_node',
-      'field' => 'tid',
-      'override' => array(
-        'button' => 'Override',
-      ),
-      'relationship' => 'none',
-    ),
-    'changed' => array(
-      'label' => 'Updated',
-      'alter' => array(
-        'alter_text' => 0,
-        'text' => '',
-        'make_link' => 0,
-        'path' => '',
-        'link_class' => '',
-        'alt' => '',
-        'prefix' => '',
-        'suffix' => '',
-        'target' => '',
-        'help' => '',
-        'trim' => 0,
-        'max_length' => '',
-        'word_boundary' => 1,
-        'ellipsis' => 1,
-        'html' => 0,
-        'strip_tags' => 0,
-      ),
-      'empty' => '',
-      'hide_empty' => 0,
-      'empty_zero' => 0,
-      'date_format' => 'custom',
-      'custom_date_format' => 'm/d/Y',
-      'exclude' => 0,
-      'id' => 'changed',
-      'table' => 'node',
-      'field' => 'changed',
-      'override' => array(
-        'button' => 'Override',
-      ),
-      'relationship' => 'none',
-    ),
-  ));
-  $handler->override_option('sorts', array(
-    'field_due_date_value' => array(
-      'order' => 'ASC',
-      'delta' => -1,
-      'id' => 'field_due_date_value',
-      'table' => 'node_data_field_due_date',
-      'field' => 'field_due_date_value',
-      'override' => array(
-        'button' => 'Override',
-      ),
-      'relationship' => 'none',
-    ),
-  ));
-  $handler->override_option('filters', array(
-    'type' => array(
-      'operator' => 'in',
-      'value' => array(
-        'media_request_form' => 'media_request_form',
-      ),
-      'group' => '0',
-      'exposed' => FALSE,
-      'expose' => array(
-        'operator' => FALSE,
-        'label' => '',
-      ),
-      'id' => 'type',
-      'table' => 'node',
-      'field' => 'type',
-      'override' => array(
-        'button' => 'Override',
-      ),
-      'relationship' => 'none',
-    ),
-    'tid' => array(
-      'operator' => 'or',
-      'value' => array(),
-      'group' => '0',
-      'exposed' => TRUE,
-      'expose' => array(
-        'use_operator' => 0,
-        'operator' => 'tid_op',
-        'identifier' => 'tid',
-        'label' => 'Course',
-        'optional' => 1,
-        'single' => 1,
-        'remember' => 0,
-        'reduce' => 0,
-      ),
-      'type' => 'select',
-      'limit' => TRUE,
-      'vid' => '1',
-      'id' => 'tid',
-      'table' => 'term_node',
-      'field' => 'tid',
-      'hierarchy' => 0,
-      'override' => array(
-        'button' => 'Override',
-      ),
-      'relationship' => 'none',
-      'reduce_duplicates' => 0,
-    ),
-    'tid_1' => array(
-      'operator' => 'or',
-      'value' => array(),
-      'group' => '0',
-      'exposed' => TRUE,
-      'expose' => array(
-        'use_operator' => 0,
-        'operator' => 'tid_1_op',
-        'identifier' => 'tid_1',
-        'label' => 'Lesson',
-        'optional' => 1,
-        'single' => 1,
-        'remember' => 0,
-        'reduce' => 0,
-      ),
-      'type' => 'select',
-      'limit' => TRUE,
-      'vid' => '3',
-      'id' => 'tid_1',
-      'table' => 'term_node',
-      'field' => 'tid',
-      'hierarchy' => 0,
-      'override' => array(
-        'button' => 'Override',
-      ),
-      'relationship' => 'none',
-      'reduce_duplicates' => 0,
-    ),
-    'field_status_value_many_to_one' => array(
-      'operator' => 'or',
-      'value' => array(),
-      'group' => '0',
-      'exposed' => TRUE,
-      'expose' => array(
-        'use_operator' => 0,
-        'operator' => 'field_status_value_many_to_one_op',
-        'identifier' => 'field_status_value_many_to_one',
-        'label' => 'Status',
-        'optional' => 1,
-        'single' => 1,
-        'remember' => 0,
-        'reduce' => 0,
-      ),
-      'id' => 'field_status_value_many_to_one',
-      'table' => 'node_data_field_status',
-      'field' => 'field_status_value_many_to_one',
-      'override' => array(
-        'button' => 'Override',
-      ),
-      'relationship' => 'none',
-      'reduce_duplicates' => 0,
-    ),
-    'field_assigned_to_uid' => array(
-      'operator' => 'or',
-      'value' => array(),
-      'group' => '0',
-      'exposed' => TRUE,
-      'expose' => array(
-        'use_operator' => 0,
-        'operator' => 'field_assigned_to_uid_op',
-        'identifier' => 'field_assigned_to_uid',
-        'label' => 'Assigned to',
-        'optional' => 1,
-        'single' => 1,
-        'remember' => 0,
-        'reduce' => 0,
-      ),
-      'id' => 'field_assigned_to_uid',
-      'table' => 'node_data_field_assigned_to',
-      'field' => 'field_assigned_to_uid',
-      'override' => array(
-        'button' => 'Override',
-      ),
-      'relationship' => 'none',
-      'reduce_duplicates' => 0,
-    ),
-    'field_personneedinginfo_uid' => array(
-      'operator' => 'or',
-      'value' => array(),
-      'group' => '0',
-      'exposed' => TRUE,
-      'expose' => array(
-        'use_operator' => 0,
-        'operator' => 'field_personneedinginfo_uid_op',
-        'identifier' => 'field_personneedinginfo_uid',
-        'label' => 'Need info from',
-        'optional' => 1,
-        'single' => 1,
-        'remember' => 0,
-        'reduce' => 0,
-      ),
-      'id' => 'field_personneedinginfo_uid',
-      'table' => 'node_data_field_personneedinginfo',
-      'field' => 'field_personneedinginfo_uid',
-      'override' => array(
-        'button' => 'Override',
-      ),
-      'relationship' => 'none',
-      'reduce_duplicates' => 0,
-    ),
-    'field_final_product_value_many_to_one' => array(
-      'operator' => 'or',
-      'value' => array(),
-      'group' => '0',
-      'exposed' => TRUE,
-      'expose' => array(
-        'use_operator' => 0,
-        'operator' => 'field_final_product_value_many_to_one_op',
-        'identifier' => 'field_final_product_value_many_to_one',
-        'label' => 'Final Product',
-        'optional' => 1,
-        'single' => 1,
-        'remember' => 0,
-        'reduce' => 0,
-      ),
-      'id' => 'field_final_product_value_many_to_one',
-      'table' => 'node_data_field_final_product',
-      'field' => 'field_final_product_value_many_to_one',
-      'override' => array(
-        'button' => 'Override',
-      ),
-      'relationship' => 'none',
-      'reduce_duplicates' => 0,
-    ),
-  ));
-  $handler->override_option('access', array(
-    'type' => 'role',
-    'role' => array(
-      '3' => 3,
-      '6' => 6,
-      '5' => 5,
-      '4' => 4,
-    ),
-  ));
-  $handler->override_option('cache', array(
-    'type' => 'none',
-  ));
-  $handler->override_option('title', 'Media Request');
-  $handler->override_option('header_format', '2');
-  $handler->override_option('header_empty', 0);
-  $handler->override_option('use_ajax', TRUE);
-  $handler->override_option('items_per_page', 25);
-  $handler->override_option('use_pager', '1');
-  $handler->override_option('style_plugin', 'table');
-  $handler->override_option('style_options', array(
-    'grouping' => '',
-    'override' => 1,
-    'sticky' => 1,
-    'order' => 'asc',
-    'columns' => array(
-      'field_status_value' => 'field_status_value',
-      'title' => 'title',
-      'timestamp' => 'title',
-      'field_due_date_value' => 'field_due_date_value',
-      'tid' => 'tid',
-      'tid_1' => 'tid_1',
-      'changed' => 'changed',
-    ),
-    'info' => array(
-      'field_status_value' => array(
-        'sortable' => 1,
-        'separator' => '',
-      ),
-      'title' => array(
-        'sortable' => 1,
-        'separator' => ' ',
-      ),
-      'timestamp' => array(
-        'separator' => '',
-      ),
-      'field_due_date_value' => array(
-        'sortable' => 1,
-        'separator' => '',
-      ),
-      'tid' => array(
-        'separator' => '',
-      ),
-      'tid_1' => array(
-        'separator' => '',
-      ),
-      'changed' => array(
-        'sortable' => 1,
-        'separator' => '',
-      ),
-    ),
-    'default' => 'field_due_date_value',
-  ));
-  $handler = $view->new_display('page', 'Media Request Queue', 'page_1');
-  $handler->override_option('path', 'mediarequests/queue');
-  $handler->override_option('menu', array(
-    'type' => 'default tab',
-    'title' => 'all',
-    'description' => 'All Media Requests',
-    'weight' => '-50',
-    'name' => 'navigation',
-  ));
-  $handler->override_option('tab_options', array(
-    'type' => 'normal',
-    'title' => 'Search Media Requests',
-    'description' => 'Search Media Requests',
-    'weight' => '0',
-    'name' => 'secondary-links',
-  ));
-  $handler = $view->new_display('page', 'My Requests', 'page_2');
-  $handler->override_option('filters', array(
-    'type' => array(
-      'operator' => 'in',
-      'value' => array(
-        'media_request_form' => 'media_request_form',
-      ),
-      'group' => '0',
-      'exposed' => FALSE,
-      'expose' => array(
-        'operator' => FALSE,
-        'label' => '',
-      ),
-      'id' => 'type',
-      'table' => 'node',
-      'field' => 'type',
-      'override' => array(
-        'button' => 'Override',
-      ),
-      'relationship' => 'none',
-    ),
-    'uid_current' => array(
-      'operator' => '=',
-      'value' => '1',
-      'group' => '0',
-      'exposed' => FALSE,
-      'expose' => array(
-        'operator' => FALSE,
-        'label' => '',
-      ),
-      'id' => 'uid_current',
-      'table' => 'users',
-      'field' => 'uid_current',
-      'override' => array(
-        'button' => 'Use default',
-      ),
-      'relationship' => 'none',
-    ),
-    'tid' => array(
-      'operator' => 'or',
-      'value' => array(),
-      'group' => '0',
-      'exposed' => TRUE,
-      'expose' => array(
-        'use_operator' => 0,
-        'operator' => 'tid_op',
-        'identifier' => 'tid',
-        'label' => 'Course',
-        'optional' => 1,
-        'single' => 1,
-        'remember' => 0,
-        'reduce' => 0,
-      ),
-      'type' => 'select',
-      'limit' => TRUE,
-      'vid' => '1',
-      'id' => 'tid',
-      'table' => 'term_node',
-      'field' => 'tid',
-      'hierarchy' => 0,
-      'override' => array(
-        'button' => 'Override',
-      ),
-      'relationship' => 'none',
-      'reduce_duplicates' => 0,
-    ),
-    'tid_1' => array(
-      'operator' => 'or',
-      'value' => array(),
-      'group' => '0',
-      'exposed' => TRUE,
-      'expose' => array(
-        'use_operator' => 0,
-        'operator' => 'tid_1_op',
-        'identifier' => 'tid_1',
-        'label' => 'Lesson',
-        'optional' => 1,
-        'single' => 1,
-        'remember' => 0,
-        'reduce' => 0,
-      ),
-      'type' => 'select',
-      'limit' => TRUE,
-      'vid' => '3',
-      'id' => 'tid_1',
-      'table' => 'term_node',
-      'field' => 'tid',
-      'hierarchy' => 0,
-      'override' => array(
-        'button' => 'Use default',
-      ),
-      'relationship' => 'none',
-      'reduce_duplicates' => 0,
-    ),
-    'field_status_value_many_to_one' => array(
-      'operator' => 'or',
-      'value' => array(),
-      'group' => '0',
-      'exposed' => TRUE,
-      'expose' => array(
-        'use_operator' => 0,
-        'operator' => 'field_status_value_many_to_one_op',
-        'identifier' => 'field_status_value_many_to_one',
-        'label' => 'Status',
-        'optional' => 1,
-        'single' => 1,
-        'remember' => 0,
-        'reduce' => 0,
-      ),
-      'id' => 'field_status_value_many_to_one',
-      'table' => 'node_data_field_status',
-      'field' => 'field_status_value_many_to_one',
-      'override' => array(
-        'button' => 'Override',
-      ),
-      'relationship' => 'none',
-      'reduce_duplicates' => 0,
-    ),
-    'field_assigned_to_uid' => array(
-      'operator' => 'or',
-      'value' => array(),
-      'group' => '0',
-      'exposed' => TRUE,
-      'expose' => array(
-        'use_operator' => 0,
-        'operator' => 'field_assigned_to_uid_op',
-        'identifier' => 'field_assigned_to_uid',
-        'label' => 'Assigned to',
-        'optional' => 1,
-        'single' => 1,
-        'remember' => 0,
-        'reduce' => 0,
-      ),
-      'id' => 'field_assigned_to_uid',
-      'table' => 'node_data_field_assigned_to',
-      'field' => 'field_assigned_to_uid',
-      'override' => array(
-        'button' => 'Override',
-      ),
-      'relationship' => 'none',
-      'reduce_duplicates' => 0,
-    ),
-    'field_final_product_value_many_to_one' => array(
-      'operator' => 'or',
-      'value' => array(),
-      'group' => '0',
-      'exposed' => TRUE,
-      'expose' => array(
-        'use_operator' => 0,
-        'operator' => 'field_final_product_value_many_to_one_op',
-        'identifier' => 'field_final_product_value_many_to_one',
-        'label' => 'Final Product',
-        'optional' => 1,
-        'single' => 1,
-        'remember' => 0,
-        'reduce' => 0,
-      ),
-      'id' => 'field_final_product_value_many_to_one',
-      'table' => 'node_data_field_final_product',
-      'field' => 'field_final_product_value_many_to_one',
-      'override' => array(
-        'button' => 'Override',
-      ),
-      'relationship' => 'none',
-      'reduce_duplicates' => 0,
-    ),
-  ));
-  $handler->override_option('access', array(
-    'type' => 'role',
-    'role' => array(
-      '3' => 3,
-      '6' => 6,
-      '5' => 5,
-    ),
-  ));
-  $handler->override_option('title', 'My Requests');
-  $handler->override_option('path', 'mediarequests/my');
-  $handler->override_option('menu', array(
-    'type' => 'tab',
-    'title' => 'my requests',
-    'description' => 'Requests I have submitted',
-    'weight' => '-50',
-    'name' => 'navigation',
-  ));
-  $handler->override_option('tab_options', array(
-    'type' => 'none',
-    'title' => '',
-    'description' => '',
-    'weight' => 0,
-    'name' => 'navigation',
-  ));
-  $handler = $view->new_display('page', 'Assigned to me', 'page_3');
-  $handler->override_option('relationships', array(
-    'field_assigned_to_uid' => array(
-      'label' => 'Assigned to complete request',
-      'required' => 1,
-      'delta' => -1,
-      'id' => 'field_assigned_to_uid',
-      'table' => 'node_data_field_assigned_to',
-      'field' => 'field_assigned_to_uid',
-      'override' => array(
-        'button' => 'Use default',
-      ),
-      'relationship' => 'none',
-    ),
-  ));
-  $handler->override_option('filters', array(
-    'type' => array(
-      'operator' => 'in',
-      'value' => array(
-        'media_request_form' => 'media_request_form',
-      ),
-      'group' => '0',
-      'exposed' => FALSE,
-      'expose' => array(
-        'operator' => FALSE,
-        'label' => '',
-      ),
-      'id' => 'type',
-      'table' => 'node',
-      'field' => 'type',
-      'override' => array(
-        'button' => 'Override',
-      ),
-      'relationship' => 'none',
-    ),
-    'uid_current' => array(
-      'operator' => '=',
-      'value' => '1',
-      'group' => '0',
-      'exposed' => FALSE,
-      'expose' => array(
-        'operator' => FALSE,
-        'label' => '',
-      ),
-      'id' => 'uid_current',
-      'table' => 'users',
-      'field' => 'uid_current',
-      'override' => array(
-        'button' => 'Use default',
-      ),
-      'relationship' => 'field_assigned_to_uid',
-    ),
-    'field_assigned_to_uid_1' => array(
-      'id' => 'field_assigned_to_uid_1',
-      'table' => 'node_data_field_assigned_to',
-      'field' => 'field_assigned_to_uid',
-    ),
-    'tid' => array(
-      'operator' => 'or',
-      'value' => array(),
-      'group' => '0',
-      'exposed' => TRUE,
-      'expose' => array(
-        'use_operator' => 0,
-        'operator' => 'tid_op',
-        'identifier' => 'tid',
-        'label' => 'Course',
-        'optional' => 1,
-        'single' => 1,
-        'remember' => 0,
-        'reduce' => 0,
-      ),
-      'type' => 'select',
-      'limit' => TRUE,
-      'vid' => '1',
-      'id' => 'tid',
-      'table' => 'term_node',
-      'field' => 'tid',
-      'hierarchy' => 0,
-      'override' => array(
-        'button' => 'Override',
-      ),
-      'relationship' => 'none',
-      'reduce_duplicates' => 0,
-    ),
-    'tid_1' => array(
-      'operator' => 'or',
-      'value' => array(),
-      'group' => '0',
-      'exposed' => TRUE,
-      'expose' => array(
-        'use_operator' => 0,
-        'operator' => 'tid_1_op',
-        'identifier' => 'tid_1',
-        'label' => 'Lesson',
-        'optional' => 1,
-        'single' => 1,
-        'remember' => 0,
-        'reduce' => 0,
-      ),
-      'type' => 'select',
-      'limit' => TRUE,
-      'vid' => '3',
-      'id' => 'tid_1',
-      'table' => 'term_node',
-      'field' => 'tid',
-      'hierarchy' => 0,
-      'override' => array(
-        'button' => 'Use default',
-      ),
-      'relationship' => 'none',
-      'reduce_duplicates' => 0,
-    ),
-    'field_status_value_many_to_one' => array(
-      'operator' => 'or',
-      'value' => array(),
-      'group' => '0',
-      'exposed' => TRUE,
-      'expose' => array(
-        'use_operator' => 0,
-        'operator' => 'field_status_value_many_to_one_op',
-        'identifier' => 'field_status_value_many_to_one',
-        'label' => 'Status',
-        'optional' => 1,
-        'single' => 1,
-        'remember' => 0,
-        'reduce' => 0,
-      ),
-      'id' => 'field_status_value_many_to_one',
-      'table' => 'node_data_field_status',
-      'field' => 'field_status_value_many_to_one',
-      'override' => array(
-        'button' => 'Override',
-      ),
-      'relationship' => 'none',
-      'reduce_duplicates' => 0,
-    ),
-    'field_final_product_value_many_to_one' => array(
-      'operator' => 'or',
-      'value' => array(),
-      'group' => '0',
-      'exposed' => TRUE,
-      'expose' => array(
-        'use_operator' => 0,
-        'operator' => 'field_final_product_value_many_to_one_op',
-        'identifier' => 'field_final_product_value_many_to_one',
-        'label' => 'Final Product',
-        'optional' => 1,
-        'single' => 1,
-        'remember' => 0,
-        'reduce' => 0,
-      ),
-      'id' => 'field_final_product_value_many_to_one',
-      'table' => 'node_data_field_final_product',
-      'field' => 'field_final_product_value_many_to_one',
-      'override' => array(
-        'button' => 'Override',
-      ),
-      'relationship' => 'none',
-      'reduce_duplicates' => 0,
-    ),
-  ));
-  $handler->override_option('access', array(
-    'type' => 'role',
-    'role' => array(
-      '4' => 4,
-    ),
-  ));
-  $handler->override_option('title', 'Assigned to me');
-  $handler->override_option('path', 'mediarequests/assignedtome');
-  $handler->override_option('menu', array(
-    'type' => 'tab',
-    'title' => 'assigned to me',
-    'description' => 'Assigned to me',
-    'weight' => '-47',
-    'name' => 'navigation',
-  ));
-  $handler->override_option('tab_options', array(
-    'type' => 'none',
-    'title' => '',
-    'description' => '',
-    'weight' => 0,
-    'name' => 'navigation',
-  ));
-  $handler = $view->new_display('page', 'Needs Info', 'page_4');
-  $handler->override_option('relationships', array(
-    'field_personneedinginfo_uid' => array(
-      'label' => 'Person to supply information',
-      'required' => 1,
-      'delta' => -1,
-      'id' => 'field_personneedinginfo_uid',
-      'table' => 'node_data_field_personneedinginfo',
-      'field' => 'field_personneedinginfo_uid',
-      'override' => array(
-        'button' => 'Use default',
-      ),
-      'relationship' => 'none',
-    ),
-  ));
-  $handler->override_option('filters', array(
-    'type' => array(
-      'operator' => 'in',
-      'value' => array(
-        'media_request_form' => 'media_request_form',
-      ),
-      'group' => '0',
-      'exposed' => FALSE,
-      'expose' => array(
-        'operator' => FALSE,
-        'label' => '',
-      ),
-      'id' => 'type',
-      'table' => 'node',
-      'field' => 'type',
-      'override' => array(
-        'button' => 'Override',
-      ),
-      'relationship' => 'none',
-    ),
-    'uid_current' => array(
-      'operator' => '=',
-      'value' => '1',
-      'group' => '0',
-      'exposed' => FALSE,
-      'expose' => array(
-        'operator' => FALSE,
-        'label' => '',
-      ),
-      'id' => 'uid_current',
-      'table' => 'users',
-      'field' => 'uid_current',
-      'override' => array(
-        'button' => 'Use default',
-      ),
-      'relationship' => 'field_personneedinginfo_uid',
-    ),
-    'tid' => array(
-      'operator' => 'or',
-      'value' => array(),
-      'group' => '0',
-      'exposed' => TRUE,
-      'expose' => array(
-        'use_operator' => 0,
-        'operator' => 'tid_op',
-        'identifier' => 'tid',
-        'label' => 'Course',
-        'optional' => 1,
-        'single' => 1,
-        'remember' => 0,
-        'reduce' => 0,
-      ),
-      'type' => 'select',
-      'limit' => TRUE,
-      'vid' => '1',
-      'id' => 'tid',
-      'table' => 'term_node',
-      'field' => 'tid',
-      'hierarchy' => 0,
-      'override' => array(
-        'button' => 'Override',
-      ),
-      'relationship' => 'none',
-      'reduce_duplicates' => 0,
-    ),
-    'tid_1' => array(
-      'operator' => 'or',
-      'value' => array(),
-      'group' => '0',
-      'exposed' => TRUE,
-      'expose' => array(
-        'use_operator' => 0,
-        'operator' => 'tid_1_op',
-        'identifier' => 'tid_1',
-        'label' => 'Lesson',
-        'optional' => 1,
-        'single' => 1,
-        'remember' => 0,
-        'reduce' => 0,
-      ),
-      'type' => 'select',
-      'limit' => TRUE,
-      'vid' => '3',
-      'id' => 'tid_1',
-      'table' => 'term_node',
-      'field' => 'tid',
-      'hierarchy' => 0,
-      'override' => array(
-        'button' => 'Use default',
-      ),
-      'relationship' => 'none',
-      'reduce_duplicates' => 0,
-    ),
-    'field_status_value_many_to_one' => array(
-      'operator' => 'or',
-      'value' => array(),
-      'group' => '0',
-      'exposed' => TRUE,
-      'expose' => array(
-        'use_operator' => 0,
-        'operator' => 'field_status_value_many_to_one_op',
-        'identifier' => 'field_status_value_many_to_one',
-        'label' => 'Status',
-        'optional' => 1,
-        'single' => 1,
-        'remember' => 0,
-        'reduce' => 0,
-      ),
-      'id' => 'field_status_value_many_to_one',
-      'table' => 'node_data_field_status',
-      'field' => 'field_status_value_many_to_one',
-      'override' => array(
-        'button' => 'Override',
-      ),
-      'relationship' => 'none',
-      'reduce_duplicates' => 0,
-    ),
-    'field_assigned_to_uid' => array(
-      'operator' => 'or',
-      'value' => array(),
-      'group' => '0',
-      'exposed' => TRUE,
-      'expose' => array(
-        'use_operator' => 0,
-        'operator' => 'field_assigned_to_uid_op',
-        'identifier' => 'field_assigned_to_uid',
-        'label' => 'Assigned to',
-        'optional' => 1,
-        'single' => 1,
-        'remember' => 0,
-        'reduce' => 0,
-      ),
-      'id' => 'field_assigned_to_uid',
-      'table' => 'node_data_field_assigned_to',
-      'field' => 'field_assigned_to_uid',
-      'override' => array(
-        'button' => 'Override',
-      ),
-      'relationship' => 'none',
-      'reduce_duplicates' => 0,
-    ),
-    'field_final_product_value_many_to_one' => array(
-      'operator' => 'or',
-      'value' => array(),
-      'group' => '0',
-      'exposed' => TRUE,
-      'expose' => array(
-        'use_operator' => 0,
-        'operator' => 'field_final_product_value_many_to_one_op',
-        'identifier' => 'field_final_product_value_many_to_one',
-        'label' => 'Final Product',
-        'optional' => 1,
-        'single' => 1,
-        'remember' => 0,
-        'reduce' => 0,
-      ),
-      'id' => 'field_final_product_value_many_to_one',
-      'table' => 'node_data_field_final_product',
-      'field' => 'field_final_product_value_many_to_one',
-      'override' => array(
-        'button' => 'Override',
-      ),
-      'relationship' => 'none',
-      'reduce_duplicates' => 0,
-    ),
-  ));
-  $handler->override_option('title', 'Need Info From Me');
-  $handler->override_option('path', 'mediarequests/needinfo');
-  $handler->override_option('menu', array(
-    'type' => 'tab',
-    'title' => 'needs my info',
-    'description' => 'Things that need info from me',
-    'weight' => '-49',
-    'name' => 'navigation',
-  ));
-  $handler->override_option('tab_options', array(
-    'type' => 'none',
-    'title' => '',
-    'description' => '',
-    'weight' => 0,
-    'name' => 'navigation',
-  ));
-  $handler = $view->new_display('page', 'Whats unassigned', 'page_5');
-  $handler->override_option('filters', array(
-    'type' => array(
-      'operator' => 'in',
-      'value' => array(
-        'media_request_form' => 'media_request_form',
-      ),
-      'group' => '0',
-      'exposed' => FALSE,
-      'expose' => array(
-        'operator' => FALSE,
-        'label' => '',
-      ),
-      'id' => 'type',
-      'table' => 'node',
-      'field' => 'type',
-      'override' => array(
-        'button' => 'Override',
-      ),
-      'relationship' => 'none',
-    ),
-    'field_status_value_many_to_one_1' => array(
-      'operator' => 'or',
-      'value' => array(
-        'Unassigned' => 'Unassigned',
-      ),
-      'group' => '0',
-      'exposed' => FALSE,
-      'expose' => array(
-        'operator' => FALSE,
-        'label' => '',
-      ),
-      'id' => 'field_status_value_many_to_one_1',
-      'table' => 'node_data_field_status',
-      'field' => 'field_status_value_many_to_one',
-      'override' => array(
-        'button' => 'Use default',
-      ),
-      'relationship' => 'none',
-      'reduce_duplicates' => 0,
-    ),
-    'tid' => array(
-      'operator' => 'or',
-      'value' => array(),
-      'group' => '0',
-      'exposed' => TRUE,
-      'expose' => array(
-        'use_operator' => 0,
-        'operator' => 'tid_op',
-        'identifier' => 'tid',
-        'label' => 'Course',
-        'optional' => 1,
-        'single' => 1,
-        'remember' => 0,
-        'reduce' => 0,
-      ),
-      'type' => 'select',
-      'limit' => TRUE,
-      'vid' => '1',
-      'id' => 'tid',
-      'table' => 'term_node',
-      'field' => 'tid',
-      'hierarchy' => 0,
-      'override' => array(
-        'button' => 'Override',
-      ),
-      'relationship' => 'none',
-      'reduce_duplicates' => 0,
-    ),
-    'tid_1' => array(
-      'operator' => 'or',
-      'value' => array(),
-      'group' => '0',
-      'exposed' => TRUE,
-      'expose' => array(
-        'use_operator' => 0,
-        'operator' => 'tid_1_op',
-        'identifier' => 'tid_1',
-        'label' => 'Lesson',
-        'optional' => 1,
-        'single' => 1,
-        'remember' => 0,
-        'reduce' => 0,
-      ),
-      'type' => 'select',
-      'limit' => TRUE,
-      'vid' => '3',
-      'id' => 'tid_1',
-      'table' => 'term_node',
-      'field' => 'tid',
-      'hierarchy' => 0,
-      'override' => array(
-        'button' => 'Use default',
-      ),
-      'relationship' => 'none',
-      'reduce_duplicates' => 0,
-    ),
-    'field_final_product_value_many_to_one' => array(
-      'operator' => 'or',
-      'value' => array(),
-      'group' => '0',
-      'exposed' => TRUE,
-      'expose' => array(
-        'use_operator' => 0,
-        'operator' => 'field_final_product_value_many_to_one_op',
-        'identifier' => 'field_final_product_value_many_to_one',
-        'label' => 'Final Product',
-        'optional' => 1,
-        'single' => 1,
-        'remember' => 0,
-        'reduce' => 0,
-      ),
-      'id' => 'field_final_product_value_many_to_one',
-      'table' => 'node_data_field_final_product',
-      'field' => 'field_final_product_value_many_to_one',
-      'override' => array(
-        'button' => 'Override',
-      ),
-      'relationship' => 'none',
-      'reduce_duplicates' => 0,
-    ),
-  ));
-  $handler->override_option('access', array(
-    'type' => 'role',
-    'role' => array(
-      '3' => 3,
-      '6' => 6,
-    ),
-  ));
-  $handler->override_option('title', 'Currently Unassigned');
-  $handler->override_option('path', 'mediarequests/unassigned');
-  $handler->override_option('menu', array(
-    'type' => 'tab',
-    'title' => 'unassigned',
-    'description' => 'All Unassigned tasks',
-    'weight' => '-46',
-    'name' => 'navigation',
-  ));
-  $handler->override_option('tab_options', array(
-    'type' => 'none',
-    'title' => '',
-    'description' => '',
-    'weight' => 0,
-    'name' => 'navigation',
-  ));
-  $handler = $view->new_display('page', 'Overdue', 'page_6');
-  $handler->override_option('filters', array(
-    'type' => array(
-      'operator' => 'in',
-      'value' => array(
-        'media_request_form' => 'media_request_form',
-      ),
-      'group' => '0',
-      'exposed' => FALSE,
-      'expose' => array(
-        'operator' => FALSE,
-        'label' => '',
-      ),
-      'id' => 'type',
-      'table' => 'node',
-      'field' => 'type',
-      'override' => array(
-        'button' => 'Override',
-      ),
-      'relationship' => 'none',
-    ),
-    'date_filter' => array(
-      'operator' => '<',
-      'value' => array(
-        'value' => NULL,
-        'min' => NULL,
-        'max' => NULL,
-        'default_date' => 'now',
-        'default_to_date' => '',
-      ),
-      'group' => '0',
-      'exposed' => FALSE,
-      'expose' => array(
-        'operator' => FALSE,
-        'label' => '',
-      ),
-      'date_fields' => array(
-        'node_data_field_due_date.field_due_date_value' => 'node_data_field_due_date.field_due_date_value',
-      ),
-      'date_method' => 'OR',
-      'granularity' => 'day',
-      'form_type' => 'date_select',
-      'default_date' => 'now',
-      'default_to_date' => '',
-      'year_range' => '-3:+3',
-      'id' => 'date_filter',
-      'table' => 'node',
-      'field' => 'date_filter',
-      'override' => array(
-        'button' => 'Use default',
-      ),
-      'relationship' => 'none',
-    ),
-    'tid' => array(
-      'operator' => 'or',
-      'value' => array(),
-      'group' => '0',
-      'exposed' => TRUE,
-      'expose' => array(
-        'use_operator' => 0,
-        'operator' => 'tid_op',
-        'identifier' => 'tid',
-        'label' => 'Course',
-        'optional' => 1,
-        'single' => 1,
-        'remember' => 0,
-        'reduce' => 0,
-      ),
-      'type' => 'select',
-      'limit' => TRUE,
-      'vid' => '1',
-      'id' => 'tid',
-      'table' => 'term_node',
-      'field' => 'tid',
-      'hierarchy' => 0,
-      'override' => array(
-        'button' => 'Override',
-      ),
-      'relationship' => 'none',
-      'reduce_duplicates' => 0,
-    ),
-    'tid_1' => array(
-      'operator' => 'or',
-      'value' => array(),
-      'group' => '0',
-      'exposed' => TRUE,
-      'expose' => array(
-        'use_operator' => 0,
-        'operator' => 'tid_1_op',
-        'identifier' => 'tid_1',
-        'label' => 'Lesson',
-        'optional' => 1,
-        'single' => 1,
-        'remember' => 0,
-        'reduce' => 0,
-      ),
-      'type' => 'select',
-      'limit' => TRUE,
-      'vid' => '3',
-      'id' => 'tid_1',
-      'table' => 'term_node',
-      'field' => 'tid',
-      'hierarchy' => 0,
-      'override' => array(
-        'button' => 'Use default',
-      ),
-      'relationship' => 'none',
-      'reduce_duplicates' => 0,
-    ),
-    'field_status_value_many_to_one' => array(
-      'operator' => 'or',
-      'value' => array(),
-      'group' => '0',
-      'exposed' => TRUE,
-      'expose' => array(
-        'use_operator' => 0,
-        'operator' => 'field_status_value_many_to_one_op',
-        'identifier' => 'field_status_value_many_to_one',
-        'label' => 'Status',
-        'optional' => 1,
-        'single' => 1,
-        'remember' => 0,
-        'reduce' => 0,
-      ),
-      'id' => 'field_status_value_many_to_one',
-      'table' => 'node_data_field_status',
-      'field' => 'field_status_value_many_to_one',
-      'override' => array(
-        'button' => 'Override',
-      ),
-      'relationship' => 'none',
-      'reduce_duplicates' => 0,
-    ),
-    'field_assigned_to_uid' => array(
-      'operator' => 'or',
-      'value' => array(),
-      'group' => '0',
-      'exposed' => TRUE,
-      'expose' => array(
-        'use_operator' => 0,
-        'operator' => 'field_assigned_to_uid_op',
-        'identifier' => 'field_assigned_to_uid',
-        'label' => 'Assigned to',
-        'optional' => 1,
-        'single' => 1,
-        'remember' => 0,
-        'reduce' => 0,
-      ),
-      'id' => 'field_assigned_to_uid',
-      'table' => 'node_data_field_assigned_to',
-      'field' => 'field_assigned_to_uid',
-      'override' => array(
-        'button' => 'Override',
-      ),
-      'relationship' => 'none',
-      'reduce_duplicates' => 0,
-    ),
-    'field_personneedinginfo_uid' => array(
-      'operator' => 'or',
-      'value' => array(),
-      'group' => '0',
-      'exposed' => TRUE,
-      'expose' => array(
-        'use_operator' => 0,
-        'operator' => 'field_personneedinginfo_uid_op',
-        'identifier' => 'field_personneedinginfo_uid',
-        'label' => 'Need info from',
-        'optional' => 1,
-        'single' => 1,
-        'remember' => 0,
-        'reduce' => 0,
-      ),
-      'id' => 'field_personneedinginfo_uid',
-      'table' => 'node_data_field_personneedinginfo',
-      'field' => 'field_personneedinginfo_uid',
-      'override' => array(
-        'button' => 'Override',
-      ),
-      'relationship' => 'none',
-      'reduce_duplicates' => 0,
-    ),
-    'field_final_product_value_many_to_one' => array(
-      'operator' => 'or',
-      'value' => array(),
-      'group' => '0',
-      'exposed' => TRUE,
-      'expose' => array(
-        'use_operator' => 0,
-        'operator' => 'field_final_product_value_many_to_one_op',
-        'identifier' => 'field_final_product_value_many_to_one',
-        'label' => 'Final Product',
-        'optional' => 1,
-        'single' => 1,
-        'remember' => 0,
-        'reduce' => 0,
-      ),
-      'id' => 'field_final_product_value_many_to_one',
-      'table' => 'node_data_field_final_product',
-      'field' => 'field_final_product_value_many_to_one',
-      'override' => array(
-        'button' => 'Override',
-      ),
-      'relationship' => 'none',
-      'reduce_duplicates' => 0,
-    ),
-  ));
-  $handler->override_option('title', 'Overdue Requests');
-  $handler->override_option('path', 'mediarequests/overdue');
-  $handler->override_option('menu', array(
-    'type' => 'tab',
-    'title' => 'overdue',
-    'description' => 'Overdue requests',
-    'weight' => '-47',
-    'name' => 'navigation',
-  ));
-  $handler->override_option('tab_options', array(
-    'type' => 'none',
-    'title' => '',
-    'description' => '',
-    'weight' => 0,
-    'name' => 'navigation',
-  ));
-  $handler = $view->new_display('feed', 'Feed', 'feed_1');
-  $handler->override_option('filters', array(
-    'type' => array(
-      'operator' => 'in',
-      'value' => array(
-        'media_request_form' => 'media_request_form',
-      ),
-      'group' => '0',
-      'exposed' => FALSE,
-      'expose' => array(
-        'operator' => FALSE,
-        'label' => '',
-      ),
-      'id' => 'type',
-      'table' => 'node',
-      'field' => 'type',
-      'override' => array(
-        'button' => 'Override',
-      ),
-      'relationship' => 'none',
-    ),
-  ));
-  $handler->override_option('access', array(
-    'type' => 'none',
-  ));
-  $handler->override_option('title', 'Media Request Feed');
-  $handler->override_option('items_per_page', 20);
-  $handler->override_option('style_plugin', 'rss');
-  $handler->override_option('style_options', array(
-    'mission_description' => 0,
-    'description' => 'Latest Media Requests',
-  ));
-  $handler->override_option('row_plugin', 'node_rss');
-  $handler->override_option('row_options', array(
-    'relationship' => 'none',
-    'item_length' => 'title',
-  ));
-  $handler->override_option('path', 'mediarequests.xml');
-  $handler->override_option('menu', array(
-    'type' => 'none',
-    'title' => '',
-    'description' => '',
-    'weight' => 0,
-    'name' => 'navigation',
-  ));
-  $handler->override_option('tab_options', array(
-    'type' => 'none',
-    'title' => '',
-    'description' => '',
-    'weight' => 0,
-    'name' => 'navigation',
-  ));
-  $handler->override_option('displays', array(
-    'page_1' => 'page_1',
-    'default' => 0,
-    'page_2' => 0,
-    'page_3' => 0,
-    'page_4' => 0,
-    'page_5' => 0,
-    'page_6' => 0,
-  ));
-  $handler->override_option('sitename_title', 0);
-
-  $views[$view->name] = $view;
-
   // Exported view: renderdoc
   $view = new view;
   $view->name = 'renderdoc';
   $view->description = 'renderdoc';
   $view->tag = 'renderdoc';
-  $view->view_php = '';
   $view->base_table = 'node';
-  $view->is_cacheable = FALSE;
-  $view->api_version = 2;
+  $view->core = 0;
+  $view->api_version = '2';
   $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
   $handler = $view->new_display('default', 'Defaults', 'default');
   $handler->override_option('fields', array(
@@ -5805,10 +4245,9 @@ function elmsmedia_feature_views_default_views() {
   $view->name = 'rendergallery';
   $view->description = 'rendergallery';
   $view->tag = 'rendergallery';
-  $view->view_php = '';
   $view->base_table = 'node';
-  $view->is_cacheable = FALSE;
-  $view->api_version = 2;
+  $view->core = 0;
+  $view->api_version = '2';
   $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
   $handler = $view->new_display('default', 'Defaults', 'default');
   $handler->override_option('fields', array(
@@ -5910,10 +4349,9 @@ function elmsmedia_feature_views_default_views() {
   $view->name = 'tracking';
   $view->description = 'track where all media is embedded';
   $view->tag = 'tracking';
-  $view->view_php = '';
   $view->base_table = 'node';
-  $view->is_cacheable = FALSE;
-  $view->api_version = 2;
+  $view->core = 0;
+  $view->api_version = '2';
   $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
   $handler = $view->new_display('default', 'Defaults', 'default');
   $handler->override_option('fields', array(
@@ -6088,10 +4526,10 @@ function elmsmedia_feature_views_default_views() {
   $handler->override_option('access', array(
     'type' => 'role',
     'role' => array(
-      '3' => 3,
-      '6' => 6,
-      '4' => 4,
-      '7' => 7,
+      3 => 3,
+      6 => 6,
+      4 => 4,
+      7 => 7,
     ),
   ));
   $handler->override_option('cache', array(
@@ -6152,10 +4590,9 @@ function elmsmedia_feature_views_default_views() {
   $view->name = 'transcription_overview';
   $view->description = 'Transcription overview / workflow page';
   $view->tag = 'transcription';
-  $view->view_php = '';
   $view->base_table = 'node';
-  $view->is_cacheable = FALSE;
-  $view->api_version = 2;
+  $view->core = 0;
+  $view->api_version = '2';
   $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
   $handler = $view->new_display('default', 'Defaults', 'default');
   $handler->override_option('relationships', array(
@@ -6462,9 +4899,9 @@ function elmsmedia_feature_views_default_views() {
       'link_to_taxonomy' => 0,
       'limit' => 1,
       'vids' => array(
-        '1' => 1,
-        '3' => 0,
-        '2' => 0,
+        1 => 1,
+        3 => 0,
+        2 => 0,
       ),
       'exclude' => 0,
       'id' => 'tid',
@@ -6715,9 +5152,9 @@ function elmsmedia_feature_views_default_views() {
   $handler->override_option('access', array(
     'type' => 'role',
     'role' => array(
-      '3' => 3,
-      '6' => 6,
-      '4' => 4,
+      3 => 3,
+      6 => 6,
+      4 => 4,
     ),
   ));
   $handler->override_option('cache', array(
@@ -7022,10 +5459,9 @@ function elmsmedia_feature_views_default_views() {
   $view->name = 'videofeed';
   $view->description = 'This is for generating dynamic playlists for JWplayer';
   $view->tag = 'play list';
-  $view->view_php = '';
   $view->base_table = 'node';
-  $view->is_cacheable = FALSE;
-  $view->api_version = 2;
+  $view->core = 0;
+  $view->api_version = '2';
   $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
   $handler = $view->new_display('default', 'Defaults', 'default');
   $handler->override_option('relationships', array(
@@ -7408,9 +5844,9 @@ function elmsmedia_feature_views_default_views() {
       'field' => 'nid',
       'validate_user_argument_type' => 'uid',
       'validate_user_roles' => array(
-        '2' => 0,
-        '3' => 0,
-        '4' => 0,
+        2 => 0,
+        3 => 0,
+        4 => 0,
       ),
       'override' => array(
         'button' => 'Override',
@@ -7427,7 +5863,7 @@ function elmsmedia_feature_views_default_views() {
       'validate_argument_node_access' => 0,
       'validate_argument_nid_type' => 'nid',
       'validate_argument_vocabulary' => array(
-        '1' => 0,
+        1 => 0,
       ),
       'validate_argument_type' => 'tid',
       'validate_argument_transform' => 0,

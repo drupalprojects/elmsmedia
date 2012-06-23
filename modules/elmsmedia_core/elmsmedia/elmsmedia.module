@@ -13,37 +13,46 @@ function elmsmedia_init() {
 }
 
 /**
- * Implementation of hook_perm().
+ * Implementation of hook_block().
  */
-function elmsmedia_perm() {
-  return array('reboot fmis');
+function elmsmedia_block($op = 'list', $delta = 0, $edit = array()) {
+  switch ($op) {
+    case 'list':
+      $blocks[0]['info'] = t('Asset count');
+      return $blocks;
+    break;
+    case 'view':
+      $block = array();
+      switch ($delta) {
+        case 0:
+          $block['subject'] = t('Asset Count');
+          $block['content'] = elmsmedia_block_asset_count();
+        break;
+      }
+      return $block;
+    break;
+  }
 }
 
 /**
- * Implementation of hook_menu().
+ * Callback to render block asset count
  */
-function elmsmedia_menu() {
-  $items['reboot_fmis'] = array(
-    'title' => 'Reboot FMIS',
-    'description' => 'Reboot the Flash Media Interactive Server',
-    'page callback' => '_elmsmedia_reboot_fmis',
-    'access arguments' => array('reboot fmis'),
-  );
-  return $items;
-}
-
-//helper function to kick off the file to reboot the fmis on cron run
-function _elmsmedia_reboot_fmis() {
-  //create file in the files directory, cron finds it and kills if it exists
-  $filename = 'fms_broken';
-  $content = "reboot soon\r\n";
-  $handle = fopen(file_directory_path() .'/'. $filename, 'x+');
-  fwrite($handle, $content);
-  fclose($handle);
-  drupal_set_message(t('The Flash Media Interactive Server will be rebooted in the next 1 to 2 minutes!'), 'warning');
-  watchdog('fmis','FMIS was rebooted');
-  //just reload the page they were on when they pushed the button
-  drupal_goto();
+function elmsmedia_block_asset_count() {
+  $header = array('Asset Type', 'Count');
+  $rows = array();
+  // get all types, grouped by type
+  $types = node_get_types();
+  $rows = array();
+  $total = 0;
+  // loop through available types
+  foreach ($types as $type => $type_data) {
+    // get a count
+    $count = db_result(db_query("SELECT COUNT(type) FROM {node} WHERE type='%s'", $type));
+    $rows[] = array($type_data->name, $count);
+    $total += $count;
+  }
+  $rows[] = array(t('Total'), $total);
+  return theme('table', $header, $rows);
 }
 
 function _elmsmedia_implode_settings($settings) {

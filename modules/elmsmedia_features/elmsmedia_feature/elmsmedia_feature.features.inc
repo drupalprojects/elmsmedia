@@ -1,6 +1,19 @@
 <?php
 
 /**
+ * Implementation of hook_ctools_plugin_api().
+ */
+function elmsmedia_feature_ctools_plugin_api() {
+  list($module, $api) = func_get_args();
+  if ($module == "context" && $api == "context") {
+    return array("version" => 3);
+  }
+  elseif ($module == "strongarm" && $api == "strongarm") {
+    return array("version" => 1);
+  }
+}
+
+/**
  * Implementation of hook_flag_default_flags().
  */
 function elmsmedia_feature_flag_default_flags() {
@@ -38,11 +51,11 @@ function elmsmedia_feature_flag_default_flags() {
     'show_on_form' => 0,
     'access_author' => '',
     'i18n' => 0,
-    'api_version' => 2,
     'module' => 'elmsmedia_feature',
     'locked' => array(
       '0' => 'name',
     ),
+    'api_version' => 2,
   );
   // Exported flag: "Media Approval".
   $flags['media_review'] = array(
@@ -77,11 +90,11 @@ function elmsmedia_feature_flag_default_flags() {
     'show_on_form' => 0,
     'access_author' => '',
     'i18n' => 0,
-    'api_version' => 2,
     'module' => 'elmsmedia_feature',
     'locked' => array(
       '0' => 'name',
     ),
+    'api_version' => 2,
   );
   return $flags;
 }
@@ -163,6 +176,37 @@ function elmsmedia_feature_imagecache_default_presets() {
         ),
       ),
     ),
+    'elms_column' => array(
+      'presetname' => 'elms_column',
+      'actions' => array(
+        '0' => array(
+          'weight' => '-1',
+          'module' => 'elmsmedia',
+          'action' => 'imagecache_scale_and_crop',
+          'data' => array(
+            'width' => '220',
+            'height' => '180',
+          ),
+        ),
+        '1' => array(
+          'weight' => '9',
+          'module' => 'elmsmedia',
+          'action' => 'imagecache_convert',
+          'data' => array(
+            'format' => 'image/png',
+          ),
+        ),
+        '2' => array(
+          'weight' => '10',
+          'module' => 'elmsmedia',
+          'action' => 'dropshadow',
+          'data' => array(
+            'path' => 'sites/all/modules/imagecache_dropshadow/image',
+            'background_color' => '#FFFFFF',
+          ),
+        ),
+      ),
+    ),
     'elmsmedia_artistartwork' => array(
       'presetname' => 'elmsmedia_artistartwork',
       'actions' => array(
@@ -232,37 +276,6 @@ function elmsmedia_feature_imagecache_default_presets() {
             'width' => '',
             'height' => '200',
             'upscale' => 1,
-          ),
-        ),
-      ),
-    ),
-    'elms_column' => array(
-      'presetname' => 'elms_column',
-      'actions' => array(
-        '0' => array(
-          'weight' => '-1',
-          'module' => 'elmsmedia',
-          'action' => 'imagecache_scale_and_crop',
-          'data' => array(
-            'width' => '220',
-            'height' => '180',
-          ),
-        ),
-        '1' => array(
-          'weight' => '9',
-          'module' => 'elmsmedia',
-          'action' => 'imagecache_convert',
-          'data' => array(
-            'format' => 'image/png',
-          ),
-        ),
-        '2' => array(
-          'weight' => '10',
-          'module' => 'elmsmedia',
-          'action' => 'dropshadow',
-          'data' => array(
-            'path' => 'sites/all/modules/imagecache_dropshadow/image',
-            'background_color' => '#FFFFFF',
           ),
         ),
       ),

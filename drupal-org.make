@@ -27,9 +27,6 @@ projects[better_formats][subdir] = "contrib"
 projects[calendar][version] = "2.4"
 projects[calendar][subdir] = "contrib"
 
-projects[coder][version] = "2.0-rc1"
-projects[coder][subdir] = "contrib"
-
 projects[colorpicker][version] = "2.1"
 projects[colorpicker][subdir] = "contrib"
 
@@ -74,9 +71,6 @@ projects[filefield_paths][subdir] = "contrib"
 
 projects[flag][version] = "2.0-beta6"
 projects[flag][subdir] = "contrib"
-
-projects[hacked][version] = "2.0-beta8"
-projects[hacked][subdir] = "contrib"
 
 projects[hover_preview][version] = "1.0"
 projects[hover_preview][subdir] = "contrib"
@@ -137,6 +131,9 @@ projects[realname][subdir] = "contrib"
 
 projects[stringoverrides][version] = "1.8"
 projects[stringoverrides][subdir] = "contrib"
+
+projects[strongarm][version] = "2.2"
+projects[strongarm][subdir] = "contrib"
 
 projects[subscriptions][version] = "1.5"
 projects[subscriptions][subdir] = "contrib"
