@@ -202,8 +202,7 @@ function elmsmedia_profile_tasks(&$task, $url) {
   // now its safe to enable jquery_ui
   module_enable(array('jquery_ui'));
   // the feature to build out the whole thing
-  features_revert(array('elmsmedia_feature' => array('content', 'fieldgroup', 'menu_links', 'node', 'views', 'variable', 'permissions')));
-  // Update the menu router information.
+  features_revert(array('elmsmedia_feature' => array('content', 'fieldgroup', 'menu_links', 'node', 'flag', 'views', 'variable', 'permissions')));
   menu_rebuild();
 }
 
