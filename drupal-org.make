@@ -75,7 +75,7 @@ projects[filefield][subdir] = "contrib"
 projects[filefield_paths][version] = "1.4"
 projects[filefield_paths][subdir] = "contrib"
 
-projects[flag][version] = "2.0-beta6"
+projects[flag][version] = "2.0-beta7"
 projects[flag][subdir] = "contrib"
 
 projects[hover_preview][version] = "1.0"
