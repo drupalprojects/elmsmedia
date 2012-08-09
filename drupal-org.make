@@ -1,179 +1,109 @@
 ; ELMS Media make file
-core = 6.x
+core = 7.x
 api = 2
-
-; Modules
-projects[views_bulk_operations][version] = "1.13"
-projects[views_bulk_operations][subdir] = "contrib"
-
-projects[admin][version] = "2.0"
-projects[admin][subdir] = "contrib"
-
-projects[adminrole][version] = "1.3"
-projects[adminrole][subdir] = "contrib"
-
-projects[advanced_help][version] = "1.2"
-projects[advanced_help][subdir] = "contrib"
-
-projects[auto_nodetitle][version] = "1.2"
-projects[auto_nodetitle][subdir] = "contrib"
-
-projects[backup_migrate][version] = "2.6"
-projects[backup_migrate][subdir] = "contrib"
-
-projects[better_formats][version] = "1.2"
-projects[better_formats][subdir] = "contrib"
-
-projects[calendar][version] = "2.4"
-projects[calendar][subdir] = "contrib"
-
-projects[coder][version] = "2.0-rc1"
-projects[coder][subdir] = "contrib"
-
-projects[colorpicker][version] = "2.1"
-projects[colorpicker][subdir] = "contrib"
-
-projects[util][version] = "3.0"
-projects[util][subdir] = "contrib"
-
-projects[conditional_fields][version] = "2.0"
-projects[conditional_fields][subdir] = "contrib"
-
-projects[context][version] = "3.x-dev"
+; Based on Ulmus starting point
+; OG/features/context/spaces core and associated projects
+projects[context][version] = "3.0-beta3"
 projects[context][subdir] = "contrib"
-
-projects[cck][version] = "2.9"
-projects[cck][subdir] = "contrib"
-
-projects[date][version] = "2.9"
-projects[date][subdir] = "contrib"
-
-projects[devel][version] = "1.27"
-projects[devel][subdir] = "contrib"
-
-projects[dhtml_menu][version] = "3.5"
-projects[dhtml_menu][subdir] = "contrib"
-
-projects[diff][version] = "2.3"
-projects[diff][subdir] = "contrib"
-
-projects[emfield][version] = "1.26"
-projects[emfield][subdir] = "contrib"
-
-projects[features][version] = "1.2"
+projects[context_og][version] = "2.x-dev"
+projects[context_og][subdir] = "contrib"
+projects[features][version] = "1.0"
 projects[features][subdir] = "contrib"
-
-projects[filefield][version] = "3.10"
-projects[filefield][subdir] = "contrib"
-
-projects[filefield_paths][version] = "1.4"
-projects[filefield_paths][subdir] = "contrib"
-
-projects[flag][version] = "2.0-beta6"
-projects[flag][subdir] = "contrib"
-
-projects[hacked][version] = "2.0-beta8"
-projects[hacked][subdir] = "contrib"
-
-projects[hover_preview][version] = "1.0"
-projects[hover_preview][subdir] = "contrib"
-
-projects[iconizer][version] = "1.3"
-projects[iconizer][subdir] = "contrib"
-
-projects[imageapi][version] = "1.10"
-projects[imageapi][subdir] = "contrib"
-
-projects[imagecache][version] = "2.0-beta12"
-projects[imagecache][subdir] = "contrib"
-
-projects[imagecache_actions][version] = "2.0"
-projects[imagecache_actions][subdir] = "contrib"
-
-projects[imagecache_scale9actions][version] = "1.02"
-projects[imagecache_scale9actions][subdir] = "contrib"
-
-projects[imagefield][version] = "3.10"
-projects[imagefield][subdir] = "contrib"
-
-projects[jammer][version] = "1.7"
-projects[jammer][subdir] = "contrib"
-
-projects[jquery_ui][version] = "1.5"
-projects[jquery_ui][subdir] = "contrib"
-
-projects[jquery_update][version] = "2.0-alpha1"
-projects[jquery_update][subdir] = "contrib"
-
-projects[jwplayermodule][version] = "1.1"
-projects[jwplayermodule][subdir] = "contrib"
-
-projects[lightbox2][version] = "1.11"
-projects[lightbox2][subdir] = "contrib"
-
-projects[masquerade][version] = "1.7"
-projects[masquerade][subdir] = "contrib"
-
-projects[media_webcam][version] = "1.0-beta2"
-projects[media_webcam][subdir] = "contrib"
-
-projects[module_filter][version] = "1.7"
-projects[module_filter][subdir] = "contrib"
-
-projects[nodeformcols][version] = "1.6"
-projects[nodeformcols][subdir] = "contrib"
-
-projects[pathauto][version] = "1.6"
-projects[pathauto][subdir] = "contrib"
-
-projects[protect_critical_users][version] = "1.1"
-projects[protect_critical_users][subdir] = "contrib"
-
-projects[realname][version] = "1.5"
-projects[realname][subdir] = "contrib"
-
-projects[stringoverrides][version] = "1.8"
-projects[stringoverrides][subdir] = "contrib"
-
-projects[subscriptions][version] = "1.5"
-projects[subscriptions][subdir] = "contrib"
-
-projects[themekey][version] = "3.6"
-projects[themekey][subdir] = "contrib"
-
-projects[token][version] = "1.18"
-projects[token][subdir] = "contrib"
-
-projects[vertical_tabs][version] = "1.0-rc2"
-projects[vertical_tabs][subdir] = "contrib"
-
-projects[views][version] = "2.12"
+projects[og][version] = "2.0-beta1"
+projects[og][subdir] = "contrib"
+projects[og_views][version] = "1.0"
+projects[og_views][subdir] = "contrib"
+projects[og_theme][version] = "2.0"
+projects[og_theme][subdir] = "contrib"
+projects[og_extras][version] = "1.1"
+projects[og_extras][subdir] = "contrib"
+projects[views][version] = "3.3"
 projects[views][subdir] = "contrib"
 
-projects[views_bonus][version] = "1.1"
-projects[views_bonus][subdir] = "contrib"
+; Development best practices / addition required modules
+projects[devel][version] = "1.3"
+projects[devel][subdir] = "contrib"
+projects[profiler_builder][version] = "1.x-dev"
+projects[profiler_builder][subdir] = "contrib"
+projects[admin_menu][version] = "3.0-rc3"
+projects[admin_menu][subdir] = "contrib"
+projects[views_bulk_operations][version] = "3.0-rc1"
+projects[views_bulk_operations][subdir] = "contrib"
+projects[backup_migrate][version] = "2.4"
+projects[backup_migrate][subdir] = "contrib"
+projects[advanced_help][version] = "1.0"
+projects[advanced_help][subdir] = "contrib"
+projects[ctools][version] = "1.x-dev"
+projects[ctools][subdir] = "contrib"
+projects[entity][version] = "1.0-rc3"
+projects[entity][subdir] = "contrib"
+projects[job_scheduler][version] = "2.0-alpha3"
+projects[job_scheduler][subdir] = "contrib"
+projects[jquery_update][version] = "2.2"
+projects[jquery_update][subdir] = "contrib"
+projects[libraries][version] = "2.x-dev"
+projects[libraries][subdir] = "contrib"
+projects[masquerade][version] = "1.0-rc4"
+projects[masquerade][subdir] = "contrib"
+projects[module_filter][version] = "1.7"
+projects[module_filter][subdir] = "contrib"
+projects[pathauto][version] = "1.1"
+projects[pathauto][subdir] = "contrib"
+projects[stringoverrides][version] = "1.8"
+projects[stringoverrides][subdir] = "contrib"
+projects[strongarm][version] = "2.0"
+projects[strongarm][subdir] = "contrib"
+projects[prepopulate][version] = "2.x-dev"
+projects[prepopulate][subdir] = "contrib"
+projects[requirement_dashboard][version] = "1.2"
+projects[requirement_dashboard][subdir] = "contrib"
+projects[token][version] = "1.1"
+projects[token][subdir] = "contrib"
+projects[entityreference_prepopulate][version] = "1.0"
+projects[entityreference_prepopulate][subdir] = "contrib"
 
-projects[views_calc][version] = "1.3"
-projects[views_calc][subdir] = "contrib"
-
-projects[views_fluid_grid][version] = "1.1"
-projects[views_fluid_grid][subdir] = "contrib"
-
-projects[wysiwyg][version] = "2.4"
+; UX projects to refine and manage UX above drupal
+projects[omega_tools][version] = "3.0-rc4"
+projects[omega_tools][subdir] = "contrib"
+projects[delta][version] = "3.0-beta11"
+projects[delta][subdir] = "contrib"
+projects[wysiwyg][version] = "2.1"
 projects[wysiwyg][subdir] = "contrib"
 
-projects[wysiwyg_template][version] = "2.6"
-projects[wysiwyg_template][subdir] = "contrib"
+; Field / Common content enablers for content types / entities
+projects[field_group][version] = "1.1"
+projects[field_group][subdir] = "contrib"
+projects[autocomplete_widgets][version] = "1.0-beta2"
+projects[autocomplete_widgets][subdir] = "contrib"
+projects[date][version] = "2.5"
+projects[date][subdir] = "contrib"
+projects[link][version] = "1.0"
+projects[link][subdir] = "contrib"
+projects[entityreference][version] = "1.0-rc3"
+projects[entityreference][subdir] = "contrib"
+projects[nodereference_url][version] = "1.12"
+projects[nodereference_url][subdir] = "contrib"
+projects[options_element][version] = "1.7"
+projects[options_element][subdir] = "contrib"
+projects[filefield_paths][version] = "1.0-beta3"
+projects[filefield_paths][subdir] = "contrib"
+
+; Data migration helpers for getting information in
+projects[uuid][version] = "1.x-dev"
+projects[uuid][subdir] = "contrib"
 
 ; Themes
-projects[rubik][version] = "3.0-beta2"
+projects[rubik][version] = "4.0-beta8"
+projects[rubik][type] = "theme"
 projects[rubik][subdir] = "contrib"
 
-projects[tao][version] = "3.2"
+projects[tao][version] = "3.0-beta4"
+projects[tao][type] = "theme"
 projects[tao][subdir] = "contrib"
 
-projects[sky][version] = "3.11"
-projects[sky][subdir] = "contrib"
+projects[omega][version] = "3.1"
+projects[omega][type] = "theme"
+projects[omega][subdir] = "contrib"
 
 ; Libraries
 libraries[ckeditor][download][type] = "get"
@@ -181,6 +111,3 @@ libraries[ckeditor][download][url] = "http://download.cksource.com/CKEditor/CKEd
 libraries[ckeditor][directory_name] = "ckeditor"
 libraries[ckeditor][type] = "library"
 libraries[ckeditor][destination] = "libraries"
-
-; Patches
-projects[context][patch][] = "http://drupal.org/files/issues/context-expose-weights.patch"
