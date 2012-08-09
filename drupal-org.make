@@ -1,6 +1,7 @@
 ; ELMS Media make file
 core = 7.x
 api = 2
+
 ; Based on Ulmus starting point
 ; OG/features/context/spaces core and associated projects
 projects[context][version] = "3.0-beta3"
@@ -13,12 +14,13 @@ projects[og][version] = "2.0-beta1"
 projects[og][subdir] = "contrib"
 projects[og_views][version] = "1.0"
 projects[og_views][subdir] = "contrib"
-projects[og_theme][version] = "2.0"
-projects[og_theme][subdir] = "contrib"
-projects[og_extras][version] = "1.1"
-projects[og_extras][subdir] = "contrib"
+; Views projects
 projects[views][version] = "3.3"
 projects[views][subdir] = "contrib"
+projects[views_bulk_operations][version] = "3.0-rc1"
+projects[views_bulk_operations][subdir] = "contrib"
+projects[views_fluid_grid][version] = "3.0"
+projects[views_fluid_grid][subdir] = "contrib"
 
 ; Development best practices / addition required modules
 projects[devel][version] = "1.3"
@@ -27,8 +29,6 @@ projects[profiler_builder][version] = "1.x-dev"
 projects[profiler_builder][subdir] = "contrib"
 projects[admin_menu][version] = "3.0-rc3"
 projects[admin_menu][subdir] = "contrib"
-projects[views_bulk_operations][version] = "3.0-rc1"
-projects[views_bulk_operations][subdir] = "contrib"
 projects[backup_migrate][version] = "2.4"
 projects[backup_migrate][subdir] = "contrib"
 projects[advanced_help][version] = "1.0"
@@ -77,12 +77,8 @@ projects[autocomplete_widgets][version] = "1.0-beta2"
 projects[autocomplete_widgets][subdir] = "contrib"
 projects[date][version] = "2.5"
 projects[date][subdir] = "contrib"
-projects[link][version] = "1.0"
-projects[link][subdir] = "contrib"
 projects[entityreference][version] = "1.0-rc3"
 projects[entityreference][subdir] = "contrib"
-projects[nodereference_url][version] = "1.12"
-projects[nodereference_url][subdir] = "contrib"
 projects[options_element][version] = "1.7"
 projects[options_element][subdir] = "contrib"
 projects[filefield_paths][version] = "1.0-beta3"
@@ -105,9 +101,29 @@ projects[omega][version] = "3.1"
 projects[omega][type] = "theme"
 projects[omega][subdir] = "contrib"
 
+projects[respond][version] = "3.0-beta1"
+projects[respond][type] = "theme"
+projects[respond][subdir] = "contrib"
+
 ; Libraries
 libraries[ckeditor][download][type] = "get"
 libraries[ckeditor][download][url] = "http://download.cksource.com/CKEditor/CKEditor/CKEditor%203.6.3/ckeditor_3.6.3.tar.gz"
 libraries[ckeditor][directory_name] = "ckeditor"
 libraries[ckeditor][type] = "library"
 libraries[ckeditor][destination] = "libraries"
+
+; Additional projects
+projects[elements][version] = "1.2"
+projects[elements][subdir] = "contrib"
+projects[kaltura][version] = "2.0"
+projects[kaltura][subdir] = "contrib"
+projects[html5_tools][version] = "1.2"
+projects[html5_tools][subdir] = "contrib"
+projects[jquery_plugin][version] = "1.0"
+projects[jquery_plugin][subdir] = "contrib"
+projects[ldap][version] = "1.0-beta11"
+projects[ldap][subdir] = "contrib"
+projects[pubcookie][version] = "1.0"
+projects[pubcookie][subdir] = "contrib"
+projects[media_kaltura][version] = "1.x-dev"
+projects[media_kaltura][subdir] = "contrib"
