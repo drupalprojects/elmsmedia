@@ -6,21 +6,18 @@ projects[drupal][version] = "7.x"
 ; include the d.o. profile base
 includes[] = "drupal-org.make"
 
+
+projects[accessibility][version] = "1.x-dev"
+projects[accessibility][subdir] = "contrib"
+
 ; +++++ Libraries +++++
 
 ; mediaelement
-libraries[mediaelement][directory_name] = "mediaelement"
-libraries[mediaelement][type] = "library"
-libraries[mediaelement][destination] = "libraries"
-libraries[mediaelement][download][type] = "get"
-libraries[mediaelement][download][url] = "" ; TODO add download URI
-
-; quail
-libraries[quail][directory_name] = "quail"
-libraries[quail][type] = "library"
-libraries[quail][destination] = "libraries"
-libraries[quail][download][type] = "get"
-libraries[quail][download][url] = "" ; TODO add download URI
+;libraries[mediaelement][directory_name] = "mediaelement"
+;libraries[mediaelement][type] = "library"
+;libraries[mediaelement][destination] = "libraries"
+;libraries[mediaelement][download][type] = "get"
+;libraries[mediaelement][download][url] = "" ; TODO add download URI
 
 ; elmsmedia
 libraries[elmsmedia][directory_name] = "elmsmedia"

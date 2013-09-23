@@ -4,9 +4,6 @@ api = "2"
 
 ; +++++ Modules +++++
 
-projects[accessibility][version] = "1.x-dev"
-projects[accessibility][subdir] = "contrib"
-
 projects[admin_menu][version] = "3.0-rc4"
 projects[admin_menu][subdir] = "contrib"
 
@@ -75,12 +72,6 @@ projects[token][subdir] = "contrib"
 
 projects[transliteration][version] = "3.1"
 projects[transliteration][subdir] = "contrib"
-
-projects[webaccess][version] = "1.x-dev"
-projects[webaccess][subdir] = "contrib"
-
-projects[webaccess_forms][version] = "1.x-dev"
-projects[webaccess_forms][subdir] = "contrib"
 
 projects[httprl][version] = "1.12"
 projects[httprl][subdir] = "contrib"
