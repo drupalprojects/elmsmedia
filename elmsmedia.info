@@ -1,102 +1,93 @@
-name = "ELMS Media"
-description = "Install ELMS Media Asset management system"
-core = 7.x
-; Ulmus-based Core installation
+; Packaging information for elmsmedia
+name = "ELMSMedia"
+description = "ELMS Media distribution for asset management in CIS Network"
+exclusive = "1"
+core = "7.x"
+; ----------
+; Dependencies
+; ----------
+; Accessibility
+dependencies[] = accessibility
+dependencies[] = accessibility_wysiwyg
+; Administration
+dependencies[] = admin_devel
+dependencies[] = admin_menu
+dependencies[] = admin_menu_toolbar
+; Chaos tool suite
+dependencies[] = ctools
+; Context
+dependencies[] = context
+dependencies[] = context_ui
 ; Core
 dependencies[] = block
-dependencies[] = color
-dependencies[] = comment
 dependencies[] = contextual
-dependencies[] = dashboard
+dependencies[] = dblog
 dependencies[] = field
 dependencies[] = field_sql_storage
 dependencies[] = field_ui
 dependencies[] = file
 dependencies[] = filter
-dependencies[] = help
 dependencies[] = image
 dependencies[] = list
-dependencies[] = menu
 dependencies[] = node
-dependencies[] = number
 dependencies[] = options
+dependencies[] = overlay
 dependencies[] = path
-dependencies[] = rdf
-dependencies[] = search
 dependencies[] = system
 dependencies[] = taxonomy
 dependencies[] = text
 dependencies[] = update
 dependencies[] = user
-dependencies[] = dblog
-dependencies[] = overlay
-; Administration
-dependencies[] = admin_devel
-dependencies[] = admin_menu
-dependencies[] = admin_menu_toolbar
-; Context
-dependencies[] = context
-dependencies[] = context_og
-dependencies[] = context_ui
-; Chaos tool suite
-dependencies[] = ctools
-; Date/Time
-dependencies[] = date
-dependencies[] = date_api
-dependencies[] = date_popup
-dependencies[] = date_views
-; Theme Tools
-dependencies[] = delta
-dependencies[] = delta_blocks
-dependencies[] = delta_color
-dependencies[] = delta_ui
-dependencies[] = omega_tools
+; Entity
+dependencies[] = entity_iframe
+dependencies[] = entity_iframe_mode
 ; Fields
 dependencies[] = entityreference
-dependencies[] = link
-dependencies[] = field_group
-; User interface
-dependencies[] = jquery_update
-dependencies[] = wysiwyg
+; Input filters
+dependencies[] = typogrify
+dependencies[] = video_filter
+; Media
+dependencies[] = imce
 ; Organic groups
 dependencies[] = og
 dependencies[] = og_access
 dependencies[] = og_context
 dependencies[] = og_ui
-dependencies[] = og_views
-dependencies[] = og_extras
-dependencies[] = og_theme
-; Development
-dependencies[] = profiler_builder
-dependencies[] = devel
-; Requirement Dashboard
-dependencies[] = requirement_dashboard
-dependencies[] = requirement_dashboard_og
-dependencies[] = requirement_dashboard_system
-; UUID
-dependencies[] = uuid
-; Views
-dependencies[] = views_bulk_operations
-dependencies[] = views_ui
-dependencies[] = views
-; Features
-dependencies[] = features
 ; Other
-dependencies[] = strongarm
-dependencies[] = masquerade
-dependencies[] = advanced_help
-dependencies[] = autocomplete_widgets
-dependencies[] = backup_migrate
+dependencies[] = elmsmedia_helper
 dependencies[] = entity
 dependencies[] = entity_token
-dependencies[] = job_scheduler
+dependencies[] = fitvids
+dependencies[] = imagefield_focus
 dependencies[] = libraries
+dependencies[] = masquerade
+dependencies[] = mediaelement
 dependencies[] = module_filter
-dependencies[] = options_element
-dependencies[] = stringoverrides
-dependencies[] = token
 dependencies[] = pathauto
-dependencies[] = prepopulate
-dependencies[] = entityreference_prepopulate
-
-; ELMS Media specific
+dependencies[] = strongarm
+dependencies[] = token
+dependencies[] = transliteration
+; Performance and scalability
+dependencies[] = httprl
+; Regions
+dependencies[] = regions
+dependencies[] = regions_admin_left
+; Textbook
+dependencies[] = textbook
+; User interface
+dependencies[] = ckeditor_link
+dependencies[] = imce_wysiwyg
+dependencies[] = jquery_update
+dependencies[] = wysiwyg
+; Views
+dependencies[] = better_exposed_filters
+dependencies[] = views
+dependencies[] = views_autocomplete_filters
+dependencies[] = views_bulk_operations
+dependencies[] = views_fluid_grid
+dependencies[] = views_ui
+; Features
+dependencies[] = features
+dependencies[] = regions_admin_example
+dependencies[] = textbook_editor
+dependencies[] = elmsmedia_feature
