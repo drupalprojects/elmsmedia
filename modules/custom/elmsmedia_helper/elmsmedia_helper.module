@@ -14,6 +14,13 @@ function elmsmedia_helper_field_formatter_info_alter(&$info) {
 }
 
 /**
+ * Implements hook_init().
+ */
+function elmsmedia_helper_init() {
+  drupal_add_css(drupal_get_path('module', 'elmsmedia_helper') . '/elmsmedia_helper.css');
+}
+
+/**
  * Implements hook_field_formatter_view().
  */
 function elmsmedia_helper_field_formatter_view($entity_type, $entity, $field, $instance, $langcode, $items, $display) {
@@ -64,9 +71,13 @@ function elmsmedia_helper_field_formatter_view($entity_type, $entity, $field, $i
       $element[$delta]['#attributes']['width'] = $display['settings']['width'];
       // this is where we deviate from default mediaelement handler
       // this adds the poster image we want that's been uploaded
-      $element[$delta]['#attributes']['poster'] = file_create_url($entity->field_poster['und'][0]['uri']);
+      if (isset($entity->field_poster['und'])) {
+        $element[$delta]['#attributes']['poster'] = file_create_url($entity->field_poster['und'][0]['uri']);
+      }
       // helps to set the caption file correctly
-      $element[$delta]['#settings']['caption'] = file_create_url($entity->field_caption['und'][0]['uri']);  
+      if (isset($entity->field_caption['und'])) {
+        $element[$delta]['#settings']['caption'] = file_create_url($entity->field_caption['und'][0]['uri']);  
+      }
     }
     elseif ($display['type'] == 'mediaelement_audio') {
       $element[$delta]['#theme'] = 'elmsmedia_helper_audio';
@@ -78,7 +89,6 @@ function elmsmedia_helper_field_formatter_view($entity_type, $entity, $field, $i
 /**
  * Implements hook_theme().
  */
-
 function elmsmedia_helper_theme() {
   return array(
     'elmsmedia_helper_video' => array(
@@ -93,9 +103,11 @@ function elmsmedia_helper_theme() {
 // callback for elmsmedia_helper_video
 function theme_elmsmedia_helper_video($variables) {
   $output = '<div class="mediaelement-video">';
-  $output .= '<video ' . drupal_attributes($variables['attributes']) . ' >
-  <track kind="subtitles" src="'. $variables['settings']['caption'] .'" srclang="en" />
-  </video>';
+  $output .= '<video ' . drupal_attributes($variables['attributes']) . ' >';
+  if (isset($variables['settings']['caption'])) {
+    $output .= '<track kind="subtitles" src="'. $variables['settings']['caption'] .'" srclang="en" />
+    </video>';
+  }
   if ($variables['settings']['download_link']) {
     $output .= '<div class="mediaelement-download-link"><a href="' . $variables['attributes']['src'] . '">' . filter_xss_admin($variables['settings']['download_text']) . '</a></div>';
   }
