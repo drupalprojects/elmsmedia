@@ -26,6 +26,7 @@ function elmsmedia_feature_views_default_views() {
   $handler->display->display_options['use_ajax'] = TRUE;
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'perm';
+  $handler->display->display_options['access']['perm'] = 'create elmsmedia_image content';
   $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['exposed_form']['type'] = 'better_exposed_filters';
@@ -88,6 +89,18 @@ function elmsmedia_feature_views_default_views() {
     'image_style' => 'medium',
     'image_link' => 'content',
   );
+  /* Field: Content: External media */
+  $handler->display->display_options['fields']['field_external_media']['id'] = 'field_external_media';
+  $handler->display->display_options['fields']['field_external_media']['table'] = 'field_data_field_external_media';
+  $handler->display->display_options['fields']['field_external_media']['field'] = 'field_external_media';
+  $handler->display->display_options['fields']['field_external_media']['label'] = '';
+  $handler->display->display_options['fields']['field_external_media']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_external_media']['click_sort_column'] = 'video_url';
+  $handler->display->display_options['fields']['field_external_media']['type'] = 'video_embed_field_thumbnail';
+  $handler->display->display_options['fields']['field_external_media']['settings'] = array(
+    'image_style' => 'medium',
+    'image_link' => 'node',
+  );
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
@@ -114,20 +127,20 @@ function elmsmedia_feature_views_default_views() {
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Content: Type */
-  $handler->display->display_options['filters']['type']['id'] = 'type';
-  $handler->display->display_options['filters']['type']['table'] = 'node';
-  $handler->display->display_options['filters']['type']['field'] = 'type';
-  $handler->display->display_options['filters']['type']['value'] = array(
-    'audio' => 'audio',
-    'elmsmedia_image' => 'elmsmedia_image',
-    'video' => 'video',
+  /* Filter criterion: Content type groups: Content type group */
+  $handler->display->display_options['filters']['group_type']['id'] = 'group_type';
+  $handler->display->display_options['filters']['group_type']['table'] = 'content_type_groups_types';
+  $handler->display->display_options['filters']['group_type']['field'] = 'group_type';
+  $handler->display->display_options['filters']['group_type']['value'] = array(
+    'elmsmedia_types' => 'elmsmedia_types',
   );
+  $handler->display->display_options['filters']['group_type']['group'] = 1;
   /* Filter criterion: Content: Title */
   $handler->display->display_options['filters']['title']['id'] = 'title';
   $handler->display->display_options['filters']['title']['table'] = 'node';
   $handler->display->display_options['filters']['title']['field'] = 'title';
   $handler->display->display_options['filters']['title']['operator'] = 'contains';
+  $handler->display->display_options['filters']['title']['group'] = 1;
   $handler->display->display_options['filters']['title']['exposed'] = TRUE;
   $handler->display->display_options['filters']['title']['expose']['operator_id'] = 'title_op';
   $handler->display->display_options['filters']['title']['expose']['label'] = 'Title';
@@ -151,6 +164,7 @@ function elmsmedia_feature_views_default_views() {
   $handler->display->display_options['filters']['field_course_tid']['table'] = 'field_data_field_course';
   $handler->display->display_options['filters']['field_course_tid']['field'] = 'field_course_tid';
   $handler->display->display_options['filters']['field_course_tid']['value'] = '';
+  $handler->display->display_options['filters']['field_course_tid']['group'] = 1;
   $handler->display->display_options['filters']['field_course_tid']['exposed'] = TRUE;
   $handler->display->display_options['filters']['field_course_tid']['expose']['operator_id'] = 'field_course_tid_op';
   $handler->display->display_options['filters']['field_course_tid']['expose']['label'] = 'Course';
@@ -168,6 +182,7 @@ function elmsmedia_feature_views_default_views() {
   $handler->display->display_options['filters']['type_1']['id'] = 'type_1';
   $handler->display->display_options['filters']['type_1']['table'] = 'node';
   $handler->display->display_options['filters']['type_1']['field'] = 'type';
+  $handler->display->display_options['filters']['type_1']['group'] = 1;
   $handler->display->display_options['filters']['type_1']['exposed'] = TRUE;
   $handler->display->display_options['filters']['type_1']['expose']['operator_id'] = 'type_1_op';
   $handler->display->display_options['filters']['type_1']['expose']['label'] = 'Type';

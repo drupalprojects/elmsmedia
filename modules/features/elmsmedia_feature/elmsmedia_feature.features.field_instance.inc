@@ -82,7 +82,7 @@ function elmsmedia_feature_field_default_field_instances() {
         'label' => 'hidden',
         'module' => 'taxonomy',
         'settings' => array(),
-        'type' => 'taxonomy_term_reference_link',
+        'type' => 'taxonomy_term_reference_plain',
         'weight' => 0,
       ),
       'iframe' => array(
@@ -114,6 +114,87 @@ function elmsmedia_feature_field_default_field_instances() {
       ),
       'type' => 'taxonomy_autocomplete',
       'weight' => 32,
+    ),
+  );
+
+  // Exported field_instance: 'node-document-field_course'
+  $field_instances['node-document-field_course'] = array(
+    'bundle' => 'document',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 1,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_course',
+    'label' => 'Course',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'taxonomy',
+      'settings' => array(
+        'autocomplete_path' => 'taxonomy/autocomplete',
+        'size' => 60,
+      ),
+      'type' => 'taxonomy_autocomplete',
+      'weight' => 33,
+    ),
+  );
+
+  // Exported field_instance: 'node-document-field_document_file'
+  $field_instances['node-document-field_document_file'] = array(
+    'bundle' => 'document',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'file',
+        'settings' => array(),
+        'type' => 'file_default',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_document_file',
+    'label' => 'File',
+    'required' => 1,
+    'settings' => array(
+      'description_field' => 0,
+      'file_directory' => 'documents',
+      'file_extensions' => 'txt pdf doc docx xls xlsx ppt pptx',
+      'max_filesize' => '',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'file',
+      'settings' => array(
+        'progress_indicator' => 'bar',
+      ),
+      'type' => 'file_generic',
+      'weight' => 31,
     ),
   );
 
@@ -214,6 +295,106 @@ function elmsmedia_feature_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-external_video-field_course'
+  $field_instances['node-external_video-field_course'] = array(
+    'bundle' => 'external_video',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'inline',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_plain',
+        'weight' => 2,
+      ),
+      'iframe' => array(
+        'label' => 'inline',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 1,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_course',
+    'label' => 'Course',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'taxonomy',
+      'settings' => array(
+        'autocomplete_path' => 'taxonomy/autocomplete',
+        'size' => 60,
+      ),
+      'type' => 'taxonomy_autocomplete',
+      'weight' => 1,
+    ),
+  );
+
+  // Exported field_instance: 'node-external_video-field_external_media'
+  $field_instances['node-external_video-field_external_media'] = array(
+    'bundle' => 'external_video',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'video_embed_field',
+        'settings' => array(
+          'description' => 1,
+          'description_position' => 'bottom',
+          'video_style' => 'normal',
+        ),
+        'type' => 'video_embed_field',
+        'weight' => 1,
+      ),
+      'iframe' => array(
+        'label' => 'hidden',
+        'module' => 'video_embed_field',
+        'settings' => array(
+          'description' => 1,
+          'description_position' => 'bottom',
+          'video_style' => 'normal',
+        ),
+        'type' => 'video_embed_field',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_external_media',
+    'label' => 'External media',
+    'required' => 1,
+    'settings' => array(
+      'description_field' => 0,
+      'description_length' => 128,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'video_embed_field',
+      'settings' => array(),
+      'type' => 'video_embed_field_video',
+      'weight' => 2,
+    ),
+  );
+
   // Exported field_instance: 'node-video-field_caption'
   $field_instances['node-video-field_caption'] = array(
     'bundle' => 'video',
@@ -272,7 +453,7 @@ function elmsmedia_feature_field_default_field_instances() {
         'label' => 'inline',
         'module' => 'taxonomy',
         'settings' => array(),
-        'type' => 'taxonomy_term_reference_link',
+        'type' => 'taxonomy_term_reference_plain',
         'weight' => 0,
       ),
       'iframe' => array(
@@ -422,7 +603,7 @@ function elmsmedia_feature_field_default_field_instances() {
           'controls' => 1,
           'download_link' => 0,
           'download_text' => 'Download',
-          'height' => 400,
+          'height' => '400px',
           'width' => '100%',
         ),
         'type' => 'mediaelement_video',
@@ -475,6 +656,8 @@ function elmsmedia_feature_field_default_field_instances() {
   t('Audio');
   t('Caption');
   t('Course');
+  t('External media');
+  t('File');
   t('Image');
   t('MP3 files only');
   t('Poster');

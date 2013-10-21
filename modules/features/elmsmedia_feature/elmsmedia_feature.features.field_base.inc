@@ -33,6 +33,8 @@ function elmsmedia_feature_field_default_field_bases() {
     'locked' => 0,
     'module' => 'file',
     'settings' => array(
+      'cis_connector_access' => FALSE,
+      'cis_connector_disable' => FALSE,
       'display_default' => 0,
       'display_field' => 0,
       'uri_scheme' => 'public',
@@ -64,6 +66,8 @@ function elmsmedia_feature_field_default_field_bases() {
     'locked' => 0,
     'module' => 'file',
     'settings' => array(
+      'cis_connector_access' => FALSE,
+      'cis_connector_disable' => FALSE,
       'display_default' => 0,
       'display_field' => 0,
       'uri_scheme' => 'public',
@@ -101,9 +105,63 @@ function elmsmedia_feature_field_default_field_bases() {
           'parent' => 0,
         ),
       ),
+      'cis_connector_access' => FALSE,
+      'cis_connector_disable' => FALSE,
     ),
     'translatable' => 0,
     'type' => 'taxonomy_term_reference',
+  );
+
+  // Exported field_base: 'field_document_file'
+  $field_bases['field_document_file'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_document_file',
+    'foreign keys' => array(
+      'fid' => array(
+        'columns' => array(
+          'fid' => 'fid',
+        ),
+        'table' => 'file_managed',
+      ),
+    ),
+    'indexes' => array(
+      'fid' => array(
+        0 => 'fid',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'file',
+    'settings' => array(
+      'cis_connector_access' => FALSE,
+      'cis_connector_disable' => FALSE,
+      'display_default' => 0,
+      'display_field' => 0,
+      'uri_scheme' => 'public',
+    ),
+    'translatable' => 0,
+    'type' => 'file',
+  );
+
+  // Exported field_base: 'field_external_media'
+  $field_bases['field_external_media'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_external_media',
+    'foreign keys' => array(),
+    'indexes' => array(),
+    'locked' => 0,
+    'module' => 'video_embed_field',
+    'settings' => array(
+      'cis_connector_access' => FALSE,
+      'cis_connector_disable' => FALSE,
+    ),
+    'translatable' => 0,
+    'type' => 'video_embed_field',
   );
 
   // Exported field_base: 'field_image'
@@ -129,6 +187,8 @@ function elmsmedia_feature_field_default_field_bases() {
     'locked' => 0,
     'module' => 'image',
     'settings' => array(
+      'cis_connector_access' => FALSE,
+      'cis_connector_disable' => FALSE,
       'default_image' => 0,
       'uri_scheme' => 'public',
     ),
@@ -159,6 +219,8 @@ function elmsmedia_feature_field_default_field_bases() {
     'locked' => 0,
     'module' => 'image',
     'settings' => array(
+      'cis_connector_access' => FALSE,
+      'cis_connector_disable' => FALSE,
       'default_image' => 0,
       'uri_scheme' => 'public',
     ),
@@ -189,6 +251,8 @@ function elmsmedia_feature_field_default_field_bases() {
     'locked' => 0,
     'module' => 'file',
     'settings' => array(
+      'cis_connector_access' => FALSE,
+      'cis_connector_disable' => FALSE,
       'display_default' => 0,
       'display_field' => 0,
       'uri_scheme' => 'public',
@@ -220,6 +284,8 @@ function elmsmedia_feature_field_default_field_bases() {
     'locked' => 0,
     'module' => 'file',
     'settings' => array(
+      'cis_connector_access' => FALSE,
+      'cis_connector_disable' => FALSE,
       'display_default' => 0,
       'display_field' => 0,
       'uri_scheme' => 'public',
