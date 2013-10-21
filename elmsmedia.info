@@ -15,6 +15,8 @@ dependencies[] = admin_menu
 dependencies[] = admin_menu_toolbar
 ; Chaos tool suite
 dependencies[] = ctools
+; CIS
+dependencies[] = cis_connector
 ; Context
 dependencies[] = context
 dependencies[] = context_ui
@@ -62,6 +64,8 @@ dependencies[] = imagefield_focus
 dependencies[] = libraries
 dependencies[] = masquerade
 dependencies[] = mediaelement
+dependencies[] = restws
+dependencies[] = restws_basic_auth
 dependencies[] = module_filter
 dependencies[] = pathauto
 dependencies[] = strongarm
@@ -88,6 +92,7 @@ dependencies[] = views_fluid_grid
 dependencies[] = views_ui
 ; Features
 dependencies[] = features
+dependencies[] = cis_service_roles
 dependencies[] = regions_admin_example
 dependencies[] = textbook_editor
 dependencies[] = elmsmedia_feature

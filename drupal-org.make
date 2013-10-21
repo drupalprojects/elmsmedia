@@ -10,7 +10,7 @@ projects[admin_menu][subdir] = "contrib"
 projects[ctools][version] = "1.3"
 projects[ctools][subdir] = "contrib"
 
-projects[context][version] = "3.0-beta7"
+projects[context][version] = "3.1"
 projects[context][subdir] = "contrib"
 
 projects[devel][version] = "1.3"
@@ -19,16 +19,16 @@ projects[devel][subdir] = "contrib"
 projects[profiler_builder][version] = "1.x-dev"
 projects[profiler_builder][subdir] = "contrib"
 
-projects[entity_iframe][version] = "1.0-beta4"
+projects[entity_iframe][version] = "1.0-rc1"
 projects[entity_iframe][subdir] = "contrib"
 
-projects[features][version] = "2.0-rc3"
+projects[features][version] = "2.0"
 projects[features][subdir] = "contrib"
 
 projects[entityreference][version] = "1.0"
 projects[entityreference][subdir] = "contrib"
 
-projects[typogrify][version] = "1.0-rc6"
+projects[typogrify][version] = "1.0-rc8"
 projects[typogrify][subdir] = "contrib"
 
 projects[video_filter][version] = "3.1"
@@ -81,6 +81,9 @@ projects[regions][subdir] = "contrib"
 
 projects[textbook][version] = "4.0-alpha1"
 projects[textbook][subdir] = "contrib"
+
+projects[restws][version] = "2.1"
+projects[restws][subdir] = "contrib"
 
 projects[ckeditor_link][version] = "2.3"
 projects[ckeditor_link][subdir] = "contrib"
