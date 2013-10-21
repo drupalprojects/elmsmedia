@@ -105,9 +105,9 @@ function theme_elmsmedia_helper_video($variables) {
   $output = '<div class="mediaelement-video">';
   $output .= '<video ' . drupal_attributes($variables['attributes']) . ' >';
   if (isset($variables['settings']['caption'])) {
-    $output .= '<track kind="subtitles" src="'. $variables['settings']['caption'] .'" srclang="en" />
-    </video>';
+    $output .= '<track kind="subtitles" src="'. $variables['settings']['caption'] .'" srclang="en" />';
   }
+  $output .= '</video>';
   if ($variables['settings']['download_link']) {
     $output .= '<div class="mediaelement-download-link"><a href="' . $variables['attributes']['src'] . '">' . filter_xss_admin($variables['settings']['download_text']) . '</a></div>';
   }
