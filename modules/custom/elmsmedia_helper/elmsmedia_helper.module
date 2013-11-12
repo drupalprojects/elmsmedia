@@ -1,5 +1,4 @@
 <?php
-
 /**
  * @file
  * Media integration improvements for ELMS Media distro.
@@ -76,7 +75,7 @@ function elmsmedia_helper_field_formatter_view($entity_type, $entity, $field, $i
       }
       // helps to set the caption file correctly
       if (isset($entity->field_caption['und'])) {
-        $element[$delta]['#settings']['caption'] = file_create_url($entity->field_caption['und'][0]['uri']);  
+        $element[$delta]['#settings']['caption'] = file_create_url($entity->field_caption['und'][0]['uri']);
       }
     }
     elseif ($display['type'] == 'mediaelement_audio') {
@@ -100,26 +99,32 @@ function elmsmedia_helper_theme() {
   );
 }
 
-// callback for elmsmedia_helper_video
+/**
+ * Callback for elmsmedia_helper_video()
+ */
 function theme_elmsmedia_helper_video($variables) {
   $output = '<div class="mediaelement-video">';
   $output .= '<video ' . drupal_attributes($variables['attributes']) . ' >';
   if (isset($variables['settings']['caption'])) {
-    $output .= '<track kind="subtitles" src="'. $variables['settings']['caption'] .'" srclang="en" />';
+    $output .= '<track kind="subtitles" src="' . $variables['settings']['caption'] . '" srclang="en" />';
   }
   $output .= '</video>';
   if ($variables['settings']['download_link']) {
+    // @ignore coder_tough_love_13
     $output .= '<div class="mediaelement-download-link"><a href="' . $variables['attributes']['src'] . '">' . filter_xss_admin($variables['settings']['download_text']) . '</a></div>';
   }
   $output .= '</div>';
   return $output;
 }
 
-// callback for audio rendering
+/**
+ * Callback for audio rendering.
+ */
 function theme_elmsmedia_helper_audio($variables) {
   $output = '<div class="mediaelement-audio">';
   $output .= '<audio ' . drupal_attributes($variables['attributes']) . ' ></audio>';
   if ($variables['settings']['download_link']) {
+    // @ignore coder_tough_love_13
     $output .= '<div class="mediaelement-download-link"><a href="' . $variables['attributes']['src'] . '">' . filter_xss_admin($variables['settings']['download_text']) . '</a></div>';
   }
   $output .= '</div>';
@@ -153,13 +158,13 @@ function elmsmedia_helper_field_formatter_settings_form($field, $instance, $view
   );
 
   $element['download_link'] = array(
-    '#title' => t('Download Link'),
+    '#title' => t('Download link'),
     '#type' => 'checkbox',
     '#default_value' => $settings['download_link'],
   );
 
   $element['download_text'] = array(
-    '#title' => t('Download Link Text'),
+    '#title' => t('Download link text'),
     '#type' => 'textfield',
     '#default_value' => $settings['download_text'],
   );
@@ -178,23 +183,23 @@ function elmsmedia_helper_field_formatter_settings_summary($field, $instance, $v
 
 /**
  * Alter the outgoing response.
- * Based originally on cis_helper_restws_response_alter
+ *
+ * Based on cis_helper_restws_response_alter
  * though this has improvements beyond that cis specific one.
- * 
+ *
  * related support issue https://drupal.org/node/2024603
  *
  * @param mixed $response
  *   The response data being returned by the REST service (not yet serialized).
- *
  * @param string $function
  *   The function being called on the REST service.
- *
  * @param string $format
  *   The name of the format serializing the response.
+ * @see cis_helper_restws_response_alter()
  */
-function elmsmedia_helper_restws_response_alter(&$response, $function, $formatName) {
+function elmsmedia_helper_restws_response_alter(&$response, $function, $format_name) {
   // specific modifications based common request type
-  if (($function == 'viewResource' || $function == 'queryResource') && $formatName == 'json' && isset($_GET['deep-load-refs'])) {
+  if (($function == 'viewResource' || $function == 'queryResource') && $format_name == 'json' && isset($_GET['deep-load-refs'])) {
     // query response is nested, direct access is not
     if ($function == 'queryResource') {
       foreach ($response['list'] as &$object) {
