@@ -1,186 +1,151 @@
-; ELMS Media make file
-core = 6.x
-api = 2
+; elmsmedia make file for d.o. usage
+core = "7.x"
+api = "2"
 
-; Modules
-projects[views_bulk_operations][version] = "1.13"
-projects[views_bulk_operations][subdir] = "contrib"
+; +++++ Modules +++++
 
-projects[admin][version] = "2.0"
-projects[admin][subdir] = "contrib"
+projects[fastclick][version] = "1.3"
+projects[fastclick][subdir] = "contrib"
 
-projects[adminrole][version] = "1.3"
-projects[adminrole][subdir] = "contrib"
+projects[admin_menu][version] = "3.0-rc4"
+projects[admin_menu][subdir] = "contrib"
 
-projects[advanced_help][version] = "1.2"
-projects[advanced_help][subdir] = "contrib"
+projects[ctools][version] = "1.4"
+projects[ctools][subdir] = "contrib"
 
-projects[auto_nodetitle][version] = "1.2"
-projects[auto_nodetitle][subdir] = "contrib"
-
-projects[backup_migrate][version] = "2.6"
-projects[backup_migrate][subdir] = "contrib"
-
-projects[better_formats][version] = "1.2"
-projects[better_formats][subdir] = "contrib"
-
-projects[calendar][version] = "2.4"
-projects[calendar][subdir] = "contrib"
-
-projects[coder][version] = "2.0-rc1"
-projects[coder][subdir] = "contrib"
-
-projects[colorpicker][version] = "2.1"
-projects[colorpicker][subdir] = "contrib"
-
-projects[util][version] = "3.0"
-projects[util][subdir] = "contrib"
-
-projects[conditional_fields][version] = "2.0"
-projects[conditional_fields][subdir] = "contrib"
-
-projects[context][version] = "3.x-dev"
+projects[context][version] = "3.2"
 projects[context][subdir] = "contrib"
 
-projects[cck][version] = "2.9"
-projects[cck][subdir] = "contrib"
+projects[cis_connector][version] = "1.x-dev"
+projects[cis_connector][subdir] = "contrib"
 
-projects[date][version] = "2.9"
-projects[date][subdir] = "contrib"
-
-projects[devel][version] = "1.27"
+projects[devel][version] = "1.5"
 projects[devel][subdir] = "contrib"
 
-projects[dhtml_menu][version] = "3.5"
-projects[dhtml_menu][subdir] = "contrib"
+projects[profiler_builder][version] = "1.x-dev"
+projects[profiler_builder][subdir] = "contrib"
 
-projects[diff][version] = "2.3"
-projects[diff][subdir] = "contrib"
+projects[entity_iframe][version] = "1.x-dev"
+projects[entity_iframe][subdir] = "contrib"
 
-projects[emfield][version] = "1.26"
-projects[emfield][subdir] = "contrib"
-
-projects[features][version] = "1.2"
+projects[features][version] = "2.0"
 projects[features][subdir] = "contrib"
 
-projects[filefield][version] = "3.10"
-projects[filefield][subdir] = "contrib"
+projects[entityreference][version] = "1.1"
+projects[entityreference][subdir] = "contrib"
 
-projects[filefield_paths][version] = "1.4"
-projects[filefield_paths][subdir] = "contrib"
+projects[typogrify][version] = "1.0-rc8"
+projects[typogrify][subdir] = "contrib"
 
-projects[flag][version] = "2.0-beta6"
-projects[flag][subdir] = "contrib"
+projects[video_filter][version] = "3.1"
+projects[video_filter][subdir] = "contrib"
 
-projects[hacked][version] = "2.0-beta8"
-projects[hacked][subdir] = "contrib"
+projects[imce][version] = "1.9"
+projects[imce][subdir] = "contrib"
 
-projects[hover_preview][version] = "1.0"
-projects[hover_preview][subdir] = "contrib"
+projects[og][version] = "2.7"
+projects[og][subdir] = "contrib"
 
-projects[iconizer][version] = "1.3"
-projects[iconizer][subdir] = "contrib"
+projects[entity][version] = "1.5"
+projects[entity][subdir] = "contrib"
 
-projects[imageapi][version] = "1.10"
-projects[imageapi][subdir] = "contrib"
+projects[fitvids][version] = "1.15"
+projects[fitvids][subdir] = "contrib"
 
-projects[imagecache][version] = "2.0-beta12"
-projects[imagecache][subdir] = "contrib"
+projects[imagefield_focus][version] = "1.0"
+projects[imagefield_focus][subdir] = "contrib"
 
-projects[imagecache_actions][version] = "2.0"
-projects[imagecache_actions][subdir] = "contrib"
+projects[libraries][version] = "2.2"
+projects[libraries][subdir] = "contrib"
 
-projects[imagecache_scale9actions][version] = "1.02"
-projects[imagecache_scale9actions][subdir] = "contrib"
-
-projects[imagefield][version] = "3.10"
-projects[imagefield][subdir] = "contrib"
-
-projects[jammer][version] = "1.7"
-projects[jammer][subdir] = "contrib"
-
-projects[jquery_ui][version] = "1.5"
-projects[jquery_ui][subdir] = "contrib"
-
-projects[jquery_update][version] = "2.0-alpha1"
-projects[jquery_update][subdir] = "contrib"
-
-projects[jwplayermodule][version] = "1.1"
-projects[jwplayermodule][subdir] = "contrib"
-
-projects[lightbox2][version] = "1.11"
-projects[lightbox2][subdir] = "contrib"
-
-projects[masquerade][version] = "1.7"
+projects[masquerade][version] = "1.0-rc7"
 projects[masquerade][subdir] = "contrib"
 
-projects[media_webcam][version] = "1.0-beta2"
-projects[media_webcam][subdir] = "contrib"
+projects[mediaelement][version] = "1.2"
+projects[mediaelement][subdir] = "contrib"
 
-projects[module_filter][version] = "1.7"
+projects[module_filter][version] = "1.8"
 projects[module_filter][subdir] = "contrib"
 
-projects[nodeformcols][version] = "1.6"
-projects[nodeformcols][subdir] = "contrib"
-
-projects[pathauto][version] = "1.6"
+projects[pathauto][version] = "1.2"
 projects[pathauto][subdir] = "contrib"
 
-projects[protect_critical_users][version] = "1.1"
-projects[protect_critical_users][subdir] = "contrib"
+projects[strongarm][version] = "2.0"
+projects[strongarm][subdir] = "contrib"
 
-projects[realname][version] = "1.5"
-projects[realname][subdir] = "contrib"
-
-projects[stringoverrides][version] = "1.8"
-projects[stringoverrides][subdir] = "contrib"
-
-projects[subscriptions][version] = "1.5"
-projects[subscriptions][subdir] = "contrib"
-
-projects[themekey][version] = "3.6"
-projects[themekey][subdir] = "contrib"
-
-projects[token][version] = "1.18"
+projects[token][version] = "1.5"
 projects[token][subdir] = "contrib"
 
-projects[vertical_tabs][version] = "1.0-rc2"
-projects[vertical_tabs][subdir] = "contrib"
+projects[transliteration][version] = "3.2"
+projects[transliteration][subdir] = "contrib"
 
-projects[views][version] = "2.12"
-projects[views][subdir] = "contrib"
+projects[httprl][version] = "1.14"
+projects[httprl][subdir] = "contrib"
 
-projects[views_bonus][version] = "1.1"
-projects[views_bonus][subdir] = "contrib"
+projects[regions][version] = "1.7"
+projects[regions][subdir] = "contrib"
 
-projects[views_calc][version] = "1.3"
-projects[views_calc][subdir] = "contrib"
+projects[textbook][version] = "4.1"
+projects[textbook][subdir] = "contrib"
 
-projects[views_fluid_grid][version] = "1.1"
-projects[views_fluid_grid][subdir] = "contrib"
+projects[restws][version] = "2.1"
+projects[restws][subdir] = "contrib"
 
-projects[wysiwyg][version] = "2.4"
+projects[ckeditor_link][version] = "2.3"
+projects[ckeditor_link][subdir] = "contrib"
+
+projects[imce_wysiwyg][version] = "1.0"
+projects[imce_wysiwyg][subdir] = "contrib"
+
+projects[jquery_update][version] = "2.4"
+projects[jquery_update][subdir] = "contrib"
+
+projects[wysiwyg][version] = "2.2"
 projects[wysiwyg][subdir] = "contrib"
 
-projects[wysiwyg_template][version] = "2.6"
-projects[wysiwyg_template][subdir] = "contrib"
+projects[better_exposed_filters][version] = "3.0-beta4"
+projects[better_exposed_filters][subdir] = "contrib"
 
-; Themes
-projects[rubik][version] = "3.0-beta2"
+projects[views][version] = "3.8"
+projects[views][subdir] = "contrib"
+
+projects[views_autocomplete_filters][version] = "1.1"
+projects[views_autocomplete_filters][subdir] = "contrib"
+
+projects[views_bulk_operations][version] = "3.2"
+projects[views_bulk_operations][subdir] = "contrib"
+
+projects[views_fluid_grid][version] = "3.0"
+projects[views_fluid_grid][subdir] = "contrib"
+
+; +++++ Themes +++++
+
+; entity_iframe_theme
+projects[entity_iframe_theme][type] = "theme"
+projects[entity_iframe_theme][version] = "1.x-dev"
+projects[entity_iframe_theme][subdir] = "contrib"
+
+; zurb-foundation
+projects[zurb_foundation][type] = "theme"
+projects[zurb_foundation][version] = "5.x-dev"
+projects[zurb_foundation][subdir] = "contrib"
+
+; rubik
+projects[rubik][type] = "theme"
+projects[rubik][version] = "4.1"
 projects[rubik][subdir] = "contrib"
 
-projects[tao][version] = "3.2"
+; tao
+projects[tao][type] = "theme"
+projects[tao][version] = "3.1"
 projects[tao][subdir] = "contrib"
 
-projects[sky][version] = "3.11"
-projects[sky][subdir] = "contrib"
+; +++++ Libraries +++++
 
-; Libraries
-libraries[ckeditor][download][type] = "get"
-libraries[ckeditor][download][url] = "http://download.cksource.com/CKEditor/CKEditor/CKEditor%203.6.3/ckeditor_3.6.3.tar.gz"
-libraries[ckeditor][directory_name] = "ckeditor"
-libraries[ckeditor][type] = "library"
-libraries[ckeditor][destination] = "libraries"
+; FitVids
+libraries[fitvids][directory_name] = "fitvids"
+libraries[fitvids][type] = "library"
+libraries[fitvids][destination] = "libraries"
+libraries[fitvids][download][type] = "get"
+libraries[fitvids][download][url] = "https://raw.github.com/davatron5000/FitVids.js/master/jquery.fitvids.js"
 
-; Patches
-projects[context][patch][] = "http://drupal.org/files/issues/context-expose-weights.patch"
