@@ -46,6 +46,7 @@ before_script:
   - sudo mkdir -p /var/www/drupal
   - sudo chown travis:travis /var/www/drupal
   # get drush recipes setup functions
+  - sudo mkdir -p ~/.drush
   - sudo chown -R travis:travis ~/.drush
   - cd ~/.drush/
   - git clone https://github.com/drupalprojects/drush_recipes.git
