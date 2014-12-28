@@ -20,9 +20,9 @@ libraries[mediaelement][download][type] = "get"
 libraries[mediaelement][download][url] = "http://github.com/johndyer/mediaelement/zipball/master"
 
 ; elmsmedia
-libraries[elmsmedia][directory_name] = "elmsmedia"
 libraries[elmsmedia][type] = "profile"
 libraries[elmsmedia][destination] = "../../profiles"
 libraries[elmsmedia][download][type] = "git"
 libraries[elmsmedia][download][branch] = "7.x-1.x"
+libraries[elmsmedia][directory_name] = "elmsmedia"
 libraries[elmsmedia][download][url] = "https://github.com/drupalprojects/elmsmedia.git"
