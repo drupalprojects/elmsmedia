@@ -225,3 +225,7 @@ projects[mediaelement][subdir] = "contrib"
 ; Views
 projects[views_fluid_grid][version] = "3.x-dev"
 projects[views_fluid_grid][subdir] = "contrib"
+projects[eva][version] = "1.x-dev"
+projects[eva][subdir] = "contrib"
+projects[autocomplete_deluxe][version] = "2.1"
+projects[autocomplete_deluxe][subdir] = "contrib"
