@@ -24,8 +24,13 @@ function elmsmedia_feature_views_default_views() {
   $handler = $view->new_display('default', 'Master', 'default');
   $handler->display->display_options['use_ajax'] = TRUE;
   $handler->display->display_options['use_more_always'] = FALSE;
-  $handler->display->display_options['access']['type'] = 'perm';
-  $handler->display->display_options['access']['perm'] = 'view cis shortcode';
+  $handler->display->display_options['access']['type'] = 'role';
+  $handler->display->display_options['access']['role'] = array(
+    30037204 => '30037204',
+    75987638 => '75987638',
+    166149871 => '166149871',
+    67296478 => '67296478',
+  );
   $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['exposed_form']['type'] = 'better_exposed_filters';
@@ -35,6 +40,12 @@ function elmsmedia_feature_views_default_views() {
     'general' => array(
       'allow_secondary' => 0,
       'secondary_label' => 'Advanced options',
+      'collapsible_label' => NULL,
+      'combine_rewrite' => NULL,
+      'reset_label' => NULL,
+      'bef_filter_description' => NULL,
+      'any_label' => NULL,
+      'filter_rewrite_values' => NULL,
     ),
     'title' => array(
       'more_options' => array(
@@ -43,10 +54,44 @@ function elmsmedia_feature_views_default_views() {
         'tokens' => array(
           'available' => array(
             0 => 'global_types',
+            'secondary_label' => NULL,
+            'collapsible_label' => NULL,
+            'combine_rewrite' => NULL,
+            'reset_label' => NULL,
+            'bef_filter_description' => NULL,
+            'any_label' => NULL,
+            'filter_rewrite_values' => NULL,
           ),
+          'secondary_label' => NULL,
+          'collapsible_label' => NULL,
+          'combine_rewrite' => NULL,
+          'reset_label' => NULL,
+          'bef_filter_description' => NULL,
+          'any_label' => NULL,
+          'filter_rewrite_values' => NULL,
         ),
+        'secondary_label' => NULL,
+        'collapsible_label' => NULL,
+        'combine_rewrite' => NULL,
+        'reset_label' => NULL,
+        'any_label' => NULL,
+        'filter_rewrite_values' => NULL,
       ),
+      'secondary_label' => NULL,
+      'collapsible_label' => NULL,
+      'combine_rewrite' => NULL,
+      'reset_label' => NULL,
+      'bef_filter_description' => NULL,
+      'any_label' => NULL,
+      'filter_rewrite_values' => NULL,
     ),
+    'secondary_label' => NULL,
+    'collapsible_label' => NULL,
+    'combine_rewrite' => NULL,
+    'reset_label' => NULL,
+    'bef_filter_description' => NULL,
+    'any_label' => NULL,
+    'filter_rewrite_values' => NULL,
   );
   $handler->display->display_options['pager']['type'] = 'full';
   $handler->display->display_options['pager']['options']['items_per_page'] = '50';
@@ -312,6 +357,7 @@ function elmsmedia_feature_views_default_views() {
     'document' => 'document',
     'external_video' => 'external_video',
     'elmsmedia_image' => 'elmsmedia_image',
+    'h5p_content' => 'h5p_content',
     'video' => 'video',
   );
   $handler->display->display_options['filters']['type']['group'] = 1;
@@ -324,6 +370,7 @@ function elmsmedia_feature_views_default_views() {
     'document' => 'document',
     'external_video' => 'external_video',
     'elmsmedia_image' => 'elmsmedia_image',
+    'h5p_content' => 'h5p_content',
     'video' => 'video',
   );
   $handler->display->display_options['filters']['type_1']['group'] = 1;
@@ -335,14 +382,14 @@ function elmsmedia_feature_views_default_views() {
   $handler->display->display_options['filters']['type_1']['expose']['remember_roles'] = array(
     2 => '2',
     1 => 0,
-    7 => 0,
-    6 => 0,
-    9 => 0,
-    10 => 0,
-    4 => 0,
-    8 => 0,
-    3 => 0,
-    5 => 0,
+    6065076 => 0,
+    135574917 => 0,
+    66784200 => 0,
+    67296478 => 0,
+    75987638 => 0,
+    166149871 => 0,
+    30037204 => 0,
+    76550217 => 0,
   );
   $handler->display->display_options['filters']['type_1']['expose']['reduce'] = TRUE;
   /* Filter criterion: Content: Title */

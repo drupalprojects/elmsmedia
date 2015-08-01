@@ -3,6 +3,8 @@ name = "ELMSMedia"
 description = "ELMS Media distribution for asset management"
 exclusive = "1"
 core = "7.x"
+elmslndefaulttitle = "Media assets"
+elmslntype = "authority"
 
 ; ----------
 ; ELMSLN Core Dependencies
@@ -134,6 +136,7 @@ dependencies[] = views_fluid_grid
 ; Features
 dependencies[] = elmsmedia_feature
 dependencies[] = elmsmedia_h5p
+dependencies[] = elmsmedia_perms
 
 
 ; Information added for Drupal.org usage stats while in dev
