@@ -105,6 +105,7 @@ dependencies[] = views_bulk_operations
 dependencies[] = features
 dependencies[] = features_override
 ; ELMSLN Core
+dependencies[] = elmsln_api
 dependencies[] = cis_connector
 dependencies[] = cis_service_connection
 dependencies[] = cis_service_connection_ux
@@ -112,6 +113,7 @@ dependencies[] = cis_service_roles
 dependencies[] = cis_lmsless
 dependencies[] = cis_shortcodes
 dependencies[] = foundation_access_ux
+dependencies[] = elmsln_core
 ; ELMSLN Core - Performance
 dependencies[] = elmsln_authcache
 dependencies[] = elmsln_advagg
@@ -140,6 +142,7 @@ dependencies[] = views_fluid_grid
 ; Features
 dependencies[] = elmsmedia_feature
 dependencies[] = elmsmedia_h5p
+dependencies[] = elmsmedia_cis_ux
 dependencies[] = elmsmedia_perms
 
 
