@@ -119,10 +119,16 @@ dependencies[] = elmsln_authcache
 dependencies[] = elmsln_advagg
 
 ; ----------
+; Service Dependencies
+; ----------
+dependencies[] = og
+dependencies[] = og_ui
+dependencies[] = cis_section
+
+; ----------
 ; Authority Dependencies
 ; ----------
 dependencies[] = cis_course_authority
-
 
 ; ----------
 ; ELMSMedia Dependencies
@@ -134,16 +140,34 @@ dependencies[] = entity_iframe_mode
 dependencies[] = video_embed_field
 ; Other
 dependencies[] = h5p
+dependencies[] = h5p_tincan_bridge
+dependencies[] = tincanapi
+dependencies[] = elmsln_lrs
 dependencies[] = elmsmedia_helper
+dependencies[] = elmsln_ecd
 dependencies[] = imagefield_focus
-dependencies[] = mediaelement
+dependencies[] = modernizr
+dependencies[] = ableplayer
 dependencies[] = clipboardjs
+dependencies[] = getid3
 ; Views
 dependencies[] = views_fluid_grid
 ; Features
 dependencies[] = elmsmedia_feature
+dependencies[] = elmsmedia_figure_label
+dependencies[] = elmsmedia_audio
+dependencies[] = elmsmedia_document
+dependencies[] = elmsmedia_external_video
+dependencies[] = elmsmedia_feature
 dependencies[] = elmsmedia_h5p
+dependencies[] = elmsmedia_image
+dependencies[] = elmsmedia_image_gallery
+dependencies[] = elmsmedia_static_content
+dependencies[] = elmsmedia_svg
+dependencies[] = elmsmedia_video
+dependencies[] = elmsmedia_view_mode_tabs
 dependencies[] = elmsmedia_cis_ux
+dependencies[] = elmsmedia_section_perms
 dependencies[] = elmsmedia_perms
 
 
